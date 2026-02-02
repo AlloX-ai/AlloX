@@ -212,62 +212,7 @@ export function LandingPage({ onLaunchDapp }: LandingPageProps) {
       </section>
 
       {/* Footer */}
-      <footer className="relative z-10 py-12 px-6 lg:px-12 border-t border-white/40">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
-                  <Sparkles className="w-5 h-5 text-white" strokeWidth={2.5} />
-                </div>
-                <span className="text-lg font-bold text-gray-900">AlloX</span>
-              </div>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Your AI-powered crypto copilot for the decentralized future.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-gray-900 mb-4">Product</h4>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li><a href="#" className="hover:text-gray-900 transition-colors">Chat</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors">Portfolio</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors">Trading</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors">Staking</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-gray-900 mb-4">Resources</h4>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li><a href="#" className="hover:text-gray-900 transition-colors">Documentation</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors">API</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors">Help Center</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors">Blog</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-gray-900 mb-4">Company</h4>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li><a href="#" className="hover:text-gray-900 transition-colors">About</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors">Privacy</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors">Terms</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="pt-8 border-t border-white/40 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-gray-600">© 2024 AlloX. All rights reserved.</p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors text-sm">Twitter</a>
-              <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors text-sm">Discord</a>
-              <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors text-sm">GitHub</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+ 
 
       <style>{`
         @keyframes blob {

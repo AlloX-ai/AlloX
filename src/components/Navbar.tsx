@@ -10,7 +10,7 @@ export function Navbar() {
     { label: 'Product', href: '/product' },
     { label: 'Docs', href: '/docs' },
     { label: 'Foundation', href: '/foundation' },
-    { label: 'Blog', href: '/blog' },
+    // { label: 'Blog', href: '/blog' },
   ];
 
   return (

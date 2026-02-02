@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Navbar } from '../components/Navbar';
 import { GlassCard } from '../components/GlassCard';
 import { CheckCircle2, Sparkles } from 'lucide-react';
 
@@ -29,7 +28,6 @@ export function BetaAccessPage() {
 
   return (
     <div className="min-h-screen bg-pattern">
-      <Navbar />
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-6">
@@ -256,14 +254,7 @@ export function BetaAccessPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-16 px-6 border-t border-gray-200/50">
-        <div className="max-w-[1440px] mx-auto text-center">
-          <p className="text-sm text-gray-600">
-            © 2024 AlloX Foundation. All rights reserved.
-          </p>
-        </div>
-      </footer>
+   
     </div>
   );
 }

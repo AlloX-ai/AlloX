@@ -1,5 +1,4 @@
 import { Link } from 'react-router';
-import { Navbar } from '../components/Navbar';
 import { GlassCard } from '../components/GlassCard';
 import { AnimatedChatDemo } from '../components/AnimatedChatDemo';
 import { ArrowRight, MessageSquare, Shield, Zap, Globe, CheckCircle2, TrendingUp, Calendar, Linkedin, Instagram, Github } from 'lucide-react';
@@ -14,7 +13,6 @@ export function LandingPage() {
 
   return (
     <div className="min-h-screen bg-pattern">
-      <Navbar />
 
       {/* Hero Section */}
       <section className="pt-32 pb-24 px-6">
@@ -514,123 +512,7 @@ export function LandingPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-16 px-6 border-t border-gray-200/50">
-        <div className="max-w-[1440px] mx-auto">
-          <div className="grid md:grid-cols-4 gap-12 mb-12">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
-                  <div className="w-4 h-4 border-2 border-white rounded-full"></div>
-                </div>
-                <span className="font-bold text-xl">AlloX</span>
-              </div>
-              <p className="text-sm text-gray-600">
-                Narrative-driven capital allocation for TradFi & DeFi.
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="font-bold mb-4">Product</h4>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li><Link to="/product" className="hover:text-black transition-colors">Features</Link></li>
-                <li><Link to="/docs" className="hover:text-black transition-colors">Documentation</Link></li>
-                <li><Link to="/app" className="hover:text-black transition-colors">Launch App</Link></li>
-                <li><a href="#" className="hover:text-black transition-colors">Security</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-bold mb-4">Foundation</h4>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li><Link to="/foundation" className="hover:text-black transition-colors">About</Link></li>
-                <li><a href="#" className="hover:text-black transition-colors">Governance</a></li>
-                <li><a href="#" className="hover:text-black transition-colors">Grants</a></li>
-                <li><Link to="/blog" className="hover:text-black transition-colors">Blog</Link></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-bold mb-4">Developers</h4>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li><a href="#" className="hover:text-black transition-colors">API Reference</a></li>
-                <li><a href="#" className="hover:text-black transition-colors">SDKs</a></li>
-                <li><a href="#" className="hover:text-black transition-colors">GitHub</a></li>
-                <li><a href="#" className="hover:text-black transition-colors">Beta Access</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="pt-8 border-t border-gray-200/50">
-            {/* Social Icons */}
-            <div className="flex justify-center gap-3 mb-6">
-              <a 
-                href="https://twitter.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-3 glass-card rounded-xl hover:bg-white/80 hover:shadow-md transition-all duration-200"
-                aria-label="X (Twitter)"
-              >
-                <FaXTwitter size={20} className="text-gray-700" />
-              </a>
-              <a 
-                href="https://telegram.org" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-3 glass-card rounded-xl hover:bg-white/80 hover:shadow-md transition-all duration-200"
-                aria-label="Telegram"
-              >
-                <FaTelegram size={20} className="text-gray-700" />
-              </a>
-              <a 
-                href="https://discord.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-3 glass-card rounded-xl hover:bg-white/80 hover:shadow-md transition-all duration-200"
-                aria-label="Discord"
-              >
-                <FaDiscord size={20} className="text-gray-700" />
-              </a>
-              <a 
-                href="https://linkedin.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-3 glass-card rounded-xl hover:bg-white/80 hover:shadow-md transition-all duration-200"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={20} className="text-gray-700" />
-              </a>
-              <a 
-                href="https://instagram.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-3 glass-card rounded-xl hover:bg-white/80 hover:shadow-md transition-all duration-200"
-                aria-label="Instagram"
-              >
-                <Instagram size={20} className="text-gray-700" />
-              </a>
-              <a 
-                href="https://github.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-3 glass-card rounded-xl hover:bg-white/80 hover:shadow-md transition-all duration-200"
-                aria-label="GitHub"
-              >
-                <Github size={20} className="text-gray-700" />
-              </a>
-            </div>
-
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-600">
-              <div>© 2024 AlloX Foundation. All rights reserved.</div>
-              <div className="flex gap-6">
-                <a href="#" className="hover:text-black transition-colors">Privacy</a>
-                <a href="#" className="hover:text-black transition-colors">Terms</a>
-                <a href="#" className="hover:text-black transition-colors">Cookies</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+    
     </div>
   );
 }

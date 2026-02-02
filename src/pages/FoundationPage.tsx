@@ -1,4 +1,3 @@
-import { Navbar } from '../components/Navbar';
 import { GlassCard } from '../components/GlassCard';
 import { Download, Users, Target, Globe, Award, BookOpen, Vote, Gift } from 'lucide-react';
 import { useEffect } from 'react';
@@ -12,7 +11,6 @@ export function FoundationPage() {
 
   return (
     <div className="min-h-screen bg-pattern">
-      <Navbar />
 
       {/* Hero Section */}
       <section className="pt-32 pb-24 px-6">
@@ -405,14 +403,7 @@ export function FoundationPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-16 px-6 border-t border-gray-200/50">
-        <div className="max-w-[1440px] mx-auto text-center">
-          <p className="text-gray-600">
-            © 2024 AlloX Foundation. Building the future of AI x DeFi.
-          </p>
-        </div>
-      </footer>
+   
     </div>
   );
 }

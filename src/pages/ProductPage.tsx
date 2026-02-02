@@ -1,4 +1,3 @@
-import { Navbar } from '../components/Navbar';
 import { GlassCard } from '../components/GlassCard';
 import { AnimatedSwapDemo } from '../components/AnimatedSwapDemo';
 import { AnimatedPortfolioDemo } from '../components/AnimatedPortfolioDemo';
@@ -15,7 +14,6 @@ export function ProductPage() {
 
   return (
     <div className="min-h-screen bg-pattern">
-      <Navbar />
 
       {/* Hero */}
       <section className="pt-32 pb-16 px-6">
@@ -279,14 +277,7 @@ export function ProductPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-16 px-6 border-t border-gray-200/50">
-        <div className="max-w-[1440px] mx-auto text-center">
-          <p className="text-gray-600">
-            © 2026 AlloX Foundation. All rights reserved.
-          </p>
-        </div>
-      </footer>
+  
     </div>
   );
 }
