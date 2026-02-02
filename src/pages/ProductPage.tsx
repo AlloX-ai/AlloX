@@ -4,8 +4,15 @@ import { AnimatedSwapDemo } from '../components/AnimatedSwapDemo';
 import { AnimatedPortfolioDemo } from '../components/AnimatedPortfolioDemo';
 import { MessageSquare, CheckCircle2, Send, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router';
+import { useEffect } from 'react';
 
 export function ProductPage() {
+
+  useEffect(()=>{
+        window.scrollTo(0,0)
+        document.title = 'Product'
+    },[])
+
   return (
     <div className="min-h-screen bg-pattern">
       <Navbar />

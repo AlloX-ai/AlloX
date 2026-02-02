@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Navbar } from '../components/Navbar';
 import { GlassCard } from '../components/GlassCard';
 import { Search, Book, Wallet, Repeat, TrendingUp, Shield, Globe, Code, ChevronRight, Copy, Check } from 'lucide-react';
@@ -6,6 +6,12 @@ import { Search, Book, Wallet, Repeat, TrendingUp, Shield, Globe, Code, ChevronR
 export function DocsPage() {
   const [activeSection, setActiveSection] = useState('getting-started');
   const [copied, setCopied] = useState(false);
+
+
+   useEffect(()=>{
+          window.scrollTo(0,0)
+          document.title = 'Docs'
+      },[])
 
   const handleCopy = (code: string) => {
     navigator.clipboard.writeText(code);

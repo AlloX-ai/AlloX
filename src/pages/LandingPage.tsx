@@ -4,8 +4,14 @@ import { GlassCard } from '../components/GlassCard';
 import { AnimatedChatDemo } from '../components/AnimatedChatDemo';
 import { ArrowRight, MessageSquare, Shield, Zap, Globe, CheckCircle2, TrendingUp, Calendar, Linkedin, Instagram, Github } from 'lucide-react';
 import { FaTelegram, FaDiscord, FaXTwitter } from 'react-icons/fa6';
+import { useEffect } from 'react';
 
 export function LandingPage() {
+
+  useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
+
   return (
     <div className="min-h-screen bg-pattern">
       <Navbar />

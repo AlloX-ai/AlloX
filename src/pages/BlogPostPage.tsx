@@ -2,10 +2,13 @@ import { useParams, Link } from 'react-router';
 import { Navbar } from '../components/Navbar';
 import { GlassCard } from '../components/GlassCard';
 import { ArrowLeft, ArrowRight, Calendar } from 'lucide-react';
+import { useEffect } from 'react';
 
 export function BlogPostPage() {
   const { postId } = useParams();
-
+ useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
   // Mock blog post content
   const post = {
     id: postId,

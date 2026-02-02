@@ -2,8 +2,15 @@ import { Navbar } from '../components/Navbar';
 import { GlassCard } from '../components/GlassCard';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router';
+import { useEffect } from 'react';
 
 export function BlogPage() {
+
+ useEffect(()=>{
+        window.scrollTo(0,0)
+        document.title = 'Blog'
+    },[])
+
   const featuredPost = {
     id: 'multi-chain-expansion',
     category: 'Product Update',

@@ -1,8 +1,15 @@
 import { Navbar } from '../components/Navbar';
 import { GlassCard } from '../components/GlassCard';
 import { Download, Users, Target, Globe, Award, BookOpen, Vote, Gift } from 'lucide-react';
+import { useEffect } from 'react';
 
 export function FoundationPage() {
+
+ useEffect(()=>{
+        window.scrollTo(0,0)
+        document.title = 'Foundation'
+    },[])
+
   return (
     <div className="min-h-screen bg-pattern">
       <Navbar />
