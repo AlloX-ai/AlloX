@@ -1,26 +1,37 @@
-import { GlassCard } from '../components/GlassCard';
-import { AnimatedSwapDemo } from '../components/AnimatedSwapDemo';
-import { AnimatedPortfolioDemo } from '../components/AnimatedPortfolioDemo';
-import { MessageSquare, CheckCircle2, Send, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router';
-import { useEffect } from 'react';
+import { GlassCard } from "../components/GlassCard";
+import { AnimatedSwapDemo } from "../components/AnimatedSwapDemo";
+import { AnimatedPortfolioDemo } from "../components/AnimatedPortfolioDemo";
+import { MessageSquare, CheckCircle2, Send, ArrowRight } from "lucide-react";
+import { Link } from "react-router";
+import { useEffect } from "react";
+import aiIcon from "../assets/aiIcon.svg";
+import defiIcon from "../assets/defiIcon.svg";
+import desciIcon from "../assets/desciIcon.svg";
+import gamingIcon from "../assets/gamingIcon.svg";
+import layerIcon from "../assets/layerIcon.svg";
+import rwaIcon from "../assets/rwaIcon.svg";
+import aibasketIcon from "../assets/aibasketIcon.svg";
+import narrativeIcon from "../assets/narrativeIcon.svg";
+import riskIcon from "../assets/riskIcon.svg";
+import allocateIcon from "../assets/allocateIcon.svg";
 
 export function ProductPage() {
-
-  useEffect(()=>{
-        window.scrollTo(0,0)
-        document.title = 'Product'
-    },[])
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.title = "Product";
+  }, []);
 
   return (
     <div className="min-h-screen bg-pattern">
-
       {/* Hero */}
       <section className="pt-32 pb-16 px-6">
         <div className="max-w-[1200px] mx-auto text-center">
-          <h1 className="text-6xl md:text-7xl font-bold mb-6">How AlloX Works</h1>
+          <h1 className="text-6xl md:text-7xl font-bold mb-6">
+            How AlloX Works
+          </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Invest in market narratives through AI-constructed baskets in three easy steps
+            Invest in market narratives through AI-constructed baskets in three
+            easy steps
           </p>
         </div>
       </section>
@@ -39,7 +50,9 @@ export function ProductPage() {
               </div>
               <h3 className="text-2xl font-bold mb-4">Choose a narrative</h3>
               <p className="text-gray-600 leading-relaxed">
-                Select from market themes like Gaming, AI, RWA, or DeSci. Each narrative represents a diversified investment opportunity, not a single token.
+                Select from market themes like Gaming, AI, RWA, or DeSci. Each
+                narrative represents a diversified investment opportunity, not a
+                single token.
               </p>
             </GlassCard>
 
@@ -53,7 +66,9 @@ export function ProductPage() {
               </div>
               <h3 className="text-2xl font-bold mb-4">AI builds your basket</h3>
               <p className="text-gray-600 leading-relaxed">
-                Our AI constructs a diversified token basket for your chosen narrative, with risk tiers and transparent allocation percentages for every asset.
+                Our AI constructs a diversified token basket for your chosen
+                narrative, with risk tiers and transparent allocation
+                percentages for every asset.
               </p>
             </GlassCard>
 
@@ -65,21 +80,31 @@ export function ProductPage() {
               <div className="inline-block px-4 py-2 bg-green-100 rounded-full text-sm font-bold text-green-700 mb-6">
                 Step 3
               </div>
-              <h3 className="text-2xl font-bold mb-4">Allocate with confidence</h3>
+              <h3 className="text-2xl font-bold mb-4">
+                Allocate with confidence
+              </h3>
               <p className="text-gray-600 leading-relaxed">
-                Select your investment amount, review the complete basket breakdown, and confirm. AlloX executes the full allocation across all tokens automatically.
+                Select your investment amount, review the complete basket
+                breakdown, and confirm. AlloX executes the full allocation
+                across all tokens automatically.
               </p>
             </GlassCard>
           </div>
 
           {/* Visual Flow Diagram */}
           <div className="mb-24">
-            <h2 className="text-4xl font-bold text-center mb-12">The Allocation Flow</h2>
+            <h2 className="text-4xl font-bold text-center mb-12">
+              The Allocation Flow
+            </h2>
             <div className="glass-card p-12">
               <div className="flex flex-col md:flex-row items-center justify-center gap-8">
                 <div className="text-center">
                   <div className="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl">🎯</span>
+                    <img
+                      src={narrativeIcon}
+                      alt="Select Narrative"
+                      className="text-3xl"
+                    />
                   </div>
                   <p className="font-medium">Select Narrative</p>
                 </div>
@@ -88,7 +113,11 @@ export function ProductPage() {
 
                 <div className="text-center">
                   <div className="w-20 h-20 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl">🤖</span>
+                    <img
+                      src={aibasketIcon}
+                      alt="AI Basket"
+                      className="text-3xl"
+                    />
                   </div>
                   <p className="font-medium">AI Basket</p>
                 </div>
@@ -97,7 +126,7 @@ export function ProductPage() {
 
                 <div className="text-center">
                   <div className="w-20 h-20 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl">⚖️</span>
+                    <img src={riskIcon} alt="Risk Tier" className="text-3xl" />
                   </div>
                   <p className="font-medium">Risk Tier</p>
                 </div>
@@ -106,7 +135,11 @@ export function ProductPage() {
 
                 <div className="text-center">
                   <div className="w-20 h-20 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl">✅</span>
+                    <img
+                      src={allocateIcon}
+                      alt="Allocate"
+                      className="text-3xl"
+                    />
                   </div>
                   <p className="font-medium">Allocate</p>
                 </div>
@@ -119,14 +152,16 @@ export function ProductPage() {
       {/* Use Cases */}
       <section className="py-16 px-6 bg-gradient-to-b from-transparent to-gray-50/50">
         <div className="max-w-[1200px] mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">Market Narratives Available</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+            Market Narratives Available
+          </h2>
 
           <div className="grid md:grid-cols-2 gap-6">
             {/* Gaming */}
             <GlassCard hover className="p-8">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl">🎮</span>
+                  <img className="text-2xl" src={gamingIcon} />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Gaming & Metaverse</h3>
@@ -136,7 +171,8 @@ export function ProductPage() {
                 </div>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                AI-constructed basket of leading gaming and metaverse projects. Available in High, Mid, and Low Cap tiers.
+                AI-constructed basket of leading gaming and metaverse projects.
+                Available in High, Mid, and Low Cap tiers.
               </p>
             </GlassCard>
 
@@ -144,7 +180,7 @@ export function ProductPage() {
             <GlassCard hover className="p-8">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl">🤖</span>
+                  <img className="text-2xl" src={aiIcon} />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">AI & Agents</h3>
@@ -154,7 +190,9 @@ export function ProductPage() {
                 </div>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Exposure to the AI revolution in crypto with a balanced basket of infrastructure, agents, and compute tokens across all risk tiers.
+                Exposure to the AI revolution in crypto with a balanced basket
+                of infrastructure, agents, and compute tokens across all risk
+                tiers.
               </p>
             </GlassCard>
 
@@ -162,7 +200,7 @@ export function ProductPage() {
             <GlassCard hover className="p-8">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl">🏦</span>
+                  <img className="text-2xl" src={rwaIcon} />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Real World Assets</h3>
@@ -172,7 +210,8 @@ export function ProductPage() {
                 </div>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Invest in the tokenization of real-world assets with a diversified basket from RWA leaders.
+                Invest in the tokenization of real-world assets with a
+                diversified basket from RWA leaders.
               </p>
             </GlassCard>
 
@@ -180,17 +219,21 @@ export function ProductPage() {
             <GlassCard hover className="p-8">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl">⚡</span>
+                  <img className="text-2xl" src={defiIcon} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">DeFi Infrastructure</h3>
+                  <h3 className="text-xl font-bold mb-2">
+                    DeFi Infrastructure
+                  </h3>
                   <p className="text-sm text-gray-600">
                     Core DeFi protocols and DEXs
                   </p>
                 </div>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Access the backbone of decentralized finance with baskets of leading DEXs, lending protocols, and DeFi infrastructure projects.
+                Access the backbone of decentralized finance with baskets of
+                leading DEXs, lending protocols, and DeFi infrastructure
+                projects.
               </p>
             </GlassCard>
 
@@ -198,7 +241,7 @@ export function ProductPage() {
             <GlassCard hover className="p-8">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-indigo-400 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl">🔗</span>
+                  <img className="text-2xl" src={layerIcon} />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Layer 1 & Layer 2</h3>
@@ -208,7 +251,8 @@ export function ProductPage() {
                 </div>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Diversified exposure to leading L1 and L2 blockchain networks with automated rebalancing as the ecosystem evolves.
+                Diversified exposure to leading L1 and L2 blockchain networks
+                with automated rebalancing as the ecosystem evolves.
               </p>
             </GlassCard>
 
@@ -216,7 +260,7 @@ export function ProductPage() {
             <GlassCard hover className="p-8">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-teal-400 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl">🔬</span>
+                  <img className="text-2xl" src={desciIcon} />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">DeSci</h3>
@@ -226,7 +270,9 @@ export function ProductPage() {
                 </div>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Early access to the emerging DeSci narrative with curated baskets of projects revolutionizing scientific research and funding.
+                Early access to the emerging DeSci narrative with curated
+                baskets of projects revolutionizing scientific research and
+                funding.
               </p>
             </GlassCard>
           </div>
@@ -236,7 +282,9 @@ export function ProductPage() {
       {/* Example Screenshots Section */}
       <section className="py-24 px-6">
         <div className="max-w-[1200px] mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">See It In Action</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+            See It In Action
+          </h2>
           <p className="text-xl text-gray-600 text-center mb-16">
             Real examples of narrative-based allocation
           </p>
@@ -265,19 +313,22 @@ export function ProductPage() {
       <section className="py-24 px-6">
         <div className="max-w-[1200px] mx-auto">
           <GlassCard className="p-16 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to try AlloX?</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Ready to try AlloX?
+            </h2>
             <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
               Experience narrative-based investing with AI-constructed baskets
             </p>
-            <Link to="/app" className="btn-primary text-lg px-8 py-4 inline-flex items-center">
+            <Link
+              to="/app"
+              className="btn-primary text-lg px-8 py-4 inline-flex items-center"
+            >
               Launch App
               <ArrowRight size={20} className="ml-2" />
             </Link>
           </GlassCard>
         </div>
       </section>
-
-  
     </div>
   );
 }
