@@ -36,7 +36,7 @@ export function LandingPage() {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Link to="/app" className="btn-primary text-lg px-8 py-4">
+                <Link to="/app" target='_blank'  className="btn-primary text-lg px-8 py-4">
                   Launch App
                   <ArrowRight size={20} className="ml-2" />
                 </Link>
@@ -81,35 +81,35 @@ export function LandingPage() {
               <div className="text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-br from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 $150M+
               </div>
-              <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">Market Cap</div>
+              <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">Capital Throughput</div>
             </GlassCard>
 
             <GlassCard hover className="p-8 text-center group transition-all duration-300 hover:scale-105">
               <div className="text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-br from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                87K
+                87K+
               </div>
-              <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">Holders</div>
+              <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">Wallets interacted</div>
             </GlassCard>
 
             <GlassCard hover className="p-8 text-center group transition-all duration-300 hover:scale-105">
               <div className="text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-br from-pink-600 to-orange-600 bg-clip-text text-transparent">
-                175K
+                175K+
               </div>
-              <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">Community</div>
+              <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">Community Reach</div>
             </GlassCard>
 
             <GlassCard hover className="p-8 text-center group transition-all duration-300 hover:scale-105">
               <div className="text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-br from-orange-600 to-green-600 bg-clip-text text-transparent">
-                $100M
+                $100M+
               </div>
-              <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">TVL</div>
+              <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">Assets Allocated</div>
             </GlassCard>
 
             <GlassCard hover className="p-8 text-center group transition-all duration-300 hover:scale-105 col-span-2 lg:col-span-1">
               <div className="text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-br from-green-600 to-cyan-600 bg-clip-text text-transparent">
                 $40M+
               </div>
-              <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">Rewards</div>
+              <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">On chain Rewards</div>
             </GlassCard>
           </div>
 
@@ -344,7 +344,7 @@ export function LandingPage() {
       </section>
 
       {/* Builders Section */}
-      <section className="py-24 px-6">
+      {/* <section className="py-24 px-6">
         <div className="max-w-[1440px] mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl mb-6">Built for Builders</h2>
@@ -384,7 +384,7 @@ export function LandingPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Roadmap Section */}
       <section className="py-24 px-6 overflow-hidden">
@@ -503,7 +503,7 @@ export function LandingPage() {
             <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
               Experience capital allocation reimagined. AI transforms market narratives into diversified, risk-managed portfolios you can invest in with one click.
             </p>
-            <Link to="/app" className="btn-primary text-lg px-8 py-4 inline-flex items-center">
+            <Link to="/app" target='_blank'  className="btn-primary text-lg px-8 py-4 inline-flex items-center">
               Launch App
               <ArrowRight size={20} className="ml-2" />
             </Link>

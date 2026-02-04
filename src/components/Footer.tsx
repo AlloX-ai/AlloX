@@ -35,7 +35,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/app" className="hover:text-black transition-colors">
+                <Link to="/app" target='_blank'  className="hover:text-black transition-colors">
                   Launch App
                 </Link>
               </li>
@@ -54,8 +54,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-black transition-colors">
-                  Governance
+                <a href="/foundation#litepaper" className="hover:text-black transition-colors">
+                  Litepaper
                 </a>
               </li>
               <li>

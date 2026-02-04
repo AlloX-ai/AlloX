@@ -43,7 +43,7 @@ export function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Link to="/app" className="btn-primary">
+            <Link to="/app" target='_blank'  className="btn-primary">
               Launch App
             </Link>
           </div>
@@ -71,7 +71,7 @@ export function Navbar() {
               </Link>
             ))}
             <Link
-              to="/app"
+              to="/app" target='_blank' 
               className="btn-primary block text-center"
               onClick={() => setMobileMenuOpen(false)}
             >
