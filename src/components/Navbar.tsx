@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import alloxFull from '../assets/alloxFull.svg';
 
 export function Navbar() {
   const location = useLocation();
@@ -16,13 +17,10 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4">
       <div className="max-w-[1440px] mx-auto">
-        <div className="glass-card px-6 py-4 flex items-center justify-between">
+        <div className="glass-card full-white px-6 py-4 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center transition-transform group-hover:scale-105">
-              <div className="w-4 h-4 border-2 border-white rounded-full"></div>
-            </div>
-            <span className="font-bold text-xl tracking-tight">AlloX</span>
+           <img src={alloxFull} alt="AlloX Logo" className="h-8 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

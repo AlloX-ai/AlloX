@@ -2843,6 +2843,10 @@ body {
   box-shadow: 0 4px 24px #0000000a, 0 1px 2px #00000005, inset 0 1px #ffffffe6;
 }
 
+.full-white{
+  background: #fff !important;
+}
+
 .hover-lift {
   transition: all .3s cubic-bezier(.4, 0, .2, 1);
 }

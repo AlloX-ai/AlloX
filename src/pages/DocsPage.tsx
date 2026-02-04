@@ -44,7 +44,7 @@ export function DocsPage() {
       <div className="pt-24 px-6">
         <div className="max-w-[1440px] mx-auto">
           {/* Search Bar */}
-          <div className="mb-8 animate-fade-in">
+          {/* <div className="mb-8 animate-fade-in">
             <div className="glass-card p-2 max-w-2xl mx-auto">
               <div className="flex items-center gap-3 px-4">
                 <Search size={20} className="text-gray-400" />
@@ -58,9 +58,9 @@ export function DocsPage() {
                 </kbd>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="grid lg:grid-cols-[280px_1fr] gap-8 pb-24">
+          <div className="grid lg:grid-cols-[280px_1fr] gap-8 pb-24 mt-4">
             {/* Sidebar */}
             <aside className="hidden lg:block animate-slide-up">
               <div className="glass-card p-4 sticky top-28">
@@ -205,11 +205,11 @@ export function DocsPage() {
                     <div className="grid md:grid-cols-2 gap-4 mb-6">
                       {[
                         "MetaMask",
-                        "Coinbase Wallet",
+                        "OKX Wallet",
                         "WalletConnect",
                         "Trust Wallet",
-                        "Binance Wallet",
-                        "Rainbow",
+                        // "Binance Wallet",
+                        // "Rainbow",
                       ].map((wallet) => (
                         <div
                           key={wallet}
@@ -552,7 +552,7 @@ export function DocsPage() {
                     </p>
                   </GlassCard>
 
-                  <GlassCard className="p-8">
+                  {/* <GlassCard className="p-8">
                     <h2 className="text-3xl font-bold mb-6">
                       Smart Contract Audits
                     </h2>
@@ -574,7 +574,7 @@ export function DocsPage() {
                         </p>
                       </div>
                     </div>
-                  </GlassCard>
+                  </GlassCard> */}
                 </div>
               )}
 
@@ -689,11 +689,10 @@ export function DocsPage() {
                   <GlassCard className="p-8">
                     <h2 className="text-3xl font-bold mb-6">Installation</h2>
                     <p className="text-gray-600 mb-6">
-                      Install the AlloX SDK using your preferred package
-                      manager:
+                    Coming Soon
                     </p>
 
-                    <div className="relative">
+                    {/* <div className="relative">
                       <pre className="bg-gray-900 text-gray-100 p-6 rounded-2xl overflow-x-auto">
                         <code>{`npm install @allox/sdk\n# or\nyarn add @allox/sdk`}</code>
                       </pre>
@@ -707,10 +706,10 @@ export function DocsPage() {
                           <Copy size={16} className="text-white" />
                         )}
                       </button>
-                    </div>
+                    </div> */}
                   </GlassCard>
 
-                  <GlassCard className="p-8">
+                  {/* <GlassCard className="p-8">
                     <h2 className="text-3xl font-bold mb-6">Basic Usage</h2>
                     <div className="relative mb-6">
                       <pre className="bg-gray-900 text-gray-100 p-6 rounded-2xl overflow-x-auto text-sm">
@@ -730,9 +729,9 @@ const result = await allox.processIntent({
 console.log(result);`}</code>
                       </pre>
                     </div>
-                  </GlassCard>
+                  </GlassCard> */}
 
-                  <GlassCard className="p-8">
+                  {/* <GlassCard className="p-8">
                     <h2 className="text-3xl font-bold mb-6">
                       Embeddable Widget
                     </h2>
@@ -754,9 +753,9 @@ function App() {
 }`}</code>
                       </pre>
                     </div>
-                  </GlassCard>
+                  </GlassCard> */}
 
-                  <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6">
+                  {/* <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6">
                     <h3 className="font-bold mb-2">Apply for Beta Access</h3>
                     <p className="text-sm text-gray-700 mb-4">
                       API and widget integration is currently in beta. Apply for
@@ -767,7 +766,7 @@ function App() {
                       Apply Now
                       <ChevronRight size={16} className="ml-2" />
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               )}
             </main>
