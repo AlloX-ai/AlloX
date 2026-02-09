@@ -1,7 +1,7 @@
 import { Github, Instagram, Linkedin } from "lucide-react";
 import React from "react";
 import { FaDiscord, FaTelegram, FaXTwitter } from "react-icons/fa6";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import alloxFull from "../assets/alloxFull.svg";
 
 const Footer = () => {
@@ -35,7 +35,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/app" target='_blank'  className="hover:text-black transition-colors">
+                <Link to="/app" target='_blank' className="hover:text-black transition-colors">
                   Launch App
                 </Link>
               </li>
@@ -46,25 +46,25 @@ const Footer = () => {
             <h4 className="font-bold mb-4">Foundation</h4>
             <ul className="space-y-2 text-sm text-gray-600">
               <li>
-                <Link
+                <NavLink
                   to="/foundation"
                   className="hover:text-black transition-colors"
                 >
                   About
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <a href="/foundation#litepaper" className="hover:text-black transition-colors">
+                <NavLink to="/foundation#litepaper" className="hover:text-black transition-colors">
                   Litepaper
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a
-                  href="/foundation#brand"
+                <NavLink
+                  to="/foundation#brand"
                   className="hover:text-black transition-colors"
                 >
                   Brand
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>

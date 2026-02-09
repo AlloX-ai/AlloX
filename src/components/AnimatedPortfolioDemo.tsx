@@ -1,4 +1,9 @@
 import { useState, useEffect } from 'react';
+import aeroToken from '../assets/tokens/aero.svg';
+import virtualToken from '../assets/tokens/virtual.svg';
+import primeToken from '../assets/tokens/prime.svg';
+
+
 
 type AnimationStep = 'idle' | 'typing' | 'show-user' | 'thinking' | 'show-ai';
 
@@ -9,13 +14,13 @@ export function AnimatedPortfolioDemo() {
   const userMessage = 'Suggest 3 trending DeFi tokens';
 
   const tokens = [
-    { name: 'AERO', color: 'from-blue-400 to-blue-600', gain: '+24.5%' },
-    { name: 'VIRTUAL', color: 'from-purple-400 to-purple-600', gain: '+18.2%' },
-    { name: 'PRIME', color: 'from-pink-400 to-pink-600', gain: '+15.8%' },
+    { name: 'AERO', color: 'from-blue-400 to-blue-600', gain: '+24.5%', icon: aeroToken},
+    { name: 'VIRTUAL', color: 'from-purple-400 to-purple-600', gain: '+18.2%', icon: virtualToken },
+    { name: 'PRIME', color: 'from-pink-400 to-pink-600', gain: '+15.8%', icon: primeToken },
   ];
 
   useEffect(() => {
-    let timer: number;
+    let timer: number | any;
 
     switch (step) {
       case 'idle':
@@ -106,8 +111,8 @@ export function AnimatedPortfolioDemo() {
                     className="flex justify-between items-center text-sm animate-fade-in"
                     style={{ animationDelay: `${idx * 150}ms` }}
                   >
-                    <div className="flex items-center gap-2">
-                      <div className={`w-6 h-6 bg-gradient-to-br ${token.color} rounded-full`}></div>
+                    <div className="flex items-center gap-2"> 
+                      <img src={token.icon} alt='' className='w-6 h-6 rounded-full' />
                       <span className="font-medium">{token.name}</span>
                     </div>
                     <span className="text-green-600 text-xs">{token.gain}</span>

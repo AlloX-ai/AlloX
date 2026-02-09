@@ -1,7 +1,7 @@
 import { GlassCard } from "../components/GlassCard";
 import { Download, Sparkles } from "lucide-react";
 import { useEffect } from "react";
-import { Link } from "react-router";
+import { Link, useLocation, useParams } from "react-router";
 
 export function FoundationPage() {
   const brandAssets = [
@@ -12,10 +12,34 @@ export function FoundationPage() {
       size: "2.4 MB",
     },
   ];
+  const location = useLocation();
+  const eventId = location.hash
+
+  const scrollToElement = () => {
+    const element = document.getElementById(eventId.slice(1, eventId.length));
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        // block: "end",
+        // inline: "nearest",
+      });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  };
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (eventId) {
+      scrollToElement();
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [eventId]);
+
+
+  useEffect(() => {
     document.title = "Foundation";
+    // window.scrollTo(0, 0);
   }, []);
 
   return (
@@ -191,21 +215,21 @@ export function FoundationPage() {
           <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             <GlassCard hover className="p-8 flex flex-col justify-between">
               <div className="flex flex-col">
-              <div className="flex items-start justify-between mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-2xl flex items-center justify-center">
-                  <Download size={24} className="text-blue-600" />
+                <div className="flex items-start justify-between mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-2xl flex items-center justify-center">
+                    <Download size={24} className="text-blue-600" />
+                  </div>
+                  <div className="px-3 py-1 bg-blue-50 rounded-full text-xs font-medium text-blue-700">
+                    English
+                  </div>
                 </div>
-                <div className="px-3 py-1 bg-blue-50 rounded-full text-xs font-medium text-blue-700">
-                  English
-                </div>
-              </div>
 
-              <h3 className="text-2xl font-bold mb-3">Litepaper (EN)</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                A comprehensive overview of AlloX's vision for narrative-based
-                investing and our AI-powered basket construction methodology.
-              </p>
-</div>
+                <h3 className="text-2xl font-bold mb-3">Litepaper (EN)</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  A comprehensive overview of AlloX's vision for narrative-based
+                  investing and our AI-powered basket construction methodology.
+                </p>
+              </div>
               <button className="btn-primary w-full justify-center">
                 <Download size={18} className="mr-2" />
                 Download PDF
@@ -214,21 +238,21 @@ export function FoundationPage() {
 
             <GlassCard hover className="p-8 p-8 flex flex-col justify-between">
               <div className="flex flex-col">
-              <div className="flex items-start justify-between mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-purple-600/20 rounded-2xl flex items-center justify-center">
-                  <Download size={24} className="text-purple-600" />
+                <div className="flex items-start justify-between mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-purple-600/20 rounded-2xl flex items-center justify-center">
+                    <Download size={24} className="text-purple-600" />
+                  </div>
+                  <div className="px-3 py-1 bg-purple-50 rounded-full text-xs font-medium text-purple-700">
+                    한국어
+                  </div>
                 </div>
-                <div className="px-3 py-1 bg-purple-50 rounded-full text-xs font-medium text-purple-700">
-                  한국어
-                </div>
-              </div>
 
-              <h3 className="text-2xl font-bold mb-3">Litepaper (KR)</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                AlloX의 내러티브 기반 투자 비전 및 AI 기반 바스켓 구성 방법론에
-                대한 포괄적인 개요.
-              </p>
-</div>
+                <h3 className="text-2xl font-bold mb-3">Litepaper (KR)</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  AlloX의 내러티브 기반 투자 비전 및 AI 기반 바스켓 구성 방법론에
+                  대한 포괄적인 개요.
+                </p>
+              </div>
               <button className="btn-primary w-full justify-center">
                 <Download size={18} className="mr-2" />
                 PDF 다운로드

@@ -9,6 +9,7 @@ export function LandingPage() {
 
   useEffect(()=>{
         window.scrollTo(0,0)
+        document.title = 'AlloX'
     },[])
 
   return (
