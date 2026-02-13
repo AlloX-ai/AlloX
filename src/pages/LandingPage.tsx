@@ -399,7 +399,7 @@ export function LandingPage() {
             <GlassCard className="p-8 min-w-[320px] snap-start">
               <div className="flex items-center gap-3 mb-4">
                 <Calendar size={20} className="text-purple-600" />
-                <div className="text-sm font-medium text-purple-600">Q1 2024 - Current</div>
+                <div className="text-sm font-medium text-purple-600">Q1 2026 - Current</div>
               </div>
               <div className="w-3 h-3 bg-purple-600 rounded-full mb-4"></div>
               <h3 className="text-xl font-bold mb-3">Foundation Launch</h3>
@@ -407,17 +407,17 @@ export function LandingPage() {
                 <li className="flex items-start gap-2">
                   {/* <CheckCircle2 size={16} className="text-green-600 flex-shrink-0 mt-0.5" /> */}
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>Narrative engine live</span>
+                  <span>Beta platform release</span>
                 </li>
                 <li className="flex items-start gap-2">
                   {/* <CheckCircle2 size={16} className="text-green-600 flex-shrink-0 mt-0.5" /> */}
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>On chain execution</span>
+                  <span>Narrative engine</span>
                 </li>
                 <li className="flex items-start gap-2">
                   {/* <CheckCircle2 size={16} className="text-green-600 flex-shrink-0 mt-0.5" /> */}
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>Base network integration</span>
+                  <span>State validation system</span>
                 </li>
               </ul>
             </GlassCard>
@@ -425,14 +425,14 @@ export function LandingPage() {
             <GlassCard className="p-8 min-w-[320px] snap-start ring-2 ring-black/10">
               <div className="flex items-center gap-3 mb-4">
                 <Calendar size={20} className="text-gray-600" />
-                <div className="text-sm font-medium text-gray-600">Q2 2024</div>
+                <div className="text-sm font-medium text-gray-600">Q2 2026</div>
               </div>
               <div className="w-3 h-3 bg-gray-600 rounded-full mb-4 animate-pulse"></div>
               <h3 className="text-xl font-bold mb-3">Multi-Chain Expansion</h3>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>Ethereum & BNB Chain support</span>
+                 <span>On chain execution</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
@@ -448,7 +448,7 @@ export function LandingPage() {
             <GlassCard className="p-8 min-w-[320px] snap-start">
               <div className="flex items-center gap-3 mb-4">
                 <Calendar size={20} className="text-gray-400" />
-                <div className="text-sm font-medium text-gray-600">Q3 2024</div>
+                <div className="text-sm font-medium text-gray-600">Q3 2026</div>
               </div>
               <div className="w-3 h-3 bg-gray-300 rounded-full mb-4"></div>
               <h3 className="text-xl font-bold mb-3">Platform & Distribution</h3>
@@ -471,7 +471,7 @@ export function LandingPage() {
             <GlassCard className="p-8 min-w-[320px] snap-start">
               <div className="flex items-center gap-3 mb-4">
                 <Calendar size={20} className="text-gray-400" />
-                <div className="text-sm font-medium text-gray-600">Q4 2024</div>
+                <div className="text-sm font-medium text-gray-600">Q4 2026</div>
               </div>
               <div className="w-3 h-3 bg-gray-300 rounded-full mb-4"></div>
               <h3 className="text-xl font-bold mb-3">Infrastructure & Decentralization</h3>

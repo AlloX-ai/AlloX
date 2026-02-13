@@ -151,7 +151,7 @@ export function ProductPage() {
             <GlassCard hover className="p-8">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <img className="text-2xl" src={`https://cdn.allox.ai/allox/product/gamingIcon`} />
+                  <img className="text-2xl" src={`https://cdn.allox.ai/allox/product/gamingIcon.svg`} />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Gaming & Metaverse</h3>

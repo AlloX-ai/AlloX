@@ -40,13 +40,11 @@ export function DocsPage() {
   ];
 
   const wallets = [
-    {id: "metamask", name: "MetaMask", image: "metamaskConnect.svg"},
-    {id: "okx", name: "OKX Wallet", image: "okxConnect.svg"},
-    {id: "walletconnect", name: "WalletConnect", image: "walletConnect.svg"},
-    {id: "trust", name: "Trust Wallet", image: "trustWalletLogo.svg"},
-  ]
-
-
+    { id: "metamask", name: "MetaMask", image: "metamaskConnect.svg" },
+    { id: "okx", name: "OKX Wallet", image: "okxConnect.svg" },
+    { id: "walletconnect", name: "WalletConnect", image: "walletConnect.svg" },
+    { id: "trust", name: "Trust Wallet", image: "trustWalletLogo.svg" },
+  ];
 
   return (
     <div className="min-h-screen bg-pattern">
@@ -218,7 +216,10 @@ export function DocsPage() {
                           className="flex items-center gap-3 p-4 bg-white/60 backdrop-blur-sm border border-gray-200/50 rounded-2xl"
                         >
                           <div className="w-10 h-10 bg-gray-100 rounded-xl">
-                            <img src={`https://cdn.allox.ai/allox/wallets/${wallet.image}`} alt={wallet.name} />
+                            <img
+                              src={`https://cdn.allox.ai/allox/wallets/${wallet.image}`}
+                              alt={wallet.name}
+                            />
                           </div>
                           <span className="font-medium">{wallet.name}</span>
                         </div>
@@ -594,14 +595,18 @@ export function DocsPage() {
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-6">
-                    <GlassCard className="p-8">
+                    <GlassCard className="p-8 opacity-60">
                       <div className="flex items-center gap-3 mb-4">
                         <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-2xl">
-                          🔵
+                          <img
+                            src="https://cdn.allox.ai/allox/networks/base.svg"
+                            className="w-8 h-8"
+                            alt=""
+                          />
                         </div>
                         <div>
                           <h3 className="text-xl font-bold">Base</h3>
-                          <p className="text-sm text-gray-600">Coinbase's L2</p>
+                          <p className="text-sm text-gray-600">Mainnet</p>
                         </div>
                       </div>
                       <p className="text-gray-600 mb-4">
@@ -609,15 +614,21 @@ export function DocsPage() {
                         operations.
                       </p>
                       <div className="flex items-center gap-2 text-sm">
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                        <span className="text-green-600 font-medium">Live</span>
+                        <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                        <span className="text-orange-600 font-medium">
+                          Q2 2026
+                        </span>
                       </div>
                     </GlassCard>
 
-                    <GlassCard className="p-8">
+                    <GlassCard className="p-8 opacity-60">
                       <div className="flex items-center gap-3 mb-4">
                         <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-2xl">
-                          💎
+                          <img
+                            src="https://cdn.allox.ai/allox/networks/eth.svg"
+                            className="w-8 h-8"
+                            alt=""
+                          />
                         </div>
                         <div>
                           <h3 className="text-xl font-bold">Ethereum</h3>
@@ -629,19 +640,22 @@ export function DocsPage() {
                         protocols.
                       </p>
                       <div className="flex items-center gap-2 text-sm">
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                        <span className="text-green-600 font-medium">Live</span>
+                        <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                        <span className="text-orange-600 font-medium">
+                          Q2 2026
+                        </span>
                       </div>
                     </GlassCard>
 
-                    <GlassCard className="p-8">
+                    <GlassCard className="p-8 opacity-60">
                       <div className="flex items-center gap-3 mb-4">
                         <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center text-2xl">
-                          🟡
+                                                 <img src="https://cdn.allox.ai/allox/networks/bnb.svg" className="w-8 h-8" alt="" />
+
                         </div>
                         <div>
                           <h3 className="text-xl font-bold">BNB Chain</h3>
-                          <p className="text-sm text-gray-600">Binance Chain</p>
+                          <p className="text-sm text-gray-600">Mainnet</p>
                         </div>
                       </div>
                       <p className="text-gray-600 mb-4">
@@ -649,29 +663,31 @@ export function DocsPage() {
                         transactions.
                       </p>
                       <div className="flex items-center gap-2 text-sm">
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                        <span className="text-green-600 font-medium">Live</span>
+                        <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                        <span className="text-orange-600 font-medium">
+                          Q3 2026
+                        </span>
                       </div>
                     </GlassCard>
 
                     <GlassCard className="p-8 opacity-60">
                       <div className="flex items-center gap-3 mb-4">
                         <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center text-2xl">
-                          🔷
+                                                   <img src="https://cdn.allox.ai/allox/networks/solana.svg" className="w-8 h-8" alt="" />
+
                         </div>
                         <div>
-                          <h3 className="text-xl font-bold">Arbitrum</h3>
-                          <p className="text-sm text-gray-600">Ethereum L2</p>
+                          <h3 className="text-xl font-bold">Solana</h3>
+                          <p className="text-sm text-gray-600">Mainnet</p>
                         </div>
                       </div>
                       <p className="text-gray-600 mb-4">
-                        Coming soon. High-speed, low-cost Ethereum scaling
-                        solution.
+                        Ultra fast transactions and extremely low fees.
                       </p>
                       <div className="flex items-center gap-2 text-sm">
                         <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
                         <span className="text-orange-600 font-medium">
-                          Q2 2024
+                          Q4 2026
                         </span>
                       </div>
                     </GlassCard>
@@ -692,9 +708,7 @@ export function DocsPage() {
 
                   <GlassCard className="p-8">
                     <h2 className="text-3xl font-bold mb-6">Installation</h2>
-                    <p className="text-gray-600 mb-6">
-                    Coming Soon
-                    </p>
+                    <p className="text-gray-600 mb-6">Coming Soon</p>
 
                     {/* <div className="relative">
                       <pre className="bg-gray-900 text-gray-100 p-6 rounded-2xl overflow-x-auto">

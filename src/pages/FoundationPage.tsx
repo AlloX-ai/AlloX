@@ -296,7 +296,7 @@ export function FoundationPage() {
                 </p>
 
                 <a
-                  href="https://cdn.worldofdypians.com/AlloXBrand.zip"
+                  href="https://cdn.allox.ai/allox/AlloXBrand.zip"
                   download
                   target="_blank"
                   className="btn-secondary w-full justify-center text-sm"
