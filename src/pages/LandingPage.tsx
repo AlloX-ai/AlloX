@@ -160,7 +160,7 @@ export function LandingPage() {
           </div>
 
           {/* Additional Details - Enhanced */}
-          <div className="text-center">
+          {/* <div className="text-center">
             <GlassCard className="p-8 max-w-3xl mx-auto relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500"></div>
               <p className="text-base text-gray-700 leading-relaxed">
@@ -169,7 +169,7 @@ export function LandingPage() {
                 Proven multi-chain infrastructure. Real value delivered to our community.
               </p>
             </GlassCard>
-          </div>
+          </div> */}
         </div>
       </section>
 
