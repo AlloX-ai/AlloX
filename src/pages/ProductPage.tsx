@@ -4,16 +4,6 @@ import { AnimatedPortfolioDemo } from "../components/AnimatedPortfolioDemo";
 import { MessageSquare, CheckCircle2, Send, ArrowRight } from "lucide-react";
 import { Link } from "react-router";
 import { useEffect } from "react";
-import aiIcon from "../assets/aiIcon.svg";
-import defiIcon from "../assets/defiIcon.svg";
-import desciIcon from "../assets/desciIcon.svg";
-import gamingIcon from "../assets/gamingIcon.svg";
-import layerIcon from "../assets/layerIcon.svg";
-import rwaIcon from "../assets/rwaIcon.svg";
-import aibasketIcon from "../assets/aibasketIcon.svg";
-import narrativeIcon from "../assets/narrativeIcon.svg";
-import riskIcon from "../assets/riskIcon.svg";
-import allocateIcon from "../assets/allocateIcon.svg";
 
 export function ProductPage() {
   useEffect(() => {
@@ -101,7 +91,7 @@ export function ProductPage() {
                 <div className="text-center">
                   <div className="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <img
-                      src={narrativeIcon}
+                      src={`https://cdn.allox.ai/allox/product/narrativeIcon.svg`}
                       alt="Select Narrative"
                       className="text-3xl"
                     />
@@ -114,7 +104,7 @@ export function ProductPage() {
                 <div className="text-center">
                   <div className="w-20 h-20 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <img
-                      src={aibasketIcon}
+                      src={`https://cdn.allox.ai/allox/product/aibasketIcon.svg`}
                       alt="AI Basket"
                       className="text-3xl"
                     />
@@ -126,7 +116,7 @@ export function ProductPage() {
 
                 <div className="text-center">
                   <div className="w-20 h-20 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <img src={riskIcon} alt="Risk Tier" className="text-3xl" />
+                    <img src={`https://cdn.allox.ai/allox/product/riskIcon.svg`} alt="Risk Tier" className="text-3xl" />
                   </div>
                   <p className="font-medium">Risk Tier</p>
                 </div>
@@ -136,7 +126,7 @@ export function ProductPage() {
                 <div className="text-center">
                   <div className="w-20 h-20 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <img
-                      src={allocateIcon}
+                      src={`https://cdn.allox.ai/allox/product/allocateIcon.svg`}
                       alt="Allocate"
                       className="text-3xl"
                     />
@@ -161,7 +151,7 @@ export function ProductPage() {
             <GlassCard hover className="p-8">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <img className="text-2xl" src={gamingIcon} />
+                  <img className="text-2xl" src={`https://cdn.allox.ai/allox/product/gamingIcon`} />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Gaming & Metaverse</h3>
@@ -180,7 +170,7 @@ export function ProductPage() {
             <GlassCard hover className="p-8">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <img className="text-2xl" src={aiIcon} />
+                  <img className="text-2xl" src={`https://cdn.allox.ai/allox/product/aiIcon.svg`} />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">AI & Agents</h3>
@@ -200,7 +190,7 @@ export function ProductPage() {
             <GlassCard hover className="p-8">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <img className="text-2xl" src={rwaIcon} />
+                  <img className="text-2xl" src={`https://cdn.allox.ai/allox/product/rwaIcon.svg`} />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Real World Assets</h3>
@@ -219,7 +209,7 @@ export function ProductPage() {
             <GlassCard hover className="p-8">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <img className="text-2xl" src={defiIcon} />
+                  <img className="text-2xl" src={`https://cdn.allox.ai/allox/product/defiIcon.svg`} />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">
@@ -241,7 +231,7 @@ export function ProductPage() {
             <GlassCard hover className="p-8">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-indigo-400 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <img className="text-2xl" src={layerIcon} />
+                  <img className="text-2xl" src={`https://cdn.allox.ai/allox/product/layerIcon.svg`} />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Layer 1 & Layer 2</h3>
@@ -260,7 +250,7 @@ export function ProductPage() {
             <GlassCard hover className="p-8">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-teal-400 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <img className="text-2xl" src={desciIcon} />
+                  <img className="text-2xl" src={`https://cdn.allox.ai/allox/product/desciIcon.svg`} />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">DeSci</h3>

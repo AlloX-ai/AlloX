@@ -22,8 +22,9 @@ function App() {
       <Route path="/foundation" element={<FoundationPage />} />
       <Route path="/blog" element={<BlogPage />} />
       {/* <Route path="/blog/:postId" element={<BlogPostPage />} />
-      <Route path="/beta" element={<BetaAccessPage />} /> */}
+     */}
       <Route path="/terms" element={<TermsPage />} />
+        <Route path="/beta" element={<BetaAccessPage />} />
       <Route path="/privacy" element={<PrivacyPage />} />
     </Routes>
     <Footer />

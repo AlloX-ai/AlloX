@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
-import aeroToken from '../assets/tokens/aero.svg';
-import virtualToken from '../assets/tokens/virtual.svg';
-import primeToken from '../assets/tokens/prime.svg';
+
 
 
 
@@ -14,10 +12,10 @@ export function AnimatedPortfolioDemo() {
   const userMessage = 'Suggest 3 trending DeFi tokens';
 
   const tokens = [
-    { name: 'AERO', color: 'from-blue-400 to-blue-600', gain: '+24.5%', icon: aeroToken},
-    { name: 'VIRTUAL', color: 'from-purple-400 to-purple-600', gain: '+18.2%', icon: virtualToken },
-    { name: 'PRIME', color: 'from-pink-400 to-pink-600', gain: '+15.8%', icon: primeToken },
-  ];
+    { name: 'AERO', color: 'from-blue-400 to-blue-600', gain: '+24.5%', icon: 'https://cdn.allox.ai/allox/tokens/aero.svg' },
+    { name: 'VIRTUAL', color: 'from-purple-400 to-purple-600', gain: '+18.2%', icon: 'https://cdn.allox.ai/allox/tokens/virtual.svg'  },
+    { name: 'PRIME', color: 'from-pink-400 to-pink-600', gain: '+15.8%', icon: 'https://cdn.allox.ai/allox/tokens/prime.svg'  },
+  ]
 
   useEffect(() => {
     let timer: number | any;

@@ -2,7 +2,6 @@ import { Github, Instagram, Linkedin } from "lucide-react";
 import React from "react";
 import { FaDiscord, FaTelegram, FaXTwitter } from "react-icons/fa6";
 import { Link, NavLink } from "react-router";
-import alloxFull from "../assets/alloxFull.svg";
 
 const Footer = () => {
   return (
@@ -11,7 +10,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img src={alloxFull} alt="AlloX Logo" className="h-8 w-auto" />
+              <img src={`https://cdn.allox.ai/allox/AlloX-desktop.svg`} alt="AlloX Logo" className="h-8 w-auto" />
             </div>
             <p className="text-sm text-gray-600">
               Narrative-driven capital allocation for TradFi & DeFi.
@@ -54,8 +53,8 @@ const Footer = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/foundation#litepaper" className="hover:text-black transition-colors">
-                  Litepaper
+                <NavLink to="/beta" className="hover:text-black transition-colors">
+                  Beta Access
                 </NavLink>
               </li>
               <li>

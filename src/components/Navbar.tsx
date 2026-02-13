@@ -1,7 +1,6 @@
 import { Link, useLocation } from 'react-router';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import alloxFull from '../assets/alloxFull.svg';
 
 export function Navbar() {
   const location = useLocation();
@@ -20,7 +19,7 @@ export function Navbar() {
         <div className="glass-card full-white px-6 py-4 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-           <img src={alloxFull} alt="AlloX Logo" className="h-8 w-auto" />
+           <img src={`https://cdn.allox.ai/allox/AlloX-desktop.svg`} alt="AlloX Logo" className="h-8 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

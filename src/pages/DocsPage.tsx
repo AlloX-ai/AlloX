@@ -39,6 +39,15 @@ export function DocsPage() {
     { id: "api", label: "API & Widget Integration", icon: Code },
   ];
 
+  const wallets = [
+    {id: "metamask", name: "MetaMask", image: "metamaskConnect.svg"},
+    {id: "okx", name: "OKX Wallet", image: "okxConnect.svg"},
+    {id: "walletconnect", name: "WalletConnect", image: "walletConnect.svg"},
+    {id: "trust", name: "Trust Wallet", image: "trustWalletLogo.svg"},
+  ]
+
+
+
   return (
     <div className="min-h-screen bg-pattern">
       <div className="pt-24 px-6">
@@ -203,20 +212,15 @@ export function DocsPage() {
                       Supported Wallets
                     </h2>
                     <div className="grid md:grid-cols-2 gap-4 mb-6">
-                      {[
-                        "MetaMask",
-                        "OKX Wallet",
-                        "WalletConnect",
-                        "Trust Wallet",
-                        // "Binance Wallet",
-                        // "Rainbow",
-                      ].map((wallet) => (
+                      {wallets.map((wallet, index) => (
                         <div
-                          key={wallet}
+                          key={wallet.id}
                           className="flex items-center gap-3 p-4 bg-white/60 backdrop-blur-sm border border-gray-200/50 rounded-2xl"
                         >
-                          <div className="w-10 h-10 bg-gray-100 rounded-xl"></div>
-                          <span className="font-medium">{wallet}</span>
+                          <div className="w-10 h-10 bg-gray-100 rounded-xl">
+                            <img src={`https://cdn.allox.ai/allox/wallets/${wallet.image}`} alt={wallet.name} />
+                          </div>
+                          <span className="font-medium">{wallet.name}</span>
                         </div>
                       ))}
                     </div>
