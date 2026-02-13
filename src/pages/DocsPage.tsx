@@ -595,7 +595,7 @@ export function DocsPage() {
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-6">
-                    <GlassCard className="p-8 opacity-60">
+                    <GlassCard className="p-8 ">
                       <div className="flex items-center gap-3 mb-4">
                         <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-2xl">
                           <img
@@ -614,14 +614,12 @@ export function DocsPage() {
                         operations.
                       </p>
                       <div className="flex items-center gap-2 text-sm">
-                        <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                        <span className="text-orange-600 font-medium">
-                          Q2 2026
-                        </span>
+                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <span className="text-green-600 font-medium">Live</span>
                       </div>
                     </GlassCard>
 
-                    <GlassCard className="p-8 opacity-60">
+                    <GlassCard className="p-8">
                       <div className="flex items-center gap-3 mb-4">
                         <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-2xl">
                           <img
@@ -640,18 +638,19 @@ export function DocsPage() {
                         protocols.
                       </p>
                       <div className="flex items-center gap-2 text-sm">
-                        <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                        <span className="text-orange-600 font-medium">
-                          Q2 2026
-                        </span>
+                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <span className="text-green-600 font-medium">Live</span>
                       </div>
                     </GlassCard>
 
-                    <GlassCard className="p-8 opacity-60">
+                    <GlassCard className="p-8 ">
                       <div className="flex items-center gap-3 mb-4">
                         <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center text-2xl">
-                                                 <img src="https://cdn.allox.ai/allox/networks/bnb.svg" className="w-8 h-8" alt="" />
-
+                          <img
+                            src="https://cdn.allox.ai/allox/networks/bnb.svg"
+                            className="w-8 h-8"
+                            alt=""
+                          />
                         </div>
                         <div>
                           <h3 className="text-xl font-bold">BNB Chain</h3>
@@ -663,18 +662,19 @@ export function DocsPage() {
                         transactions.
                       </p>
                       <div className="flex items-center gap-2 text-sm">
-                        <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                        <span className="text-orange-600 font-medium">
-                          Q3 2026
-                        </span>
+                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <span className="text-green-600 font-medium">Live</span>
                       </div>
                     </GlassCard>
 
-                    <GlassCard className="p-8 opacity-60">
+                    <GlassCard className="p-8 ">
                       <div className="flex items-center gap-3 mb-4">
-                        <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center text-2xl">
-                                                   <img src="https://cdn.allox.ai/allox/networks/solana.svg" className="w-8 h-8" alt="" />
-
+                        <div className="w-12 h-12 bg-[#CAFFEC] rounded-xl flex items-center justify-center text-2xl">
+                          <img
+                            src="https://cdn.allox.ai/allox/networks/solana.svg"
+                            className="w-8 h-8"
+                            alt=""
+                          />
                         </div>
                         <div>
                           <h3 className="text-xl font-bold">Solana</h3>
@@ -685,10 +685,8 @@ export function DocsPage() {
                         Ultra fast transactions and extremely low fees.
                       </p>
                       <div className="flex items-center gap-2 text-sm">
-                        <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                        <span className="text-orange-600 font-medium">
-                          Q4 2026
-                        </span>
+                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <span className="text-green-600 font-medium">Live</span>
                       </div>
                     </GlassCard>
                   </div>

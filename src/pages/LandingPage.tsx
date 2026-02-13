@@ -4,6 +4,7 @@ import { AnimatedChatDemo } from '../components/AnimatedChatDemo';
 import { ArrowRight, MessageSquare, Shield, Zap, Globe, CheckCircle2, TrendingUp, Calendar, Linkedin, Instagram, Github } from 'lucide-react';
 import { FaTelegram, FaDiscord, FaXTwitter } from 'react-icons/fa6';
 import { useEffect } from 'react';
+import { StatsCounter } from '../components/StatsCounter';
 
 export function LandingPage() {
 
@@ -55,6 +56,7 @@ export function LandingPage() {
           </div>
         </div>
       </section>
+      <StatsCounter />
 
       {/* Performance Metrics Section */}
       <section className="py-32 px-6 relative overflow-hidden">
