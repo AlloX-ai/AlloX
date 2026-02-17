@@ -230,10 +230,9 @@ export function FoundationPage() {
                   investing and our AI-powered basket construction methodology.
                 </p>
               </div>
-              <button className="btn-primary w-full justify-center">
-                <Download size={18} className="mr-2" />
-                Download PDF
-              </button>
+              <a href="https://docsend.com/v/zs2hz/allox-deck" target="_blank" className="btn-primary w-full justify-center">
+                View Deck
+              </a>
             </GlassCard>
 
             <GlassCard hover className="p-8 p-8 flex flex-col justify-between">
@@ -253,10 +252,9 @@ export function FoundationPage() {
                   대한 포괄적인 개요.
                 </p>
               </div>
-              <button className="btn-primary w-full justify-center">
-                <Download size={18} className="mr-2" />
-                PDF 다운로드
-              </button>
+              <a href="https://docsend.com/v/zs2hz/allox-deck-kr" target="_blank" className="btn-primary w-full justify-center">
+                피치 덱 열기
+              </a>
             </GlassCard>
           </div>
         </div>

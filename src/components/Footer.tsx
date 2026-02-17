@@ -53,8 +53,8 @@ const Footer = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/beta" className="hover:text-black transition-colors">
-                  Beta Access
+                <NavLink to="/foundation#litepaper" className="hover:text-black transition-colors">
+                  Litepaper
                 </NavLink>
               </li>
               <li>
