@@ -1,6 +1,6 @@
-import { Github, Instagram, Linkedin } from "lucide-react";
+import { Github, Instagram, Linkedin, Mail } from "lucide-react";
 import React from "react";
-import { FaDiscord, FaTelegram, FaXTwitter } from "react-icons/fa6";
+import { FaDiscord, FaFacebook, FaMedium, FaTelegram, FaXTwitter } from "react-icons/fa6";
 import { Link, NavLink } from "react-router";
 
 const Footer = () => {
@@ -67,7 +67,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="grid grid-cols-3 gap-3 h-24">
+          <div className="grid grid-cols-4 gap-3 h-24">
             <a
               href="https://twitter.com"
               target="_blank"
@@ -86,7 +86,7 @@ const Footer = () => {
             >
               <FaTelegram size={20} className="text-gray-700" />
             </a>
-            <a
+            {/* <a
               href="https://discord.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -94,7 +94,7 @@ const Footer = () => {
               aria-label="Discord"
             >
               <FaDiscord size={20} className="text-gray-700" />
-            </a>
+            </a> */}
             <a
               href="https://linkedin.com"
               target="_blank"
@@ -122,6 +122,31 @@ const Footer = () => {
             >
               <Github size={20} className="text-gray-700" />
             </a>
+             <a 
+                href="https://facebook.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-3 glass-card w-12 rounded-xl hover:bg-white/80 hover:shadow-md transition-all duration-200"
+                aria-label="Facebook"
+              >
+                <FaFacebook size={20} className="text-gray-700" />
+              </a>
+              <a 
+                href="https://medium.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-3 glass-card w-12 rounded-xl hover:bg-white/80 hover:shadow-md transition-all duration-200"
+                aria-label="Medium"
+              >
+                <FaMedium size={20} className="text-gray-700" />
+              </a>
+              <a 
+                href="mailto:contact@allox.ai"
+                className="p-3 glass-card w-12 rounded-xl hover:bg-white/80 hover:shadow-md transition-all duration-200"
+                aria-label="Email"
+              >
+                <Mail size={20} className="text-gray-700" />
+              </a>
           </div>
         </div>
 
