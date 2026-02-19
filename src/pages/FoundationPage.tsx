@@ -164,7 +164,7 @@ export function FoundationPage() {
                 <span className="text-green-600 font-bold">2</span>
               </div>
               <h3 className="text-xl font-bold mb-3">
-                Execution Depth Across On Chain Actions
+                On Chain Execution Depth
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
                 Portfolio construction, swaps, staking, rebalancing, and routing

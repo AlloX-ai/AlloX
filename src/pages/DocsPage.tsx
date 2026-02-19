@@ -44,6 +44,7 @@ export function DocsPage() {
     { id: "okx", name: "OKX Wallet", image: "okxConnect.svg" },
     { id: "walletconnect", name: "WalletConnect", image: "walletConnect.svg" },
     { id: "trust", name: "Trust Wallet", image: "trustWalletLogo.svg" },
+    { id: "phantom", name: "Phantom Wallet", image: "phantom.svg" },
   ];
 
   return (
@@ -175,12 +176,12 @@ export function DocsPage() {
                     <h2 className="text-3xl font-bold mb-6">Example Intents</h2>
                     <div className="grid md:grid-cols-2 gap-4">
                       {[
-                        "Swap 100 USDC to ETH",
-                        "Find best staking for AERO",
-                        "Bridge 500 USDT to Base",
-                        "Show trending DeFi tokens",
-                        "Diversify $1000 across top 5 coins",
-                        "What are my staking rewards?",
+                        "Create a low risk DeFi portfolio",
+                        "Build a high risk Memecoin basket",
+                        "Compare AI vs DeFi performance this week",
+                        "How diversified is my current allocation?",
+                        "Suggest a new narrative based on market trends",
+                        "Invest $500 in AI mid cap projects",
                       ].map((intent) => (
                         <div
                           key={intent}
@@ -323,38 +324,56 @@ export function DocsPage() {
                         {
                           name: "Gaming & Metaverse",
                           desc: "Virtual worlds, digital ownership, and on chain gaming experiences.",
+                          live: true,
                         },
                         {
                           name: "AI & Agents",
                           desc: "Decentralized artificial intelligence and autonomous systems.",
+                          live: true,
                         },
                         {
                           name: "Real World Assets",
                           desc: "Bringing real world value onto the blockchain.",
+                          live: true,
                         },
                         {
                           name: "DeFi Infrastructure",
                           desc: "Core financial tools powering decentralized markets.",
+                          live: true,
+                        },
+                        {
+                          name: "Meme Coins",
+                          desc: "Community driven tokens powered by culture and internet trends.",
+                          live: true,
                         },
                         {
                           name: "Layer 1 & Layer 2",
                           desc: "Blockchains and scaling networks that run crypto.",
+                          live: false,
                         },
                         {
                           name: "DeSci",
                           desc: "Open and decentralized scientific research.",
+                          live: false,
                         },
                       ].map((narrative) => (
                         <div
                           key={narrative.name}
-                          className="bg-gray-50 border border-gray-200 rounded-xl p-4"
+                          className="bg-gray-50 border border-gray-200 rounded-xl p-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0"
                         >
-                          <div className="font-bold text-sm mb-1">
-                            {narrative.name}
+                          <div className="flex flex-col">
+                            <div className="font-bold text-sm mb-1">
+                              {narrative.name}
+                            </div>
+                            <code className="text-xs text-gray-600">
+                              {narrative.desc}
+                            </code>
                           </div>
-                          <code className="text-xs text-gray-600">
-                            {narrative.desc}
-                          </code>
+                          {!narrative.live && (
+                            <span className="inline-flex items-center rounded-md bg-yellow-400/10 px-2 py-1 text-xs font-medium text-yellow-500 inset-ring inset-ring-yellow-400/20">
+                              Coming Soon
+                            </span>
+                          )}
                         </div>
                       ))}
                     </div>

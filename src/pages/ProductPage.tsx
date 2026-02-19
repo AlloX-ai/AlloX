@@ -4,6 +4,7 @@ import { AnimatedPortfolioDemo } from "../components/AnimatedPortfolioDemo";
 import { MessageSquare, CheckCircle2, Send, ArrowRight } from "lucide-react";
 import { Link } from "react-router";
 import { useEffect } from "react";
+import { AnimatedNarrativeDemo } from "../components/AnimatedNarrativeDemo";
 
 export function ProductPage() {
   useEffect(() => {
@@ -229,8 +230,8 @@ export function ProductPage() {
 
             {/* Layer 1/2 */}
             <GlassCard hover className="p-8">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-indigo-400 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
+              <div className="flex relative items-start gap-4 mb-4">
+                 <div className="w-12 h-12 bg-gradient-to-br from-indigo-400 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
                   <img className="text-2xl" src={`https://cdn.allox.ai/allox/product/layerIcon.svg`} />
                 </div>
                 <div>
@@ -239,6 +240,9 @@ export function ProductPage() {
                     Blockchain infrastructure plays
                   </p>
                 </div>
+                <span className="absolute -right-4 inline-flex items-center rounded-md bg-yellow-400/10 px-2 py-1 text-xs font-medium text-yellow-500 inset-ring inset-ring-yellow-400/20">
+                              Coming Soon
+                            </span>
               </div>
               <p className="text-gray-600 leading-relaxed">
                 Diversified exposure to leading L1 and L2 blockchain networks
@@ -248,7 +252,7 @@ export function ProductPage() {
 
             {/* DeSci */}
             <GlassCard hover className="p-8">
-              <div className="flex items-start gap-4 mb-4">
+              <div className="flex relative items-start gap-4 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-teal-400 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
                   <img className="text-2xl" src={`https://cdn.allox.ai/allox/product/desciIcon.svg`} />
                 </div>
@@ -258,6 +262,9 @@ export function ProductPage() {
                     Decentralized science projects
                   </p>
                 </div>
+                   <span className="absolute -right-4 inline-flex items-center rounded-md bg-yellow-400/10 px-2 py-1 text-xs font-medium text-yellow-500 inset-ring inset-ring-yellow-400/20">
+                              Coming Soon
+                            </span>
               </div>
               <p className="text-gray-600 leading-relaxed">
                 Early access to the emerging DeSci narrative with curated
@@ -282,7 +289,8 @@ export function ProductPage() {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             {/* Example 1: Swap */}
             <div>
-              <AnimatedSwapDemo />
+              {/* <AnimatedSwapDemo /> */}
+              <AnimatedNarrativeDemo />
               <p className="text-sm text-gray-600 text-center">
                 Transparent basket composition and allocation details
               </p>

@@ -103,7 +103,8 @@ export function StatsCounter() {
       );
       const res: Stats = await response.json();
 
-
+        console.log(res);
+        
         setData(res)
     } catch (error) {
       console.error("Error fetching stats:", error);
@@ -133,13 +134,13 @@ export function StatsCounter() {
        {data ? (
         <div className="glass-card p-8 md:p-12">
           <div className="flex flex-col md:flex-row items-center justify-center divide-y md:divide-y-0 md:divide-x divide-gray-200/50 gap-8 md:gap-0">
-            <StatItem end={Number(data?.stats?.totalUsers)}  label="Wallets" />
+            <StatItem end={Number(data?.stats?.totalUsers)}  label="Registered Wallets" />
             <StatItem
               end={Number(data?.stats?.totalTransactions)}
               
-              label="Prompts Processed"
+              label="Total Transactions"
             />
-            <StatItem end={Number(data?.stats?.totalValueOnChain)} decimals={2} label="Total Volume" prefix="$" />
+            <StatItem end={Number(data?.stats?.totalValueOnChain)} decimals={2} label="Total Value On Chain" prefix="$" />
           </div>
         </div>
       ) : (

@@ -15,7 +15,7 @@ export function TermsPage() {
         <div className="max-w-[1000px] mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Terms of Service</h1>
           <p className="text-lg text-gray-600 mb-12">
-            Last Updated: February 2, 2026
+            Last Updated: February 23, 2026
           </p>
 
           <div className="flex flex-col gap-12">

@@ -17,7 +17,7 @@ export function PrivacyPage() {
         <div className="max-w-[1000px] mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Privacy Policy</h1>
           <p className="text-lg text-gray-600 mb-12">
-            Last Updated: February 2, 2026
+            Last Updated: February 23, 2026
           </p>
 
           <div className="flex flex-col gap-12">
@@ -454,14 +454,7 @@ export function PrivacyPage() {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="py-16 px-6 border-t border-gray-200/50">
-        <div className="max-w-[1440px] mx-auto text-center">
-          <p className="text-gray-600">
-            © 2024 AlloX Foundation. All rights reserved.
-          </p>
-        </div>
-      </footer>
+  
     </div>
   );
 }
