@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 interface Stats {
- stats: {
+  stats: {
     totalUsers: number;
     totalTransactions: number;
     totalValueOnChain: number;
@@ -26,10 +26,6 @@ function StatItem({
   const [count, setCount] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
-
-
-
-
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -73,9 +69,6 @@ function StatItem({
     return Math.floor(num).toLocaleString();
   };
 
-
-  
-
   return (
     <div ref={ref} className="text-center px-6 md:px-8">
       <div className="text-4xl md:text-5xl font-bold mb-2 tracking-tight">
@@ -91,33 +84,24 @@ function StatItem({
 }
 
 export function StatsCounter() {
-
-
-
- const [data, setData] = useState<Stats | null>(null);
+  const [data, setData] = useState<Stats | null>(null);
 
   const getData = async () => {
     try {
-      const response = await fetch(
-        `https://api.allox.ai/season1/stats`,
-      );
+      const response = await fetch(`https://api.allox.ai/season1/stats`);
       const res: Stats = await response.json();
 
-        console.log(res);
-        
-        setData(res)
+      console.log(res);
+
+      setData(res);
     } catch (error) {
       console.error("Error fetching stats:", error);
     }
   };
 
-    useEffect(() => {
-    
-  getData();
-    
-  }, [])
-
-
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <section className="py-16 px-6 relative">
@@ -131,22 +115,37 @@ export function StatsCounter() {
       </div>
 
       <div className="max-w-[1200px] mx-auto relative">
-       {data ? (
-        <div className="glass-card p-8 md:p-12">
-          <div className="flex flex-col md:flex-row items-center justify-center divide-y md:divide-y-0 md:divide-x divide-gray-200/50 gap-8 md:gap-0">
-            <StatItem end={Number(data?.stats?.totalUsers)}  label="Registered Wallets" />
-            <StatItem
-              end={Number(data?.stats?.totalTransactions)}
-              
-              label="Total Transactions"
-            />
-            <StatItem end={Number(data?.stats?.totalValueOnChain)} decimals={2} label="Total Value On Chain" prefix="$" />
+        {data ? (
+          <div className="glass-card p-8 md:p-12">
+            <div className="flex flex-col md:flex-row items-center justify-center divide-y md:divide-y-0 md:divide-x divide-gray-200/50 gap-8 md:gap-0">
+              <StatItem
+                end={Number(data?.stats?.totalUsers)}
+                label="Registered Wallets"
+              />
+              <StatItem
+                end={Number(data?.stats?.totalTransactions)}
+                label="Total Transactions"
+              />
+              <StatItem
+                end={Number(data?.stats?.totalValueOnChain)}
+                decimals={2}
+                label="Total Value On Chain"
+                prefix="$"
+              />
+              <StatItem
+                end={Number(data?.stats?.totalValueOnChain)}
+                decimals={2}
+                label="Total Volume"
+                prefix="$"
+              />
+            </div>
           </div>
-        </div>
-      ) : (
-        <svg className="mr-3 size-5 animate-spin ..." viewBox="0 0 24 24">
-  </svg>
-      )}
+        ) : (
+          <svg
+            className="mr-3 size-5 animate-spin ..."
+            viewBox="0 0 24 24"
+          ></svg>
+        )}
       </div>
     </section>
   );

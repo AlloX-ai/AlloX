@@ -233,9 +233,9 @@ export function LandingPage() {
               <div className="w-12 h-12 bg-gradient-to-br from-pink-500/20 to-pink-600/20 rounded-2xl flex items-center justify-center mb-6">
                 <CheckCircle2 size={24} className="text-pink-600" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Automated Rebalancing</h3>
+              <h3 className="text-xl font-bold mb-3">Narrative Tracking</h3>
               <p className="text-gray-600 leading-relaxed">
-                Baskets are automatically rebalanced as market conditions change, ensuring your narrative exposure stays optimized without manual intervention.
+                Track how capital flows across sectors and adjust exposure based on narrative strength.
               </p>
             </GlassCard>
           </div>
