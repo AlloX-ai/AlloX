@@ -9,16 +9,13 @@ export const ComingSoon = () => {
     });
 
     useEffect(() => {
-        // Set target date (3 days from now for demo purposes)
-
-        const COUNTDOWN_END_UTC = "2026-02-23T14:00:00.000+00:00";
+        const COUNTDOWN_END_UTC = "2026-02-23T15:00:00.000+02:00";
         const endDate = new Date(COUNTDOWN_END_UTC);
         const targetDate = endDate
 
         const updateCountdown = () => {
             const now = new Date().getTime();
             const distance = targetDate.getTime() - now;
-            console.log(now, targetDate.getTime())
             if (distance > 0) {
                 setCountdown({
                     days: Math.floor(distance / (1000 * 60 * 60 * 24)),
@@ -36,7 +33,7 @@ export const ComingSoon = () => {
 
         return () => clearInterval(interval);
     }, []);
-    console.log(countdown)
+
     return (
         <div className="min-h-screen bg-pattern flex flex-col items-center justify-center">
             <section className="pt-24 pb-16 px-6 relative overflow-hidden">
