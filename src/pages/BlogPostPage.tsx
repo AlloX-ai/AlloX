@@ -1,11 +1,13 @@
 import { useParams, Link } from 'react-router';
-import { Navbar } from '../components/Navbar';
 import { GlassCard } from '../components/GlassCard';
 import { ArrowLeft, ArrowRight, Calendar } from 'lucide-react';
+import { useEffect } from 'react';
 
 export function BlogPostPage() {
   const { postId } = useParams();
-
+ useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
   // Mock blog post content
   const post = {
     id: postId,
@@ -85,7 +87,6 @@ export function BlogPostPage() {
 
   return (
     <div className="min-h-screen bg-pattern">
-      <Navbar />
 
       {/* Back Link */}
       <section className="pt-32 pb-8 px-6">
@@ -195,14 +196,7 @@ export function BlogPostPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-16 px-6 border-t border-gray-200/50">
-        <div className="max-w-[1440px] mx-auto text-center">
-          <p className="text-gray-600">
-            © 2024 AlloX Foundation. All rights reserved.
-          </p>
-        </div>
-      </footer>
+   
     </div>
   );
 }

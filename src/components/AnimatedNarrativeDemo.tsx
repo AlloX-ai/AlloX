@@ -1,24 +1,22 @@
 import { useState, useEffect } from 'react';
 
-
-
-
 type AnimationStep = 'idle' | 'typing' | 'show-user' | 'thinking' | 'show-ai';
 
-export function AnimatedPortfolioDemo() {
+export function AnimatedNarrativeDemo() {
   const [step, setStep] = useState<AnimationStep>('idle');
   const [typingText, setTypingText] = useState('');
   
-  const userMessage = 'Suggest 3 trending DeFi tokens';
+  const userMessage = 'Build a high risk Memecoin basket';
 
+  // Memecoin tokens
   const tokens = [
-    { name: 'AERO', color: 'from-blue-400 to-blue-600', gain: '+24.5%', icon: 'https://cdn.allox.ai/allox/tokens/aero.svg' },
-    { name: 'VIRTUAL', color: 'from-purple-400 to-purple-600', gain: '+18.2%', icon: 'https://cdn.allox.ai/allox/tokens/virtual.svg'  },
-    { name: 'PRIME', color: 'from-pink-400 to-pink-600', gain: '+15.8%', icon: 'https://cdn.allox.ai/allox/tokens/prime.svg'  },
-  ]
+    { symbol: 'DOGE', allocation: '35%', color: 'from-yellow-400 to-orange-500' },
+    { symbol: 'SHIB', allocation: '33%', color: 'from-orange-400 to-red-500' },
+    { symbol: 'PEPE', allocation: '32%', color: 'from-green-400 to-green-600' },
+  ];
 
   useEffect(() => {
-    let timer: number | any;
+    let timer: number;
 
     switch (step) {
       case 'idle':
@@ -29,7 +27,7 @@ export function AnimatedPortfolioDemo() {
         if (typingText.length < userMessage.length) {
           timer = setTimeout(() => {
             setTypingText(userMessage.slice(0, typingText.length + 1));
-          }, 50);
+          }, 60);
         } else {
           timer = setTimeout(() => {
             setStep('show-user');
@@ -43,7 +41,7 @@ export function AnimatedPortfolioDemo() {
         break;
 
       case 'thinking':
-        timer = setTimeout(() => setStep('show-ai'), 1500);
+        timer = setTimeout(() => setStep('show-ai'), 1800);
         break;
 
       case 'show-ai':
@@ -51,7 +49,7 @@ export function AnimatedPortfolioDemo() {
           // Reset and restart
           setStep('idle');
           setTypingText('');
-        }, 4000);
+        }, 5000);
         break;
     }
 
@@ -97,33 +95,52 @@ export function AnimatedPortfolioDemo() {
           </div>
         )}
 
-        {/* AI Response */}
+        {/* AI Response - Narrative Basket */}
         {showAIResponse && (
           <div className="flex justify-start animate-slide-up">
-            <div className="bg-white/60 backdrop-blur-sm border border-gray-200/50 px-4 py-3 rounded-2xl rounded-tl-sm">
-              <p className="text-sm mb-3">Here are 3 trending tokens:</p>
+            <div className="bg-white/60 backdrop-blur-sm border border-gray-200/50 px-4 py-3 rounded-2xl rounded-tl-sm min-w-[220px]">
+              {/* Header */}
+              <div className="flex items-center gap-2 mb-3">
+               
+                <div>
+                  <div className="font-bold text-sm">Memecoin • High Risk</div>
+                </div>
+              </div>
+
+              {/* Token Allocation */}
               <div className="space-y-2 mb-3">
                 {tokens.map((token, idx) => (
                   <div 
-                    key={token.name}
-                    className="flex justify-between items-center text-sm animate-fade-in"
-                    style={{ animationDelay: `${idx * 150}ms` }}
+                    key={token.symbol} 
+                    className="flex items-center justify-between text-sm animate-fade-in"
+                    style={{ animationDelay: `${idx * 100}ms` }}
                   >
-                    <div className="flex items-center gap-2"> 
-                      <img src={token.icon} alt='' className='w-6 h-6 rounded-full' />
-                      <span className="font-medium">{token.name}</span>
+                    <div className="flex items-center gap-2">
+                      <div className={`w-6 h-6 rounded-full bg-gradient-to-br`}>
+                        <img src={`https://cdn.allox.ai/allox/tokens/${token.symbol.toLowerCase()}.svg`} alt="" />
+                      </div>
+                      <span className="font-medium">{token.symbol}</span>
                     </div>
-                    <span className="text-green-600 text-xs">{token.gain}</span>
+                    <span className="font-medium text-xs">{token.allocation}</span>
                   </div>
                 ))}
               </div>
-              <p className="text-xs text-gray-600 mb-2">Want to allocate funds?</p>
+
+              {/* Investment Summary */}
+              <div className="border-t border-gray-200/50 pt-2 mb-2 text-xs text-gray-600">
+                <div className="flex justify-between">
+                  <span>Estimated Cost</span>
+                  <span className="font-bold text-black">~$850.00</span>
+                </div>
+              </div>
+
+              {/* Action Buttons */}
               <div className="flex gap-2">
                 <button className="flex-1 py-1.5 bg-black text-white rounded-lg text-xs font-medium">
-                  Allocate $500
+                  Build Basket
                 </button>
                 <button className="flex-1 py-1.5 bg-white/80 border border-gray-200 rounded-lg text-xs font-medium">
-                  Learn More
+                   Details
                 </button>
               </div>
             </div>

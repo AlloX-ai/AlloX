@@ -1,14 +1,20 @@
 import { Link } from 'react-router';
-import { Navbar } from '../components/Navbar';
 import { GlassCard } from '../components/GlassCard';
 import { AnimatedChatDemo } from '../components/AnimatedChatDemo';
 import { ArrowRight, MessageSquare, Shield, Zap, Globe, CheckCircle2, TrendingUp, Calendar, Linkedin, Instagram, Github } from 'lucide-react';
 import { FaTelegram, FaDiscord, FaXTwitter } from 'react-icons/fa6';
+import { useEffect } from 'react';
+import { StatsCounter } from '../components/StatsCounter';
 
 export function LandingPage() {
+
+  useEffect(()=>{
+        window.scrollTo(0,0)
+        document.title = 'AlloX'
+    },[])
+
   return (
     <div className="min-h-screen bg-pattern">
-      <Navbar />
 
       {/* Hero Section */}
       <section className="pt-32 pb-24 px-6">
@@ -32,7 +38,7 @@ export function LandingPage() {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Link to="/app" className="btn-primary text-lg px-8 py-4">
+                <Link to="/app" target='_blank'  className="btn-primary text-lg px-8 py-4">
                   Launch App
                   <ArrowRight size={20} className="ml-2" />
                 </Link>
@@ -50,6 +56,7 @@ export function LandingPage() {
           </div>
         </div>
       </section>
+      <StatsCounter />
 
       {/* Performance Metrics Section */}
       <section className="py-32 px-6 relative overflow-hidden">
@@ -77,35 +84,35 @@ export function LandingPage() {
               <div className="text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-br from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 $150M+
               </div>
-              <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">Market Cap</div>
+              <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">Capital Throughput</div>
             </GlassCard>
 
             <GlassCard hover className="p-8 text-center group transition-all duration-300 hover:scale-105">
               <div className="text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-br from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                87K
+                87K+
               </div>
-              <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">Holders</div>
+              <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">Wallets interacted</div>
             </GlassCard>
 
             <GlassCard hover className="p-8 text-center group transition-all duration-300 hover:scale-105">
               <div className="text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-br from-pink-600 to-orange-600 bg-clip-text text-transparent">
-                175K
+                175K+
               </div>
-              <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">Community</div>
+              <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">Community Reach</div>
             </GlassCard>
 
             <GlassCard hover className="p-8 text-center group transition-all duration-300 hover:scale-105">
               <div className="text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-br from-orange-600 to-green-600 bg-clip-text text-transparent">
-                $100M
+                $100M+
               </div>
-              <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">TVL</div>
+              <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">Assets Allocated</div>
             </GlassCard>
 
             <GlassCard hover className="p-8 text-center group transition-all duration-300 hover:scale-105 col-span-2 lg:col-span-1">
               <div className="text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-br from-green-600 to-cyan-600 bg-clip-text text-transparent">
                 $40M+
               </div>
-              <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">Rewards</div>
+              <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">On chain Rewards</div>
             </GlassCard>
           </div>
 
@@ -155,7 +162,7 @@ export function LandingPage() {
           </div>
 
           {/* Additional Details - Enhanced */}
-          <div className="text-center">
+          {/* <div className="text-center">
             <GlassCard className="p-8 max-w-3xl mx-auto relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500"></div>
               <p className="text-base text-gray-700 leading-relaxed">
@@ -164,7 +171,7 @@ export function LandingPage() {
                 Proven multi-chain infrastructure. Real value delivered to our community.
               </p>
             </GlassCard>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -226,9 +233,9 @@ export function LandingPage() {
               <div className="w-12 h-12 bg-gradient-to-br from-pink-500/20 to-pink-600/20 rounded-2xl flex items-center justify-center mb-6">
                 <CheckCircle2 size={24} className="text-pink-600" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Automated Rebalancing</h3>
+              <h3 className="text-xl font-bold mb-3">Narrative Tracking</h3>
               <p className="text-gray-600 leading-relaxed">
-                Baskets are automatically rebalanced as market conditions change, ensuring your narrative exposure stays optimized without manual intervention.
+                Track how capital flows across sectors and adjust exposure based on narrative strength.
               </p>
             </GlassCard>
           </div>
@@ -258,9 +265,7 @@ export function LandingPage() {
             <GlassCard className="p-10 relative overflow-hidden group">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500"></div>
               <div className="mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mb-4">
-                  <span className="text-3xl">🧠</span>
-                </div>
+                
                 <h3 className="text-2xl font-bold mb-4">Narrative Intelligence</h3>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   AlloX monitors market narratives in real-time, identifying emerging themes and constructing diversified baskets of tokens that represent each narrative's core value proposition.
@@ -285,9 +290,7 @@ export function LandingPage() {
             <GlassCard className="p-10 relative overflow-hidden group">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500"></div>
               <div className="mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl flex items-center justify-center mb-4">
-                  <span className="text-3xl">🌉</span>
-                </div>
+             
                 <h3 className="text-2xl font-bold mb-4">Risk-Managed Allocation</h3>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   Every narrative offers three risk tiers based on market cap distribution. Choose your comfort level while maintaining full diversification within your selected theme.
@@ -344,7 +347,7 @@ export function LandingPage() {
       </section>
 
       {/* Builders Section */}
-      <section className="py-24 px-6">
+      {/* <section className="py-24 px-6">
         <div className="max-w-[1440px] mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl mb-6">Built for Builders</h2>
@@ -384,7 +387,7 @@ export function LandingPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Roadmap Section */}
       <section className="py-24 px-6 overflow-hidden">
@@ -397,38 +400,41 @@ export function LandingPage() {
           <div className="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory -mx-6 px-6">
             <GlassCard className="p-8 min-w-[320px] snap-start">
               <div className="flex items-center gap-3 mb-4">
-                <Calendar size={20} className="text-blue-600" />
-                <div className="text-sm font-medium text-blue-600">Q1 2024</div>
+                <Calendar size={20} className="text-purple-600" />
+                <div className="text-sm font-medium text-purple-600">Q1 2026 - Current</div>
               </div>
-              <div className="w-3 h-3 bg-blue-600 rounded-full mb-4"></div>
+              <div className="w-3 h-3 bg-purple-600 rounded-full mb-4"></div>
               <h3 className="text-xl font-bold mb-3">Foundation Launch</h3>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 size={16} className="text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Core intent parser released</span>
+                  {/* <CheckCircle2 size={16} className="text-green-600 flex-shrink-0 mt-0.5" /> */}
+                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
+                  <span>Beta platform release</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 size={16} className="text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Base network integration</span>
+                  {/* <CheckCircle2 size={16} className="text-green-600 flex-shrink-0 mt-0.5" /> */}
+                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
+                  <span>Narrative engine</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 size={16} className="text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Beta launch with 1K users</span>
+                  {/* <CheckCircle2 size={16} className="text-green-600 flex-shrink-0 mt-0.5" /> */}
+                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
+                  <span>State validation system</span>
                 </li>
               </ul>
             </GlassCard>
 
             <GlassCard className="p-8 min-w-[320px] snap-start ring-2 ring-black/10">
               <div className="flex items-center gap-3 mb-4">
-                <Calendar size={20} className="text-purple-600" />
-                <div className="text-sm font-medium text-purple-600">Q2 2024 - Current</div>
+                <Calendar size={20} className="text-gray-600" />
+                <div className="text-sm font-medium text-gray-600">Q2 2026</div>
               </div>
-              <div className="w-3 h-3 bg-purple-600 rounded-full mb-4 animate-pulse"></div>
+              <div className="w-3 h-3 bg-gray-600 rounded-full mb-4 animate-pulse"></div>
               <h3 className="text-xl font-bold mb-3">Multi-Chain Expansion</h3>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>Ethereum & BNB Chain support</span>
+                 <span>On chain execution</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
@@ -444,22 +450,22 @@ export function LandingPage() {
             <GlassCard className="p-8 min-w-[320px] snap-start">
               <div className="flex items-center gap-3 mb-4">
                 <Calendar size={20} className="text-gray-400" />
-                <div className="text-sm font-medium text-gray-600">Q3 2024</div>
+                <div className="text-sm font-medium text-gray-600">Q3 2026</div>
               </div>
               <div className="w-3 h-3 bg-gray-300 rounded-full mb-4"></div>
-              <h3 className="text-xl font-bold mb-3">Governance & Ecosystem</h3>
+              <h3 className="text-xl font-bold mb-3">Platform & Distribution</h3>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>Token launch & governance</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>Grant program activation</span>
+                  <span>Token launch</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
                   <span>Public API access</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
+                  <span>Grant program activation</span>
                 </li>
               </ul>
             </GlassCard>
@@ -467,14 +473,14 @@ export function LandingPage() {
             <GlassCard className="p-8 min-w-[320px] snap-start">
               <div className="flex items-center gap-3 mb-4">
                 <Calendar size={20} className="text-gray-400" />
-                <div className="text-sm font-medium text-gray-600">Q4 2024</div>
+                <div className="text-sm font-medium text-gray-600">Q4 2026</div>
               </div>
               <div className="w-3 h-3 bg-gray-300 rounded-full mb-4"></div>
-              <h3 className="text-xl font-bold mb-3">Full Decentralization</h3>
+              <h3 className="text-xl font-bold mb-3">Infrastructure & Decentralization</h3>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>Decentralized agent network</span>
+                  <span>Protocol integrations</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
@@ -482,7 +488,7 @@ export function LandingPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>Cross-chain router v2</span>
+                  <span>Chain Expansion</span>
                 </li>
               </ul>
             </GlassCard>
@@ -500,7 +506,7 @@ export function LandingPage() {
             <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
               Experience capital allocation reimagined. AI transforms market narratives into diversified, risk-managed portfolios you can invest in with one click.
             </p>
-            <Link to="/app" className="btn-primary text-lg px-8 py-4 inline-flex items-center">
+            <Link to="/app" target='_blank'  className="btn-primary text-lg px-8 py-4 inline-flex items-center">
               Launch App
               <ArrowRight size={20} className="ml-2" />
             </Link>
@@ -508,123 +514,7 @@ export function LandingPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-16 px-6 border-t border-gray-200/50">
-        <div className="max-w-[1440px] mx-auto">
-          <div className="grid md:grid-cols-4 gap-12 mb-12">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
-                  <div className="w-4 h-4 border-2 border-white rounded-full"></div>
-                </div>
-                <span className="font-bold text-xl">AlloX</span>
-              </div>
-              <p className="text-sm text-gray-600">
-                Narrative-driven capital allocation for TradFi & DeFi.
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="font-bold mb-4">Product</h4>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li><Link to="/product" className="hover:text-black transition-colors">Features</Link></li>
-                <li><Link to="/docs" className="hover:text-black transition-colors">Documentation</Link></li>
-                <li><Link to="/app" className="hover:text-black transition-colors">Launch App</Link></li>
-                <li><a href="#" className="hover:text-black transition-colors">Security</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-bold mb-4">Foundation</h4>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li><Link to="/foundation" className="hover:text-black transition-colors">About</Link></li>
-                <li><a href="#" className="hover:text-black transition-colors">Governance</a></li>
-                <li><a href="#" className="hover:text-black transition-colors">Grants</a></li>
-                <li><Link to="/blog" className="hover:text-black transition-colors">Blog</Link></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-bold mb-4">Developers</h4>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li><a href="#" className="hover:text-black transition-colors">API Reference</a></li>
-                <li><a href="#" className="hover:text-black transition-colors">SDKs</a></li>
-                <li><a href="#" className="hover:text-black transition-colors">GitHub</a></li>
-                <li><a href="#" className="hover:text-black transition-colors">Beta Access</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="pt-8 border-t border-gray-200/50">
-            {/* Social Icons */}
-            <div className="flex justify-center gap-3 mb-6">
-              <a 
-                href="https://twitter.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-3 glass-card rounded-xl hover:bg-white/80 hover:shadow-md transition-all duration-200"
-                aria-label="X (Twitter)"
-              >
-                <FaXTwitter size={20} className="text-gray-700" />
-              </a>
-              <a 
-                href="https://telegram.org" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-3 glass-card rounded-xl hover:bg-white/80 hover:shadow-md transition-all duration-200"
-                aria-label="Telegram"
-              >
-                <FaTelegram size={20} className="text-gray-700" />
-              </a>
-              <a 
-                href="https://discord.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-3 glass-card rounded-xl hover:bg-white/80 hover:shadow-md transition-all duration-200"
-                aria-label="Discord"
-              >
-                <FaDiscord size={20} className="text-gray-700" />
-              </a>
-              <a 
-                href="https://linkedin.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-3 glass-card rounded-xl hover:bg-white/80 hover:shadow-md transition-all duration-200"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={20} className="text-gray-700" />
-              </a>
-              <a 
-                href="https://instagram.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-3 glass-card rounded-xl hover:bg-white/80 hover:shadow-md transition-all duration-200"
-                aria-label="Instagram"
-              >
-                <Instagram size={20} className="text-gray-700" />
-              </a>
-              <a 
-                href="https://github.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-3 glass-card rounded-xl hover:bg-white/80 hover:shadow-md transition-all duration-200"
-                aria-label="GitHub"
-              >
-                <Github size={20} className="text-gray-700" />
-              </a>
-            </div>
-
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-600">
-              <div>© 2024 AlloX Foundation. All rights reserved.</div>
-              <div className="flex gap-6">
-                <a href="#" className="hover:text-black transition-colors">Privacy</a>
-                <a href="#" className="hover:text-black transition-colors">Terms</a>
-                <a href="#" className="hover:text-black transition-colors">Cookies</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+    
     </div>
   );
 }

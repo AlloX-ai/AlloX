@@ -1,4 +1,3 @@
-import { Navbar } from '../components/Navbar';
 import { GlassCard } from '../components/GlassCard';
 import { ActionCard } from '../components/ActionCard';
 import { ChatBubble } from '../components/ChatBubble';
@@ -6,7 +5,6 @@ import { ChatBubble } from '../components/ChatBubble';
 export function DesignSystemPage() {
   return (
     <div className="min-h-screen bg-pattern">
-      <Navbar />
 
       <div className="pt-32 px-6 pb-24">
         <div className="max-w-[1400px] mx-auto">
@@ -392,14 +390,7 @@ export function DesignSystemPage() {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="py-16 px-6 border-t border-gray-200/50">
-        <div className="max-w-[1440px] mx-auto text-center">
-          <p className="text-gray-600">
-            © 2024 AlloX Foundation. All rights reserved.
-          </p>
-        </div>
-      </footer>
+    
     </div>
   );
 }

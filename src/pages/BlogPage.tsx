@@ -1,9 +1,15 @@
-import { Navbar } from '../components/Navbar';
 import { GlassCard } from '../components/GlassCard';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router';
+import { useEffect } from 'react';
 
 export function BlogPage() {
+
+ useEffect(()=>{
+        window.scrollTo(0,0)
+        document.title = 'Blog'
+    },[])
+
   const featuredPost = {
     id: 'multi-chain-expansion',
     category: 'Product Update',
@@ -66,7 +72,6 @@ export function BlogPage() {
 
   return (
     <div className="min-h-screen bg-pattern">
-      <Navbar />
 
       {/* Header */}
       <section className="pt-32 pb-16 px-6">
@@ -152,14 +157,7 @@ export function BlogPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-16 px-6 border-t border-gray-200/50">
-        <div className="max-w-[1440px] mx-auto text-center">
-          <p className="text-gray-600">
-            © 2024 AlloX Foundation. All rights reserved.
-          </p>
-        </div>
-      </footer>
+  
     </div>
   );
 }

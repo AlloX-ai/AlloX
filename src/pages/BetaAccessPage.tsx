@@ -1,16 +1,13 @@
-import { useState } from 'react';
-import { Navbar } from '../components/Navbar';
+import { useEffect, useState } from 'react';
 import { GlassCard } from '../components/GlassCard';
 import { CheckCircle2, Sparkles } from 'lucide-react';
 
 export function BetaAccessPage() {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    telegram: '',
-    projectName: '',
-    projectX: '',
-    service: '',
+    
+    email: '',
+    walletAddress: '',
+    twitter: '',
   });
   const [submitted, setSubmitted] = useState(false);
 
@@ -27,9 +24,13 @@ export function BetaAccessPage() {
     });
   };
 
+    useEffect(() => {
+      window.scrollTo(0, 0);
+      document.title = "Beta Access";
+    }, []);
+
   return (
     <div className="min-h-screen bg-pattern">
-      <Navbar />
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-6">
@@ -41,11 +42,11 @@ export function BetaAccessPage() {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Bridge TradFi & DeFi with AI
+            Get Early Beta Access
           </h1>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Be among the first to integrate AlloX's AI-powered, chat-first experience. Give your users natural language access to portfolio management, opportunity discovery, and onchain execution across both traditional and decentralized finance.
+            Be among the first to explore AlloX
           </p>
         </div>
       </section>
@@ -67,7 +68,7 @@ export function BetaAccessPage() {
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name Fields */}
-                <div className="grid md:grid-cols-2 gap-6">
+                {/* <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium mb-2">
                       First Name *
@@ -99,81 +100,81 @@ export function BetaAccessPage() {
                       placeholder="Doe"
                     />
                   </div>
-                </div>
+                </div> */}
 
                 {/* Telegram */}
                 <div>
-                  <label htmlFor="telegram" className="block text-sm font-medium mb-2">
-                    Personal Telegram *
+                  <label htmlFor="email" className="block text-sm font-medium mb-2">
+                    Email *
                   </label>
                   <input
-                    type="text"
-                    id="telegram"
-                    name="telegram"
-                    value={formData.telegram}
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-white/60 backdrop-blur-sm border border-gray-200/50 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-black/10 focus:bg-white/80 transition-all duration-200"
-                    placeholder="@username"
+                    placeholder="Email"
                   />
                   <p className="text-xs text-gray-500 mt-1">We'll reach out to you here</p>
                 </div>
 
                 {/* Project Name */}
                 <div>
-                  <label htmlFor="projectName" className="block text-sm font-medium mb-2">
-                    Project Name *
+                  <label htmlFor="walletAddress" className="block text-sm font-medium mb-2">
+                    Wallet Address *
                   </label>
                   <input
                     type="text"
-                    id="projectName"
-                    name="projectName"
-                    value={formData.projectName}
+                    id="walletAddress"
+                    name="walletAddress"
+                    value={formData.walletAddress}
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-white/60 backdrop-blur-sm border border-gray-200/50 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-black/10 focus:bg-white/80 transition-all duration-200"
-                    placeholder="Your Project"
+                    placeholder="Wallet Address"
                   />
                 </div>
 
                 {/* Project X Profile */}
                 <div>
-                  <label htmlFor="projectX" className="block text-sm font-medium mb-2">
-                    Project X (Twitter) Profile *
+                  <label htmlFor="twitter" className="block text-sm font-medium mb-2">
+                    X Profile
                   </label>
                   <input
                     type="url"
-                    id="projectX"
-                    name="projectX"
-                    value={formData.projectX}
+                    id="twitter"
+                    name="twitter"
+                    value={formData.twitter}
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-white/60 backdrop-blur-sm border border-gray-200/50 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-black/10 focus:bg-white/80 transition-all duration-200"
-                    placeholder="https://x.com/yourproject"
+                    placeholder="https://x.com/username"
                   />
                 </div>
 
-                {/* Service Interest */}
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium mb-2">
-                    Service Interest *
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={formData.service}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-white/60 backdrop-blur-sm border border-gray-200/50 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-black/10 focus:bg-white/80 transition-all duration-200 cursor-pointer"
-                  >
-                    <option value="">Select a service</option>
-                    <option value="allox-api">AlloX API</option>
-                    <option value="chat-widget">Chat Widget</option>
-                    <option value="intent-parser">Intent Parser</option>
-                    <option value="full-integration">Full Integration</option>
-                    <option value="custom-solution">Custom Solution</option>
-                  </select>
-                </div>
+                  {/* Service Interest */}
+                  {/* <div>
+                    <label htmlFor="service" className="block text-sm font-medium mb-2">
+                      Service Interest *
+                    </label>
+                    <select
+                      id="service"
+                      name="service"
+                      value={formData.service}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 bg-white/60 backdrop-blur-sm border border-gray-200/50 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-black/10 focus:bg-white/80 transition-all duration-200 cursor-pointer"
+                    >
+                      <option value="">Select a service</option>
+                      <option value="allox-api">AlloX API</option>
+                      <option value="chat-widget">Chat Widget</option>
+                      <option value="intent-parser">Intent Parser</option>
+                      <option value="full-integration">Full Integration</option>
+                      <option value="custom-solution">Custom Solution</option>
+                    </select>
+                  </div> */}
 
                 {/* Submit Button */}
                 <button
@@ -194,19 +195,13 @@ export function BetaAccessPage() {
                 <CheckCircle2 size={40} className="text-white" />
               </div>
               
-              <h2 className="text-3xl font-bold mb-4">Application Submitted!</h2>
+              <h2 className="text-3xl font-bold mb-4">Application Received</h2>
               
               <p className="text-lg text-gray-700 mb-6 max-w-lg mx-auto leading-relaxed">
-                Thank you for your interest in AlloX. Our team will review your application and reach out to you on Telegram soon.
+                Thank you for applying. Our team will review your submission and get back to you within a few business days.
               </p>
 
-              <div className="glass-card p-6 bg-gradient-to-br from-blue-50/50 to-purple-50/50 mb-8">
-                <p className="text-sm text-gray-700">
-                  <span className="font-bold">What's next?</span><br />
-                  We typically respond within 2-3 business days. In the meantime, join our community to stay updated!
-                </p>
-              </div>
-
+          
               <button
                 onClick={() => setSubmitted(false)}
                 className="btn-secondary px-8 py-3"
@@ -219,7 +214,7 @@ export function BetaAccessPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-24 px-6 bg-gradient-to-b from-transparent to-gray-50/50">
+      {/* <section className="py-24 px-6 bg-gradient-to-b from-transparent to-gray-50/50">
         <div className="max-w-[1440px] mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Beta Access Benefits</h2>
@@ -254,16 +249,9 @@ export function BetaAccessPage() {
             </GlassCard>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Footer */}
-      <footer className="py-16 px-6 border-t border-gray-200/50">
-        <div className="max-w-[1440px] mx-auto text-center">
-          <p className="text-sm text-gray-600">
-            © 2024 AlloX Foundation. All rights reserved.
-          </p>
-        </div>
-      </footer>
+   
     </div>
   );
 }
