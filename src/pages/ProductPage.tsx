@@ -318,7 +318,7 @@ export function ProductPage() {
               Experience narrative-based investing with AI-constructed baskets
             </p>
             <Link
-              to="http://app.allox.ai/"
+              to="https://app.allox.ai/"
               className="btn-primary text-lg px-8 py-4 inline-flex items-center"
               target="_blank"
               rel="noreferrer"
