@@ -38,7 +38,7 @@ export function LandingPage() {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Link to="/app" target='_blank'  className="btn-primary text-lg px-8 py-4">
+                <Link to="http://app.allox.ai/" target='_blank' rel='noreferrer' className="btn-primary text-lg px-8 py-4">
                   Launch App
                   <ArrowRight size={20} className="ml-2" />
                 </Link>
@@ -506,7 +506,7 @@ export function LandingPage() {
             <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
               Experience capital allocation reimagined. AI transforms market narratives into diversified, risk-managed portfolios you can invest in with one click.
             </p>
-            <Link to="/app" target='_blank'  className="btn-primary text-lg px-8 py-4 inline-flex items-center">
+            <Link to="http://app.allox.ai/" target='_blank' rel="noreferrer" className="btn-primary text-lg px-8 py-4 inline-flex items-center">
               Launch App
               <ArrowRight size={20} className="ml-2" />
             </Link>
