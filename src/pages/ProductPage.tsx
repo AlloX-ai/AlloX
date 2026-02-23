@@ -17,7 +17,7 @@ export function ProductPage() {
       {/* Hero */}
       <section className="pt-32 pb-16 px-6">
         <div className="max-w-[1200px] mx-auto text-center">
-          <h1 className="text-6xl md:text-7xl font-bold mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">
             How AlloX Works
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -240,7 +240,7 @@ export function ProductPage() {
                     Blockchain infrastructure plays
                   </p>
                 </div>
-                <span className="absolute -right-4 inline-flex items-center rounded-md bg-yellow-400/10 px-2 py-1 text-xs font-medium text-yellow-500 inset-ring inset-ring-yellow-400/20">
+                <span className="absolute -right-8 -top-10 sm:-right-4 sm:top-0 inline-flex items-center rounded-md bg-yellow-400/10 px-2 py-1 text-xs font-medium text-yellow-500 inset-ring inset-ring-yellow-400/20">
                   Coming Soon
                 </span>
               </div>
@@ -262,7 +262,7 @@ export function ProductPage() {
                     Decentralized science projects
                   </p>
                 </div>
-                <span className="absolute -right-4 inline-flex items-center rounded-md bg-yellow-400/10 px-2 py-1 text-xs font-medium text-yellow-500 inset-ring inset-ring-yellow-400/20">
+                <span className="absolute  -right-8 -top-10 sm:-right-4 sm:top-0 inline-flex items-center rounded-md bg-yellow-400/10 px-2 py-1 text-xs font-medium text-yellow-500 inset-ring inset-ring-yellow-400/20">
                   Coming Soon
                 </span>
               </div>

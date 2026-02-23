@@ -8,10 +8,10 @@ import { StatsCounter } from '../components/StatsCounter';
 
 export function LandingPage() {
 
-  useEffect(()=>{
-        window.scrollTo(0,0)
-        document.title = 'AlloX'
-    },[])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    document.title = 'AlloX'
+  }, [])
 
   return (
     <div className="min-h-screen bg-pattern">
@@ -27,12 +27,12 @@ export function LandingPage() {
                   Bridging TradFi & DeFi
                 </div>
               </div>
-              
-              <h1 className="text-6xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight">
+
+              <h1 className="text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight">
                 Invest in Narratives,
                 <br />Not Tokens
               </h1>
-              
+
               <p className="text-xl text-gray-600 max-w-xl leading-relaxed">
                 An AI-powered capital allocation platform that transforms market narratives into diversified, risk-managed portfolios. Bridging TradFi and DeFi through transparent, automated basket construction.
               </p>
@@ -62,7 +62,7 @@ export function LandingPage() {
       <section className="py-32 px-6 relative overflow-hidden">
         {/* Background gradient effect */}
         <div className="absolute inset-0 bg-gradient-to-b from-blue-50/30 via-purple-50/20 to-transparent pointer-events-none"></div>
-        
+
         <div className="max-w-[1440px] mx-auto relative">
           <div className="text-center mb-16">
             <div className="inline-block mb-6">
@@ -80,36 +80,36 @@ export function LandingPage() {
 
           {/* Key Metrics Grid - Enhanced */}
           <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-6 mb-16">
-            <GlassCard hover className="p-8 text-center group transition-all duration-300 hover:scale-105">
-              <div className="text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-br from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <GlassCard hover className="flex flex-col justify-center p-4 sm:p-8 text-center group transition-all duration-300 hover:scale-105">
+              <div className="text-2xl lg:text-5xl font-bold mb-0 sm:mb-3 bg-gradient-to-br from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 $150M+
               </div>
               <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">Capital Throughput</div>
             </GlassCard>
 
-            <GlassCard hover className="p-8 text-center group transition-all duration-300 hover:scale-105">
-              <div className="text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-br from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <GlassCard hover className="flex flex-col justify-center p-4 sm:p-8 text-center group transition-all duration-300 hover:scale-105">
+              <div className="text-2xl lg:text-5xl font-bold mb-0 sm:mb-3 bg-gradient-to-br from-purple-600 to-pink-600 bg-clip-text text-transparent">
                 87K+
               </div>
               <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">Wallets interacted</div>
             </GlassCard>
 
-            <GlassCard hover className="p-8 text-center group transition-all duration-300 hover:scale-105">
-              <div className="text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-br from-pink-600 to-orange-600 bg-clip-text text-transparent">
+            <GlassCard hover className="flex flex-col justify-center p-4 sm:p-8 text-center group transition-all duration-300 hover:scale-105">
+              <div className="text-2xl lg:text-5xl font-bold mb-0 sm:mb-3 bg-gradient-to-br from-pink-600 to-orange-600 bg-clip-text text-transparent">
                 175K+
               </div>
               <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">Community Reach</div>
             </GlassCard>
 
-            <GlassCard hover className="p-8 text-center group transition-all duration-300 hover:scale-105">
-              <div className="text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-br from-orange-600 to-green-600 bg-clip-text text-transparent">
+            <GlassCard hover className="flex flex-col justify-center p-4 sm:p-8 text-center group transition-all duration-300 hover:scale-105">
+              <div className="text-2xl lg:text-5xl font-bold mb-0 sm:mb-3 bg-gradient-to-br from-orange-600 to-green-600 bg-clip-text text-transparent">
                 $100M+
               </div>
               <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">Assets Allocated</div>
             </GlassCard>
 
-            <GlassCard hover className="p-8 text-center group transition-all duration-300 hover:scale-105 col-span-2 lg:col-span-1">
-              <div className="text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-br from-green-600 to-cyan-600 bg-clip-text text-transparent">
+            <GlassCard hover className="flex flex-col justify-center p-4 sm:p-8 text-center group transition-all duration-300 hover:scale-105 col-span-2 lg:col-span-1">
+              <div className="text-2xl lg:text-5xl font-bold mb-0 sm:mb-3 bg-gradient-to-br from-green-600 to-cyan-600 bg-clip-text text-transparent">
                 $40M+
               </div>
               <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">On chain Rewards</div>
@@ -245,7 +245,7 @@ export function LandingPage() {
       {/* AI Capabilities Section */}
       <section className="py-24 px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/40 via-transparent to-purple-50/40 pointer-events-none"></div>
-        
+
         <div className="max-w-[1440px] mx-auto relative">
           <div className="text-center mb-16">
             <div className="inline-block mb-6">
@@ -265,7 +265,7 @@ export function LandingPage() {
             <GlassCard className="p-10 relative overflow-hidden group">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500"></div>
               <div className="mb-6">
-                
+
                 <h3 className="text-2xl font-bold mb-4">Narrative Intelligence</h3>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   AlloX monitors market narratives in real-time, identifying emerging themes and constructing diversified baskets of tokens that represent each narrative's core value proposition.
@@ -290,7 +290,7 @@ export function LandingPage() {
             <GlassCard className="p-10 relative overflow-hidden group">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500"></div>
               <div className="mb-6">
-             
+
                 <h3 className="text-2xl font-bold mb-4">Risk-Managed Allocation</h3>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   Every narrative offers three risk tiers based on market cap distribution. Choose your comfort level while maintaining full diversification within your selected theme.
@@ -324,11 +324,11 @@ export function LandingPage() {
                 AlloX Foundation
               </div>
             </div>
-            
+
             <h2 className="text-5xl md:text-6xl mb-8 leading-tight">
               Narrative-Driven Capital Allocation
             </h2>
-            
+
             <div className="glass-card p-12 mb-8">
               <p className="text-xl text-gray-700 leading-relaxed mb-6">
                 <span className="font-bold">Our mission:</span> Transform how people invest in crypto by replacing token-picking with narrative-based allocation, where AI constructs, manages, and rebalances diversified baskets that capture the true value of market themes.
@@ -393,7 +393,7 @@ export function LandingPage() {
       <section className="py-24 px-6 overflow-hidden">
         <div className="max-w-[1440px] mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl mb-6">Roadmap</h2>
+            <h2 className="text-4xl md:text-6xl mb-6">Roadmap</h2>
             <p className="text-xl text-gray-600">Key milestones in our journey</p>
           </div>
 
@@ -407,19 +407,19 @@ export function LandingPage() {
               <h3 className="text-xl font-bold mb-3">Foundation Launch</h3>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-start gap-2">
-                  {/* <CheckCircle2 size={16} className="text-green-600 flex-shrink-0 mt-0.5" /> */}
-                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
+                  <CheckCircle2 size={16} className="text-green-600 flex-shrink-0 mt-0.5" />
+                  {/* <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div> */}
                   <span>Beta platform release</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  {/* <CheckCircle2 size={16} className="text-green-600 flex-shrink-0 mt-0.5" /> */}
-                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>Narrative engine</span>
+                  <CheckCircle2 size={16} className="text-green-600 flex-shrink-0 mt-0.5" />
+                  {/* <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div> */}
+                  <span>AlloX Campaign</span>
                 </li>
                 <li className="flex items-start gap-2">
                   {/* <CheckCircle2 size={16} className="text-green-600 flex-shrink-0 mt-0.5" /> */}
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>State validation system</span>
+                  <span>Daily Bonus</span>
                 </li>
               </ul>
             </GlassCard>
@@ -434,7 +434,7 @@ export function LandingPage() {
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                 <span>On chain execution</span>
+                  <span>On chain execution</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
@@ -499,8 +499,8 @@ export function LandingPage() {
       {/* Final CTA */}
       <section className="py-24 px-6">
         <div className="max-w-[1440px] mx-auto">
-          <GlassCard className="p-16 text-center">
-            <h2 className="text-5xl md:text-6xl mb-6">
+          <GlassCard className="p-8 md:p-16 text-center">
+            <h2 className="text-4xl md:text-6xl mb-6">
               Invest in Themes, Not Tokens
             </h2>
             <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
@@ -514,7 +514,7 @@ export function LandingPage() {
         </div>
       </section>
 
-    
+
     </div>
   );
 }

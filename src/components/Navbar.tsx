@@ -58,7 +58,7 @@ export function Navbar() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-2 glass-card p-6 space-y-4 animate-fade-in">
+          <div className="md:hidden mt-2 bg-white rounded-2xl p-6 space-y-4 animate-fade-in">
             {navItems.map((item) => (
               <Link
                 key={item.label}

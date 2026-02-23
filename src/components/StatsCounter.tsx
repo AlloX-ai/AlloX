@@ -109,8 +109,6 @@ export function StatsCounter() {
       const response = await fetch(`https://api.allox.ai/season1/stats`);
       const res: Stats = await response.json();
 
-      console.log(res);
-
       setData(res);
     } catch (error) {
       console.error("Error fetching stats:", error);
