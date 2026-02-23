@@ -34,7 +34,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/app" target='_blank' className="hover:text-black transition-colors">
+                <Link to="http://app.allox.ai/" target='_blank' rel="noreferrer" className="hover:text-black transition-colors">
                   Launch App
                 </Link>
               </li>
@@ -69,7 +69,7 @@ const Footer = () => {
           </div>
           <div className="grid grid-cols-4 gap-3 h-24">
             <a
-              href="https://twitter.com"
+              href="https://x.com/alloxdotai"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 glass-card w-12 rounded-xl hover:bg-white/80 hover:shadow-md transition-all duration-200"
@@ -78,7 +78,7 @@ const Footer = () => {
               <FaXTwitter size={20} className="text-gray-700" />
             </a>
             <a
-              href="https://telegram.org"
+              href="https://t.me/alloxai"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 glass-card w-12 rounded-xl hover:bg-white/80 hover:shadow-md transition-all duration-200"
@@ -96,7 +96,7 @@ const Footer = () => {
               <FaDiscord size={20} className="text-gray-700" />
             </a> */}
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/alloxai"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 glass-card w-12 rounded-xl hover:bg-white/80 hover:shadow-md transition-all duration-200"
@@ -105,7 +105,7 @@ const Footer = () => {
               <Linkedin size={20} className="text-gray-700" />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/allox.ai"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 glass-card w-12 rounded-xl hover:bg-white/80 hover:shadow-md transition-all duration-200"
@@ -114,7 +114,7 @@ const Footer = () => {
               <Instagram size={20} className="text-gray-700" />
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/AlloX-ai"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 glass-card w-12 rounded-xl hover:bg-white/80 hover:shadow-md transition-all duration-200"
@@ -123,7 +123,7 @@ const Footer = () => {
               <Github size={20} className="text-gray-700" />
             </a>
              <a 
-                href="https://facebook.com" 
+                href="https://www.facebook.com/alloxai" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-3 glass-card w-12 rounded-xl hover:bg-white/80 hover:shadow-md transition-all duration-200"
@@ -132,7 +132,7 @@ const Footer = () => {
                 <FaFacebook size={20} className="text-gray-700" />
               </a>
               <a 
-                href="https://medium.com" 
+                href="https://medium.com/@allox" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-3 glass-card w-12 rounded-xl hover:bg-white/80 hover:shadow-md transition-all duration-200"
