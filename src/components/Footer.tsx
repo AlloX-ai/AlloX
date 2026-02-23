@@ -34,7 +34,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="http://app.allox.ai/" target='_blank' rel="noreferrer" className="hover:text-black transition-colors">
+                <Link to="https://app.allox.ai/" target='_blank' rel="noreferrer" className="hover:text-black transition-colors">
                   Launch App
                 </Link>
               </li>
