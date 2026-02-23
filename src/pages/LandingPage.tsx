@@ -298,15 +298,15 @@ export function LandingPage() {
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 size={16} className="text-purple-600 mt-0.5 flex-shrink-0" />
-                    <span>High Cap: Lower risk, established projects (&gt;$1B MC)</span>
+                    <span>High Cap: Lower risk, established projects (&gt;$200M MC)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 size={16} className="text-purple-600 mt-0.5 flex-shrink-0" />
-                    <span>Mid Cap: Balanced growth potential ($100M-$1B MC)</span>
+                    <span>Mid Cap: Balanced growth potential ($50M-$200M MC)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 size={16} className="text-purple-600 mt-0.5 flex-shrink-0" />
-                    <span>Low Cap: Higher risk/reward early-stage (&lt;$100M MC)</span>
+                    <span>Low Cap: Higher risk/reward early-stage ($5M-$50M MC)</span>
                   </li>
                 </ul>
               </div>
