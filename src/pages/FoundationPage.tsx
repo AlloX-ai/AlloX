@@ -53,7 +53,7 @@ export function FoundationPage() {
             </div>
           </div>
 
-          <h1 className="text-6xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-8 max-w-5xl mx-auto animate-fade-in">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-8 max-w-5xl mx-auto animate-fade-in">
             From narratives to portfolios.
           </h1>
 
