@@ -391,21 +391,21 @@ export function DocsPage() {
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 bg-green-600 rounded-full mt-2"></div>
                         <span className="text-gray-700">
-                          <strong>High Cap (&gt;$1B):</strong> Lower risk,
+                          <strong>High Cap (&gt;$200M):</strong> Lower risk,
                           established projects with proven track records
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2"></div>
                         <span className="text-gray-700">
-                          <strong>Mid Cap ($100M-$1B):</strong> Balanced
+                          <strong>Mid Cap ($50M-$200M):</strong> Balanced
                           risk/reward with growth potential
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 bg-orange-600 rounded-full mt-2"></div>
                         <span className="text-gray-700">
-                          <strong>Low Cap (&lt;$100M):</strong> Higher
+                          <strong>Low Cap ($5M-$50M):</strong> Higher
                           risk/reward early-stage opportunities
                         </span>
                       </li>

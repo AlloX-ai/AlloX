@@ -64,11 +64,28 @@ function StatItem({
   }, [end, hasAnimated]);
 
   const formatNumber = (num: number) => {
-    if (decimals > 0) {
-      return num.toFixed(decimals);
-    }
-    return Math.floor(num).toLocaleString();
-  };
+  const abs = Math.abs(num);
+
+  let formatted: number;
+  let suffixLabel = "";
+
+  if (abs >= 1_000_000_000) {
+    formatted = num / 1_000_000_000;
+    suffixLabel = "B";
+  } else if (abs >= 1_000_000) {
+    formatted = num / 1_000_000;
+    suffixLabel = "M";
+  } else if (abs >= 1_000) {
+    formatted = num / 1_000;
+    suffixLabel = "K";
+  } else {
+    return decimals > 0
+      ? num.toFixed(decimals)
+      : Math.floor(num).toLocaleString();
+  }
+
+  return `${formatted.toFixed(decimals || 1)}${suffixLabel}`;
+};
 
   return (
     <div ref={ref} className="text-center px-6 md:px-8">
@@ -129,13 +146,13 @@ export function StatsCounter() {
               />
               <StatItem
                 end={Number(data?.stats?.totalValueOnChain)}
-                decimals={2}
+                decimals={1}
                 label="Total Value On Chain"
                 prefix="$"
               />
               <StatItem
                 end={Number(data?.stats?.totalVolume)}
-                decimals={2}
+                decimals={1}
                 label="Total Volume"
                 prefix="$"
               />
