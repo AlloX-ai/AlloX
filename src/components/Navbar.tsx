@@ -42,7 +42,7 @@ export function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Link to="/app" target='_blank'  className="btn-primary">
+            <Link to="http://app.allox.ai/" target='_blank' rel='noreferrer'  className="btn-primary">
               Launch App
             </Link>
           </div>
@@ -70,7 +70,7 @@ export function Navbar() {
               </Link>
             ))}
             <Link
-              to="/app" target='_blank' 
+              to="http://app.allox.ai/" target='_blank' rel="noreferrer"
               className="btn-primary block text-center"
               onClick={() => setMobileMenuOpen(false)}
             >
