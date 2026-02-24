@@ -417,8 +417,8 @@ export function LandingPage() {
                   <span>AlloX Campaign</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  {/* <CheckCircle2 size={16} className="text-green-600 flex-shrink-0 mt-0.5" /> */}
-                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
+                  <CheckCircle2 size={16} className="text-green-600 flex-shrink-0 mt-0.5" />
+                  {/* <div className="w-4 h-4 border-2 border-green-400 rounded-full flex-shrink-0 mt-0.5"></div> */}
                   <span>Daily Bonus</span>
                 </li>
               </ul>
