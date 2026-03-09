@@ -41,6 +41,7 @@ export function DocsPage() {
 
   const wallets = [
     { id: "metamask", name: "MetaMask", image: "metamaskConnect.svg" },
+    { id: "binance", name: "Binance Wallet", image: "binanceWallet.svg" },
     { id: "okx", name: "OKX Wallet", image: "okxConnect.svg" },
     { id: "walletconnect", name: "WalletConnect", image: "walletConnect.svg" },
     { id: "trust", name: "Trust Wallet", image: "trustWalletLogo.svg" },
@@ -82,11 +83,10 @@ export function DocsPage() {
                           setActiveSection(section.id);
                           window.scrollTo(0, 0);
                         }}
-                        className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all ${
-                          activeSection === section.id
+                        className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all ${activeSection === section.id
                             ? "bg-black text-white"
                             : "text-gray-700 hover:bg-black/5"
-                        }`}
+                          }`}
                       >
                         <Icon size={18} />
                         {section.label}
