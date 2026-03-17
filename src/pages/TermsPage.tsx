@@ -15,7 +15,7 @@ export function TermsPage() {
         <div className="max-w-[1000px] mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Terms of Service</h1>
           <p className="text-lg text-gray-600 mb-12">
-            Last Updated: February 23, 2026
+            Last Updated: March 17, 2026
           </p>
 
           <div className="flex flex-col gap-12">
@@ -313,8 +313,25 @@ export function TermsPage() {
             </section>
 
             {/* Contact */}
+             <section className="glass-card p-8">
+              <h2 className="text-3xl font-bold mb-4 text-black">18. Activity Terms & Rewards</h2>
+              <div className="space-y-4 text-gray-700 leading-relaxed">
+                <p>
+                  <strong>Disqualification Rights:</strong> AlloX reserves the right to disqualify a user's reward eligibility if AlloX determines that the user has breached the AlloX Terms of Use, tampered with AlloX program code, or interfered with the operation of AlloX program code with other software.
+                </p>
+                <p>
+                  <strong>Program Modifications:</strong> AlloX reserves the right at any time in its sole and absolute discretion to determine and/or amend or vary these Activity Terms without prior notice, including but not limited to canceling, extending, terminating or suspending the activities, its eligibility terms and criteria, the selection and number of winners, and the timing of any act to be done, and all users shall be bound by these amendments.
+                </p>
+                <p>
+                  <strong>Reward Value Variability:</strong> The value of Gems and Points can change based on multiple factors including but not limited to market conditions, token economics, and platform participation levels.
+                </p>
+                <p>
+                  <strong>Vesting Terms:</strong> Future rewards may be subject to cliff and vesting periods. Users will be notified of any applicable vesting schedules before claiming rewards.
+                </p>
+              </div>
+            </section>
             <section className="glass-card p-8">
-              <h2 className="text-3xl font-bold mb-4">18. Contact Information</h2>
+              <h2 className="text-3xl font-bold mb-4">19. Contact Information</h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
                   If you have questions about these Terms, please contact us at:
