@@ -120,7 +120,7 @@ export function LandingPage() {
               className="flex flex-col justify-center p-4 sm:p-8 text-center group transition-all duration-300 hover:scale-105"
             >
               <div className="text-2xl lg:text-5xl font-bold mb-0 sm:mb-3 bg-gradient-to-br from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                87K+
+                500K+
               </div>
               <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">
                 Wallets interacted
@@ -398,7 +398,7 @@ export function LandingPage() {
                       className="text-purple-600 mt-0.5 flex-shrink-0"
                     />
                     <span>
-                      High Cap: Lower risk, established projects (&gt;$200M MC)
+                      High Cap: Lower risk, established projects (&gt;$150M+ MC)
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
@@ -407,7 +407,7 @@ export function LandingPage() {
                       className="text-purple-600 mt-0.5 flex-shrink-0"
                     />
                     <span>
-                      Mid Cap: Balanced growth potential ($50M-$200M MC)
+                      Mid Cap: Balanced growth potential ($30M-$150M MC)
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
@@ -416,7 +416,7 @@ export function LandingPage() {
                       className="text-purple-600 mt-0.5 flex-shrink-0"
                     />
                     <span>
-                      Low Cap: Higher risk/reward early-stage ($5M-$50M MC)
+                      Low Cap: Higher risk/reward early-stage ($2M-$30M MC)
                     </span>
                   </li>
                 </ul>
