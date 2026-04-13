@@ -403,8 +403,7 @@ export function FoundationPage() {
                 </div>
                 <h2 className="text-4xl md:text-5xl mb-6">Audited & Secure</h2>
                 <p className="text-xl text-gray-600 mb-8">
-                  Our smart contracts have been rigorously audited by leading
-                  blockchain security firms to ensure the safety of your assets.
+                  Our dApp has been rigorously audited by a leading blockchain security firm to ensure the safety of your assets.
                 </p>
                 <div className="flex flex-col lg:flex-row items-center gap-4">
                   <a
@@ -446,7 +445,7 @@ export function FoundationPage() {
                       />
                       <script xmlns="" />
                     </svg>
-                    Certik
+                    CertiK
                     <ArrowRight
                       size={20}
                       className=" group-hover:translate-x-1 transition-transform"
