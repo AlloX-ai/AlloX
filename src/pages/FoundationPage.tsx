@@ -42,6 +42,28 @@ export function FoundationPage() {
     // window.scrollTo(0, 0);
   }, []);
 
+
+    const partners = [
+    {name: "BNB Chain", icon: "bnbChain" },
+    {name: "Base", icon: "base" },
+    {name: "Binance Wallet", icon: "binanceWallet" },
+    {name: "TrustWallet", icon: "trustWallet" },
+    {name: "Gate Wallet", icon: "gateWallet" },
+    {name: "Zerra Ventures", icon: "zerraVentures" },
+    {name: "XPIN Network", icon: "xpinNetwork" },
+    {name: "SWFT BLOCKCHAIN", icon: "swftBlockchain" },
+    {name: "Bridgers", icon: "bridgers" },
+    {name: "OKX Wallet", icon: "okxWallet" },
+    {name: "PancakeSwap", icon: "pancakeSwap" },
+    {name: "Simplicity Group", icon: "simplicityGroup" },
+    {name: "ChainGPT", icon: "chainGpt" },
+    {name: "Oortech", icon: "oortech" },
+    {name: "iMe", icon: "iMe" },
+    {name: "MoonWhale", icon: "moonWhale" },
+    {name: "World Mobile", icon: "worldMobile" },
+    {name: "World of Dypians", icon: "wod" },
+  ]
+
   return (
     <div className="min-h-screen bg-pattern">
       {/* Hero Section */}
@@ -335,63 +357,34 @@ export function FoundationPage() {
       </section>
 
          {/* Partners Section */}
-      {/* <section className="py-24 px-6 bg-gradient-to-b from-gray-50/50 to-transparent">
+       <section className="py-24 px-6 bg-gradient-to-b from-gray-50/50 to-transparent" id="partners">
         <div className="max-w-[1440px] mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl mb-4">Trusted Partners</h2>
+            <h2 className="text-4xl md:text-5xl mb-4">Partners & Backers</h2>
             <p className="text-xl text-gray-600">
               Collaborating with industry leaders to shape the future
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-            <GlassCard className="p-8 flex items-center justify-center hover:scale-105 transition-transform duration-300">
+          {partners.map((partner) => (
+              <GlassCard className="p-8 flex items-center justify-center hover:scale-105 transition-transform duration-300">
               <div className="text-center">
-                <div className="text-5xl mb-2">⟠</div>
-                <p className="text-xs font-medium text-gray-600">Ethereum</p>
+                <img
+                  src={`https://cdn.allox.ai/allox/partners/${partner.icon}.svg`}
+                  alt={partner.name}
+                  className="h-12 mx-auto mb-4"
+                />
+                <p className="text-xs font-medium text-gray-600">{partner.name}</p>
               </div>
             </GlassCard>
-
-            <GlassCard className="p-8 flex items-center justify-center hover:scale-105 transition-transform duration-300">
-              <div className="text-center">
-                <div className="text-5xl mb-2">⬢</div>
-                <p className="text-xs font-medium text-gray-600">Polygon</p>
-              </div>
-            </GlassCard>
-
-            <GlassCard className="p-8 flex items-center justify-center hover:scale-105 transition-transform duration-300">
-              <div className="text-center">
-                <div className="text-5xl mb-2">🔵</div>
-                <p className="text-xs font-medium text-gray-600">Arbitrum</p>
-              </div>
-            </GlassCard>
-
-            <GlassCard className="p-8 flex items-center justify-center hover:scale-105 transition-transform duration-300">
-              <div className="text-center">
-                <div className="text-5xl mb-2">🔷</div>
-                <p className="text-xs font-medium text-gray-600">Base</p>
-              </div>
-            </GlassCard>
-
-            <GlassCard className="p-8 flex items-center justify-center hover:scale-105 transition-transform duration-300">
-              <div className="text-center">
-                <div className="text-5xl mb-2">🔗</div>
-                <p className="text-xs font-medium text-gray-600">Chainlink</p>
-              </div>
-            </GlassCard>
-
-            <GlassCard className="p-8 flex items-center justify-center hover:scale-105 transition-transform duration-300">
-              <div className="text-center">
-                <div className="text-5xl mb-2">📊</div>
-                <p className="text-xs font-medium text-gray-600">The Graph</p>
-              </div>
-            </GlassCard>
+          ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Security Section */}
-      <section className="py-24 px-6">
+      <section className="py-24 px-6" id="security">
         <div className="max-w-[1440px] mx-auto">
           <GlassCard className="p-12 md:p-16">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -443,7 +436,7 @@ export function FoundationPage() {
                         d="M5.2113 12.6898H16.5597C16.6867 12.6898 16.8085 12.6394 16.8983 12.5495C16.9881 12.4597 17.0386 12.338 17.0386 12.2109C17.0386 12.0839 16.9881 11.9621 16.8983 11.8723C16.8085 11.7825 16.6867 11.732 16.5597 11.732H5.2113C5.08429 11.732 4.96249 11.7825 4.87268 11.8723C4.78288 11.9621 4.73242 12.0839 4.73242 12.2109C4.73242 12.338 4.78288 12.4597 4.87268 12.5495C4.96249 12.6394 5.08429 12.6898 5.2113 12.6898Z"
                         fill="white"
                       />
-                      <script xmlns="" />
+                      <script  />
                     </svg>
                     CertiK
                     <ArrowRight
