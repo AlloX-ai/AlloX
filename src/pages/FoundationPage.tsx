@@ -44,24 +44,25 @@ export function FoundationPage() {
 
 
     const partners = [
-    {name: "BNB Chain", icon: "bnbChain" },
-    {name: "Base", icon: "base" },
-    {name: "Binance Wallet", icon: "binanceWallet" },
-    {name: "TrustWallet", icon: "trustWallet" },
-    {name: "Gate Wallet", icon: "gateWallet" },
-    {name: "Zerra Ventures", icon: "zerraVentures" },
-    {name: "XPIN Network", icon: "xpinNetwork" },
-    {name: "SWFT BLOCKCHAIN", icon: "swftBlockchain" },
-    {name: "Bridgers", icon: "bridgers" },
-    {name: "OKX Wallet", icon: "okxWallet" },
-    {name: "PancakeSwap", icon: "pancakeSwap" },
-    {name: "Simplicity Group", icon: "simplicityGroup" },
-    {name: "ChainGPT", icon: "chainGpt" },
-    {name: "Oortech", icon: "oortech" },
-    {name: "iMe", icon: "iMe" },
-    {name: "MoonWhale", icon: "moonWhale" },
-    {name: "World Mobile", icon: "worldMobile" },
-    {name: "World of Dypians", icon: "wod" },
+    {name: "BNB Chain", icon: "bnbChain.svg" },
+    {name: "Base", icon: "base.svg" },
+    {name: "Binance Wallet", icon: "binanceWallet.svg" },
+    {name: "TrustWallet", icon: "trustWallet.svg" },
+    {name: "Gate Wallet", icon: "gateWallet.svg" },
+    {name: "Zerra Ventures", icon: "zerraVentures.svg" },
+    {name: "XPIN Network", icon: "xpinNetwork.svg" },
+    {name: "SWFT BLOCKCHAIN", icon: "swftBlockchain.svg" },
+    {name: "Bridgers", icon: "bridgers.svg" },
+    {name: "OKX Wallet", icon: "okxWallet.svg" },
+    {name: "PancakeSwap", icon: "pancakeSwap.svg" },
+    {name: "Simplicity Group", icon: "simplicityGroup.svg" },
+    {name: "ChainGPT", icon: "chainGpt.svg" },
+    {name: "Oortech", icon: "oortech.svg" },
+    {name: "iMe", icon: "iMe.svg" },
+    {name: "MoonWhale", icon: "moonWhale.svg" },
+    {name: "World Mobile", icon: "worldMobile.svg" },
+    {name: "World of Dypians", icon: "wod.svg" },
+    {name: "Mansory", icon: "mansory.png" },
   ]
 
   return (
@@ -371,7 +372,7 @@ export function FoundationPage() {
               <GlassCard className="p-8 flex items-center justify-center hover:scale-105 transition-transform duration-300">
               <div className="text-center">
                 <img
-                  src={`https://cdn.allox.ai/allox/partners/${partner.icon}.svg`}
+                  src={`https://cdn.allox.ai/allox/partners/${partner.icon}`}
                   alt={partner.name}
                   className="h-12 mx-auto mb-4"
                 />
