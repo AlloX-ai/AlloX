@@ -26,25 +26,25 @@ export function LandingPage() {
   }, []);
 
   const partners = [
-    {name: "BNB Chain", icon: "bnbChain.svg" },
-    {name: "Base", icon: "base.svg" },
-    {name: "Binance Wallet", icon: "binanceWallet.svg" },
-    {name: "TrustWallet", icon: "trustWallet.svg" },
-    {name: "Gate Wallet", icon: "gateWallet.svg" },
-    {name: "Zerra Ventures", icon: "zerraVentures.svg" },
-    {name: "XPIN Network", icon: "xpinNetwork.svg" },
-    {name: "SWFT BLOCKCHAIN", icon: "swftBlockchain.svg" },
-    {name: "Bridgers", icon: "bridgers.svg" },
-    {name: "OKX Wallet", icon: "okxWallet.svg" },
-    {name: "PancakeSwap", icon: "pancakeSwap.svg" },
-    {name: "Simplicity Group", icon: "simplicityGroup.svg" },
-    {name: "ChainGPT", icon: "chainGpt.svg" },
-    {name: "Oortech", icon: "oortech.svg" },
-    {name: "iMe", icon: "iMe.svg" },
-    {name: "MoonWhale", icon: "moonWhale.svg" },
-    {name: "World Mobile", icon: "worldMobile.svg" },
-    {name: "World of Dypians", icon: "wod.svg" },
-    {name: "Mansory", icon: "mansory.png" },
+    { name: "BNB Chain", icon: "bnbChain.svg" },
+    { name: "Base", icon: "base.svg" },
+    { name: "Binance Wallet", icon: "binanceWallet.svg" },
+    { name: "TrustWallet", icon: "trustWallet.svg" },
+    { name: "Gate Wallet", icon: "gateWallet.svg" },
+    { name: "Zerra Ventures", icon: "zerraVentures.svg" },
+    { name: "XPIN Network", icon: "xpinNetwork.svg" },
+    { name: "SWFT BLOCKCHAIN", icon: "swftBlockchain.svg" },
+    { name: "Bridgers", icon: "bridgers.svg" },
+    { name: "OKX Wallet", icon: "okxWallet.svg" },
+    { name: "PancakeSwap", icon: "pancakeSwap.svg" },
+    { name: "Simplicity Group", icon: "simplicityGroup.svg" },
+    { name: "ChainGPT", icon: "chainGpt.svg" },
+    { name: "Oortech", icon: "oortech.svg" },
+    { name: "iMe", icon: "iMe.svg" },
+    { name: "MoonWhale", icon: "moonWhale.svg" },
+    { name: "World Mobile", icon: "worldMobile.svg" },
+    { name: "World of Dypians", icon: "wod.svg" },
+    { name: "Mansory", icon: "mansory.png" },
 
   ]
 
@@ -548,7 +548,7 @@ export function LandingPage() {
               <div className="flex items-center gap-3 mb-4">
                 <Calendar size={20} className="text-purple-600" />
                 <div className="text-sm font-medium text-purple-600">
-                  Q1 2026 - Current
+                  Q1 2026
                 </div>
               </div>
               <div className="w-3 h-3 bg-purple-600 rounded-full mb-4"></div>
@@ -583,15 +583,18 @@ export function LandingPage() {
 
             <GlassCard className="p-8 min-w-[320px] snap-start ring-2 ring-black/10">
               <div className="flex items-center gap-3 mb-4">
-                <Calendar size={20} className="text-gray-600" />
-                <div className="text-sm font-medium text-gray-600">Q2 2026</div>
+                <Calendar size={20} className="text-purple-600" />
+                <div className="text-sm font-medium text-purple-600">Q2 2026 - Current</div>
               </div>
-              <div className="w-3 h-3 bg-gray-600 rounded-full mb-4 animate-pulse"></div>
+              <div className="w-3 h-3 bg-purple-600 rounded-full mb-4 animate-pulse"></div>
               <h3 className="text-xl font-bold mb-3">Multi-Chain Expansion</h3>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-start gap-2">
-                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>On chain execution</span>
+                  <CheckCircle2
+                    size={16}
+                    className="text-green-600 flex-shrink-0 mt-0.5"
+                  />
+                  <span>On-chain execution</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
@@ -658,7 +661,7 @@ export function LandingPage() {
       </section>
 
       {/* Partners Section */}
-  <section className="py-24 px-6 bg-gradient-to-b from-gray-50/50 to-transparent">
+      <section className="py-24 px-6 bg-gradient-to-b from-gray-50/50 to-transparent">
         <div className="max-w-[1440px] mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl mb-4">Partners & Backers</h2>
@@ -668,18 +671,18 @@ export function LandingPage() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-          {partners.map((partner) => (
+            {partners.map((partner) => (
               <GlassCard className="p-8 flex items-center justify-center hover:scale-105 transition-transform duration-300">
-              <div className="text-center">
-                <img
-                  src={`https://cdn.allox.ai/allox/partners/${partner.icon}`}
-                  alt={partner.name}
-                  className="h-12 mx-auto mb-4"
-                />
-                <p className="text-xs font-medium text-gray-600">{partner.name}</p>
-              </div>
-            </GlassCard>
-          ))}
+                <div className="text-center">
+                  <img
+                    src={`https://cdn.allox.ai/allox/partners/${partner.icon}`}
+                    alt={partner.name}
+                    className="h-12 mx-auto mb-4"
+                  />
+                  <p className="text-xs font-medium text-gray-600">{partner.name}</p>
+                </div>
+              </GlassCard>
+            ))}
           </div>
         </div>
       </section>
@@ -737,7 +740,7 @@ export function LandingPage() {
                         d="M5.2113 12.6898H16.5597C16.6867 12.6898 16.8085 12.6394 16.8983 12.5495C16.9881 12.4597 17.0386 12.338 17.0386 12.2109C17.0386 12.0839 16.9881 11.9621 16.8983 11.8723C16.8085 11.7825 16.6867 11.732 16.5597 11.732H5.2113C5.08429 11.732 4.96249 11.7825 4.87268 11.8723C4.78288 11.9621 4.73242 12.0839 4.73242 12.2109C4.73242 12.338 4.78288 12.4597 4.87268 12.5495C4.96249 12.6394 5.08429 12.6898 5.2113 12.6898Z"
                         fill="white"
                       />
-                      <script  />
+                      <script />
                     </svg>
                     CertiK
                     <ArrowRight
