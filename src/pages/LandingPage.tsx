@@ -46,6 +46,8 @@ export function LandingPage() {
     { name: "World of Dypians", icon: "wod.svg" },
     { name: "Mansory", icon: "mansory.png" },
     { name: "4AI", icon: "4ai.png" },
+     { name: "Syndicate", icon: "syndicate.png" },
+    { name: "Gate DEX", icon: "gate.svg" },
 
   ]
 
