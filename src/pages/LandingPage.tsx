@@ -192,7 +192,7 @@ export function LandingPage() {
           </div>
 
           {/* Achievements - Enhanced */}
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+          {/* <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
             <GlassCard
               hover
               className="p-10 text-center relative overflow-hidden group transition-all duration-300"
@@ -243,7 +243,7 @@ export function LandingPage() {
                 </div>
               </div>
             </GlassCard>
-          </div>
+          </div> */}
 
           {/* Additional Details - Enhanced */}
           {/* <div className="text-center">
