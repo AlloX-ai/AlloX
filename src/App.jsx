@@ -10,6 +10,7 @@ import { TermsPage } from "./pages/TermsPage";
 import { Navbar } from "./components/Navbar";
 import Footer from "./components/Footer";
 import { PrivacyPage } from "./pages/PrivacyPage";
+import { CampaignRulesPage } from "./pages/CampaignRulesPage";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Route path="/terms" element={<TermsPage />} />
         <Route path="/beta" element={<BetaAccessPage />} />
       <Route path="/privacy" element={<PrivacyPage />} />
+      <Route path="/binancewallet-campaign-rules" element={<CampaignRulesPage />} />
     </Routes>
     <Footer />
    </>
