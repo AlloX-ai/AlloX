@@ -44,15 +44,15 @@ const tiers = [
 const faqs = [
   {
     q: "What is the campaign prize?",
-    a: "A total of 10,000,000 ALLOX tokens (worth approximately $300,000 USD) will be distributed across four reward tiers, with up to 2,500,000 ALLOX ($75,000) available per tier.",
+    a: "10,000,000 ALLOX tokens (approximately $300,000 USD) distributed across five tiers.",
   },
   {
     q: "How do the tiers work?",
-    a: "There are four independent tiers based on cumulative swap volume: $100, $500, $1,000, and $5,000. Each tier has its own reward pool and a cap of 5,000 winners.",
+    a: "There are five independent tiers based on cumulative swap volume: $25, $100, $500, $1,000, and $5,000. Each tier has its own reward pool and a cap of 2000 - 3000 winners.",
   },
   {
     q: "How much will I earn per tier?",
-    a: "Each qualifying winner receives 500 ALLOX per tier.",
+    a: "You can receive between 500 - 1,250 ALLOX tokens per tier if you qualify for the lucky draw. The exact amount depends on the tier you qualify for, with higher tiers offering larger rewards.",
   },
   {
     q: "Does my portfolio volume need to happen in a single transaction?",
@@ -64,7 +64,7 @@ const faqs = [
   },
   {
     q: "Is there a limit on the number of winners?",
-    a: "Yes. Each tier is capped at 5,000 winners and closes on a first-come, first-served basis once full. Act early to secure your spot.",
+    a: "Yes. Each tier has a different maximum number of winners, ranging from 2,000 to 3,000 users per tier. Winners are selected through a lucky draw mechanism at the end of the campaign period.",
   },
   {
     q: "Can I participate with multiple wallets?",
@@ -80,7 +80,7 @@ const faqs = [
   },
   {
     q: "How are winners determined?",
-    a: "Winners are selected through a lucky draw mechanism. All users who complete the required swap volume for a tier AND complete the social task will be entered into a random draw. Up to 5,000 winners will be selected per tier at the end of the campaign period.",
+    a: "Eligible users who complete required tier volume enter a random lucky draw mechanism via BNB Chain hashed value.",
   },
   {
     q: "How do I create a portfolio using AlloX and Binance Wallet?",
@@ -206,7 +206,7 @@ export function CampaignRulesPage() {
                     Start
                   </div>
                   <div className="text-2xl font-bold text-black">
-                    2026-05-27
+                    2026-05-30
                   </div>
                   <div className="text-gray-600 mt-1">11:00 AM (UTC)</div>
                 </div>
@@ -215,7 +215,7 @@ export function CampaignRulesPage() {
                     End
                   </div>
                   <div className="text-2xl font-bold text-black">
-                    2026-06-10
+                    2026-06-12
                   </div>
                   <div className="text-gray-600 mt-1">11:00 AM (UTC)</div>
                 </div>
@@ -258,16 +258,10 @@ export function CampaignRulesPage() {
                   <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <span className="text-white text-xs font-bold">1</span>
                   </div>
-                  Like and retweet the official AlloX campaign announcement post
+                  Repost the official AlloX campaign announcement post
                   on X (Twitter)
                 </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-white text-xs font-bold">2</span>
-                  </div>
-                  Social task must be completed to be eligible for the lucky
-                  draw
-                </li>
+               
               </ul>
             </section>
 
