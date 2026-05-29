@@ -47,9 +47,9 @@ const faqs = [
     q: 'When and how will I receive my rewards?',
     a: 'Rewards will be claimable directly within Binance Wallet after ALLOX TGE.',
   },
-  {
+ {
     q: 'How are winners determined?',
-    a: "Winners are determined on a first-come, first-served basis — the first 5,000 users to reach each volume threshold during the campaign period qualify for that tier's reward.",
+    a: "Winners are selected through a lucky draw mechanism. All users who complete the required swap volume for a tier AND complete the social task will be entered into a random draw. Up to 5,000 winners will be selected per tier at the end of the campaign period.",
   },
   {
     q: 'How do I create a portfolio using AlloX and Binance Wallet?',
@@ -138,7 +138,11 @@ export function CampaignRulesPage() {
             BNB Chain using Binance Wallet. The campaign runs for two weeks across four
             volume-based reward tiers.
           </p>
-
+          <div className="bg-yellow-50 border-2 border-yellow-400 rounded-2xl p-4 mb-12">
+            <p className="text-sm font-semibold text-gray-900">
+              <strong>Important:</strong> Only Binance Wallet (Keyless) users will be eligible.
+            </p>
+          </div>
           <div className="space-y-8">
 
             {/* Activity Period */}
@@ -182,12 +186,27 @@ export function CampaignRulesPage() {
                   Cumulative portfolio volume counts toward the tier threshold 
                 </li>
               </ul>
+             <h3 className="text-lg font-semibold text-gray-900 mb-4 mt-6">Social Task</h3>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start gap-3">
+                  <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-white text-xs font-bold">1</span>
+                  </div>
+                  Like and retweet the official AlloX campaign announcement post on X (Twitter)
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-white text-xs font-bold">2</span>
+                  </div>
+                  Social task must be completed to be eligible for the lucky draw
+                </li>
+              </ul>
             </section>
 
             {/* Reward Tiers */}
             <section className="glass-card p-8">
               <h2 className="text-3xl font-bold mb-2 text-black">Reward Tiers</h2>
-              <p className="text-gray-500 mb-6">First-Come, First-Served</p>
+              <p className="text-gray-500 mb-6">Lucky Draw Mechanism</p>
               <div className="overflow-x-auto -mx-2">
                 <table className="w-full min-w-[760px] text-sm">
                   <thead>
@@ -229,6 +248,14 @@ export function CampaignRulesPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-black mt-2.5 flex-shrink-0" />
+                  Winners are selected through a lucky draw mechanism at the end of the campaign period
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-black mt-2.5 flex-shrink-0" />
+                  Up to 5,000 winners will be randomly selected per tier from all eligible participants
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-black mt-2.5 flex-shrink-0" />
                   Rewards will be claimable within Binance Wallet after ALLOX TGE
                 </li>
                 
@@ -242,6 +269,8 @@ export function CampaignRulesPage() {
                 {[
                   'Participants must complete the portfolio task to qualify for each respective tier',
                   'Only Binance Wallet (Keyless) users with verified accounts are eligible',
+                    'Winners will be randomly selected through a lucky draw at the end of the campaign period',
+                  'Only one entry per user per tier is allowed',
                   'Users with multiple entries or fraudulent behavior will be disqualified',
                   "Binance Wallet's standard Terms and Conditions apply",
                   'The list of excluded countries may be updated periodically due to evolving local regulations',
