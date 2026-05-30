@@ -330,7 +330,7 @@ export function CampaignRulesPage() {
               <ul className="space-y-4 text-gray-700 leading-relaxed">
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-black mt-2.5 flex-shrink-0" />
-                  Total of 10,000,000 ALLOX tokens distributed across all four
+                  Total of 10,000,000 ALLOX tokens distributed across all five
                   tiers
                 </li>
                 <li className="flex items-start gap-3">
