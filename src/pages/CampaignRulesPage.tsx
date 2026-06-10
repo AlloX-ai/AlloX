@@ -1,6 +1,6 @@
 import { useState } from "react";
 import React from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, Shuffle, Users } from "lucide-react";
 import { Navbar } from "../components/Navbar";
 
 const tiers = [
@@ -41,91 +41,122 @@ const tiers = [
   },
 ];
 
-const faqs = [
+
+const tasks = [
   {
-    q: "What is the campaign prize?",
-    a: "10,000,000 ALLOX tokens (approximately $300,000 USD) distributed across five tiers.",
+    title: 'Connect Binance Wallet with AlloX',
+    description: 'Connect with Binance Wallet Extension or Binance Wallet and sign on-chain message.',
+    mechanism: 'Lucky Draw',
+    capWinners: '20,000',
+    rewardPerUser: '35',
   },
   {
-    q: "How do the tiers work?",
-    a: "There are five independent tiers based on cumulative swap volume: $25, $100, $500, $1,000, and $5,000. Each tier has its own reward pool and a cap of 2000 - 3000 winners.",
+    title: 'Build Portfolio on AlloX',
+    description: 'Build Portfolio with Binance Wallet Extension on BNB. Any USD value/volume will qualify (no minimum).',
+    mechanism: 'Lucky Draw',
+    capWinners: '20,000',
+    rewardPerUser: '100',
   },
   {
-    q: "How much will I earn per tier?",
-    a: "You can receive between 500 - 1,250 ALLOX tokens per tier if you qualify for the lucky draw. The exact amount depends on the tier you qualify for, with higher tiers offering larger rewards.",
+    title: 'Sign in to AlloX daily for 14 Days',
+    description: 'Sign in to AlloX for 14 days continuously. Sign on-chain message daily for 14 days.',
+    mechanism: 'Equal Split',
+    capWinners: '10,000',
+    rewardPerUser: '310',
   },
   {
-    q: "Does my portfolio volume need to happen in a single transaction?",
-    a: "No. Your cumulative portfolio volume across multiple transactions during the campaign period counts toward each tier threshold.",
+    title: 'Reach $20 Portfolio Volume',
+    description: 'Create portfolio on the AlloX dApp using Binance Wallet and reach a cumulative portfolio volume milestone minimum $20 on BNB Chain.\n\nEligible Portfolio tokens: BNB, CAKE, BTCB, ETH, LINK, UNI, ASTER',
+    mechanism: 'Equal Split',
+    capWinners: '8,000',
+    rewardPerUser: '350',
   },
   {
-    q: "Who is eligible to participate?",
-    a: "Only Binance Wallet (Keyless) users with verified accounts are eligible.",
+    title: 'Reach $5,000 Portfolio Volume',
+    description: 'Create portfolios on the AlloX dApp using Binance Wallet and reach a cumulative portfolio volume milestone.\n\nEligible Portfolio tokens: BNB, CAKE, BTCB, ETH, LINK, UNI, ASTER',
+    mechanism: 'Equal Split',
+    capWinners: '200',
+    rewardPerUser: '7,000',
+  },
+];
+
+
+const faqs: { q: string; a: React.ReactNode }[] = [
+  {
+    q: 'What tasks are available in this campaign?',
+    a: 'There are five tasks: Connect Binance Wallet with AlloX, Build Portfolio on AlloX, Sign in to AlloX daily for 14 days, Reach $20 Portfolio Volume, and Reach $5,000 Portfolio Volume. Each task has its own reward pool and winner cap.',
   },
   {
-    q: "Is there a limit on the number of winners?",
-    a: "Yes. Each tier has a different maximum number of winners, ranging from 2,000 to 3,000 users per tier. Winners are selected through a lucky draw mechanism at the end of the campaign period.",
+    q: 'What is the difference between Lucky Draw and Equal Split?',
+    a: 'Lucky Draw means winners are selected randomly from all eligible participants who completed the task. Equal Split means the reward pool is divided equally among all qualifying users up to the winner cap.',
   },
   {
-    q: "Can I participate with multiple wallets?",
-    a: "No. Participants using multiple wallets or engaging in fraudulent behavior will be disqualified.",
+    q: 'Which tokens are eligible for portfolio tasks?',
+    a: 'Eligible portfolio tokens are: BNB, CAKE, BTCB, ETH, LINK, UNI, and ASTER on BNB Chain.',
   },
   {
-    q: "What chain do I need to create a portfolio on?",
-    a: "All portfolios must be created on BNB Chain using Binance Wallet.",
+    q: 'Does portfolio volume need to happen in a single transaction?',
+    a: 'No. Cumulative portfolio volume across multiple transactions during the campaign period counts toward the volume milestones.',
   },
   {
-    q: "When and how will I receive my rewards?",
-    a: "Rewards will be claimable directly within Binance Wallet after ALLOX TGE.",
+    q: 'Do I need a minimum amount to build a portfolio?',
+    a: 'For the Build Portfolio task, any USD value/volume qualifies with no minimum required. The $20 and $5,000 volume tasks have their respective minimums.',
   },
   {
-    q: "How are winners determined?",
-    a: "Eligible users who complete required tier volume enter a random lucky draw mechanism via BNB Chain hashed value.",
+    q: 'Who is eligible to participate?',
+    a: 'Only Binance Wallet users with verified accounts are eligible. Each user can only qualify once per task.',
   },
   {
-    q: "How do I create a portfolio using AlloX and Binance Wallet?",
-    a: (
-      <div className="space-y-4">
-        <p>
-          AlloX is an AI-powered platform that lets you invest in crypto market
-          themes — like AI, DeFi, Memecoins, RWA, and more — through diversified
-          portfolios that execute directly on BNB Chain. Here&apos;s how to get
-          started:
-        </p>
-        <ol className="space-y-4">
-          {[
-            {
-              step: 1,
-              text: "Go to app.allox.ai and click Connect Wallet in the top right corner. Select Binance Wallet and confirm the connection. Make sure your Binance Wallet is set to BNB Chain before connecting.",
-            },
-            {
-              step: 2,
-              text: 'Click "Build Quick Portfolio" on the home screen. The builder will ask you four quick questions: the blockchain (select BNB Chain), the market narrative you want exposure to (AI, DeFi, Gaming, Memecoins, RWA, and more), your investment amount, and your risk tolerance (Conservative, Balanced, or Aggressive). Click Generate.',
-            },
-            {
-              step: 3,
-              text: "Review your AI-generated portfolio. AlloX instantly builds a basket of 5 tokens matching your theme and risk level. Select your payment token (BNB, USDT, or USDC) and click Confirm & Execute.",
-            },
-            {
-              step: 4,
-              text: "Approve the transactions in Binance Wallet. AlloX processes each token swap one by one. Confirm each transaction in your Binance Wallet popup. If you want to skip a specific token, simply cancel that individual transaction — AlloX will skip it and continue with the rest automatically.",
-            },
-            {
-              step: 5,
-              text: "You're live on-chain. Once all transactions are confirmed, your tokens land directly in your Binance Wallet. AlloX never holds your funds at any point. Each swap is fully verifiable on BscScan via its on-chain transaction hash.",
-            },
-          ].map(({ step, text }) => (
-            <li key={step} className="flex items-start gap-4">
-              <div className="w-7 h-7 bg-black rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                <span className="text-white text-xs font-bold">{step}</span>
-              </div>
-              <span className="leading-relaxed">{text}</span>
-            </li>
-          ))}
-        </ol>
-      </div>
-    ),
+    q: 'Can I participate with multiple wallets?',
+    a: 'No. Participants using multiple wallets or engaging in fraudulent behavior will be disqualified.',
   },
+  {
+    q: 'What chain do I need to use?',
+    a: 'All portfolio activities must be completed on BNB Chain using Binance Wallet.',
+  },
+  {
+    q: 'When and how will I receive my rewards?',
+    a: 'Rewards will be claimable directly within Binance Wallet after AlloX TGE.',
+  },
+  // {
+  //   q: 'How do I get started with AlloX using Binance Wallet?',
+  //   a: (
+  //     <div className="space-y-4">
+  //       <p>AlloX is an AI-powered platform that lets you invest in crypto market themes through diversified portfolios that execute directly on BNB Chain. Here&apos;s how to get started:</p>
+  //       <ol className="space-y-4">
+  //         {[
+  //           {
+  //             step: 1,
+  //             text: 'Go to allox.ai and click Connect Wallet. Select Binance Wallet and confirm the connection. Make sure your Binance Wallet is set to BNB Chain before connecting.',
+  //           },
+  //           {
+  //             step: 2,
+  //             text: 'Click "Build Quick Portfolio" on the home screen. Choose BNB Chain, select a market narrative (AI, DeFi, Gaming, Memecoins, RWA, etc.), enter your investment amount, and pick your risk tolerance. Click Generate.',
+  //           },
+  //           {
+  //             step: 3,
+  //             text: 'Review your AI-generated portfolio. AlloX builds a basket of tokens matching your theme and risk level. Select your payment token (BNB, USDT, or USDC) and click Confirm & Execute.',
+  //           },
+  //           {
+  //             step: 4,
+  //             text: 'Approve the transactions in Binance Wallet. Each token swap is processed one by one. Confirm each transaction in your wallet popup.',
+  //           },
+  //           {
+  //             step: 5,
+  //             text: "You're live on-chain. Once all transactions are confirmed, your tokens land directly in your Binance Wallet. AlloX never holds your funds at any point.",
+  //           },
+  //         ].map(({ step, text }) => (
+  //           <li key={step} className="flex items-start gap-4">
+  //             <div className="w-7 h-7 bg-black rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+  //               <span className="text-white text-xs font-bold">{step}</span>
+  //             </div>
+  //             <span className="leading-relaxed">{text}</span>
+  //           </li>
+  //         ))}
+  //       </ol>
+  //     </div>
+  //   ),
+  // },
 ];
 
 const excludedCountries = [
@@ -171,6 +202,18 @@ function FAQItem({ q, a }: { q: string; a: React.ReactNode }) {
   );
 }
 
+function MechanismBadge({ mechanism }: { mechanism: string }) {
+  const isLucky = mechanism === 'Lucky Draw';
+  return (
+    <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold ${
+      isLucky ? 'bg-purple-100 text-purple-700' : 'bg-blue-100 text-blue-700'
+    }`}>
+      {isLucky ? <Shuffle size={12} /> : <Users size={12} />}
+      {mechanism}
+    </span>
+  );
+}
+
 export function CampaignRulesPage() {
   return (
     <div className="min-h-screen bg-pattern">
@@ -181,12 +224,9 @@ export function CampaignRulesPage() {
             Campaign Rules
           </h1>
           <p className="text-lg text-gray-600 mb-4">AlloX | Binance Wallet</p>
-          <p className="text-gray-600 mb-12 leading-relaxed">
+          <p className="text-gray-600 mb-6 leading-relaxed">
             Complete portfolio tasks on BNB Chain using Binance Wallet to
-            qualify for a share of <strong className="text-black"> 10,000,000 ALLOX tokens ($300,000)</strong>. Five
-            reward tiers based on portfolio volume with 12,500 lucky draw
-            winners receiving between 500 - 1,250 ALLOX tokens each. Only
-            Binance Wallet (Keyless) users will be eligible.
+            qualify for a share of <strong className="text-black"> 10,000,000 ALLOX tokens ($300,000)</strong> through Lucky Draw and Equal Split distributions.
           </p>
           <div className="bg-yellow-50 border-2 border-yellow-400 rounded-2xl p-4 mb-12">
             <p className="text-sm font-semibold text-gray-900">
@@ -206,7 +246,7 @@ export function CampaignRulesPage() {
                     Start
                   </div>
                   <div className="text-2xl font-bold text-black">
-                    2026-05-30
+                    2026-06-15
                   </div>
                   <div className="text-gray-600 mt-1">11:00 AM (UTC)</div>
                 </div>
@@ -215,7 +255,7 @@ export function CampaignRulesPage() {
                     End
                   </div>
                   <div className="text-2xl font-bold text-black">
-                    2026-06-12
+                    2026-07-15
                   </div>
                   <div className="text-gray-600 mt-1">11:00 AM (UTC)</div>
                 </div>
@@ -224,132 +264,144 @@ export function CampaignRulesPage() {
 
             {/* Mission Details */}
             <section className="glass-card p-8">
-              <h2 className="text-3xl font-bold mb-6 text-black">
+              <h2 className="text-3xl font-bold text-black">
                 Mission Details
               </h2>
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                On-Chain Task
-              </h3>
+              <p className="my-6">Complete any of the following tasks to qualify for rewards. Each task has its own reward pool and mechanism.</p>
+            
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start gap-3">
                   <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <span className="text-white text-xs font-bold">1</span>
                   </div>
-                  Create portfolios on BNB Chain using Binance Wallet
+                  Connect Binance Wallet with AlloX
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <span className="text-white text-xs font-bold">2</span>
                   </div>
-                  Portfolios must be created within the campaign period
+                  Build Portfolio on AlloX
+
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <span className="text-white text-xs font-bold">3</span>
                   </div>
-                  Cumulative portfolio volume counts toward the tier threshold
+                  Sign in to AlloX daily for 14 Days
+
                 </li>
-              </ul>
-              <h3 className="text-lg font-semibold text-gray-900 mb-4 mt-6">
-                Social Task
-              </h3>
-              <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start gap-3">
                   <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-white text-xs font-bold">1</span>
+                    <span className="text-white text-xs font-bold">4</span>
                   </div>
-                  Repost the official AlloX campaign announcement post
-                  on X (Twitter)
+                  Reach $20 Portfolio Volume
+
+
                 </li>
-               
+                <li className="flex items-start gap-3">
+                  <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-white text-xs font-bold">5</span>
+                  </div>
+                  Reach $5,000 Portfolio Volume
+
+
+                </li>
               </ul>
+            
             </section>
 
             {/* Reward Tiers */}
-            <section className="glass-card p-8">
-              <h2 className="text-3xl font-bold mb-2 text-black">
-                Reward Tiers
-              </h2>
-              <p className="text-gray-500 mb-6">Lucky Draw Mechanism</p>
-              <div className="overflow-x-auto -mx-2">
-                <table className="w-full min-w-[760px] text-sm">
-                  <thead>
-                    <tr className="border-b-2 border-gray-200">
-                      <th className="text-left py-3 px-3 text-gray-500 font-semibold whitespace-nowrap">
-                        Tier
-                      </th>
-                      <th className="text-left py-3 px-3 text-gray-500 font-semibold whitespace-nowrap">
-                        Min Portfolio Volume
-                      </th>
-                      <th className="text-left py-3 px-3 text-gray-500 font-semibold whitespace-nowrap">
-                        Reward Pool
-                      </th>
-                      <th className="text-left py-3 px-3 text-gray-500 font-semibold whitespace-nowrap">
-                        Max Winners
-                      </th>
-                      <th className="text-left py-3 px-3 text-gray-500 font-semibold whitespace-nowrap">
-                        Reward per Winner
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-gray-100">
-                    {tiers.map((t, i) => (
-                      <tr
-                        key={i}
-                        className="hover:bg-white/50 transition-colors"
-                      >
-                        <td className="py-4 px-3 whitespace-nowrap">
-                          <span className="inline-flex items-center px-3 py-1 rounded-lg bg-gray-100 text-gray-800 text-xs font-bold">
-                            {t.tier}
-                          </span>
-                        </td>
-                        <td className="py-4 px-3 font-bold text-black whitespace-nowrap">
-                          {t.volume}
-                        </td>
-                        <td className="py-4 px-3 text-gray-700 whitespace-nowrap">
-                          {t.pool}
-                        </td>
-                        <td className="py-4 px-3 text-gray-700 whitespace-nowrap">
-                          {t.winners}
-                        </td>
-                        <td className="py-4 px-3 font-bold text-green-600 whitespace-nowrap">
-                          {t.reward}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </section>
+       <section className="glass-card p-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-2">Tasks & Reward Distribution</h2>
+            <p className="text-gray-500 text-sm mb-5">All tasks are Product Tasks. dApp URL: <a href="https://app.allox.ai/" target="_blank" className="font-medium text-orange-600">https://app.allox.ai/</a></p>
 
+            {/* Mobile: Cards */}
+            <div className="md:hidden space-y-4">
+              {tasks.map((task, i) => (
+                <div key={i} className="border border-gray-200/60 rounded-2xl p-4 space-y-3">
+                  <div className="flex items-start justify-between gap-2 flex-col lg:flex-row">
+                    <span className="font-semibold text-gray-900 text-sm">{task.title}</span>
+                    <MechanismBadge mechanism={task.mechanism} />
+                  </div>
+                  <p className="text-xs text-gray-600 leading-relaxed whitespace-pre-line">{task.description}</p>
+                  <div className="grid grid-cols-2 gap-2 pt-1">
+                    <div className="bg-gray-50 rounded-xl p-3">
+                      <div className="text-xs text-gray-500 mb-0.5">Cap Winners</div>
+                      <div className="font-bold text-gray-900 text-sm lg:text-base">{task.capWinners}</div>
+                    </div>
+                    <div className="bg-orange-50 rounded-xl p-3">
+                      <div className="text-xs text-gray-500 mb-0.5">Tokens / User</div>
+                      <div className="font-bold text-orange-700 text-sm lg:text-base">{task.rewardPerUser} ALLOX</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Desktop: Table */}
+            <div className="hidden md:block overflow-x-auto -mx-2">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-gray-200">
+                    <th className="text-left py-3 px-3 text-gray-500 font-semibold">Task</th>
+                    <th className="text-left py-3 px-3 text-gray-500 font-semibold">Description</th>
+                    <th className="text-left py-3 px-3 text-gray-500 font-semibold">Mechanism</th>
+                    <th className="text-left py-3 px-3 text-gray-500 font-semibold">Cap Winners</th>
+                    <th className="text-left py-3 px-3 text-gray-500 font-semibold">Tokens / User</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100">
+                  {tasks.map((task, i) => (
+                    <tr key={i} className="hover:bg-white/60 transition-colors">
+                      <td className="py-4 px-3 font-semibold text-gray-900 align-top max-w-[180px]">{task.title}</td>
+                      <td className="py-4 px-3 text-gray-600 text-xs leading-relaxed align-top max-w-[260px] whitespace-pre-line">{task.description}</td>
+                      <td className="py-4 px-3 align-top">
+                        <MechanismBadge mechanism={task.mechanism} />
+                      </td>
+                      <td className="py-4 px-3 font-semibold text-gray-900 align-top">{task.capWinners}</td>
+                      <td className="py-4 px-3 font-bold text-orange-600 align-top">{task.rewardPerUser} ALLOX</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="mt-4 p-4 bg-blue-50 border border-blue-200/60 rounded-2xl text-sm text-blue-800">
+              Each task is independent. You can qualify for multiple tasks and earn rewards from each.
+            </div>
+         </section>
             {/* Rewards Distribution */}
-            <section className="glass-card p-8">
-              <h2 className="text-3xl font-bold mb-6 text-black">
-                Rewards Distribution
-              </h2>
-              <ul className="space-y-4 text-gray-700 leading-relaxed">
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-black mt-2.5 flex-shrink-0" />
-                  Total of 10,000,000 ALLOX tokens distributed across all five
-                  tiers
+          <section className="glass-card p-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">Rewards Distribution</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div className="bg-purple-50 border border-purple-200/60 rounded-2xl p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <Shuffle size={16} className="text-purple-600" />
+                  <span className="font-bold text-purple-900">Lucky Draw</span>
+                </div>
+                <p className="text-xs text-gray-700">Winners selected randomly from all eligible participants. Completing the task enters you into the draw.</p>
+              </div>
+              <div className="bg-blue-50 border border-blue-200/60 rounded-2xl p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <Users size={16} className="text-blue-600" />
+                  <span className="font-bold text-blue-900">Equal Split</span>
+                </div>
+                <p className="text-xs text-gray-700">Reward pool divided equally among all qualifying users up to the winner cap, on a first-come, first-served basis.</p>
+              </div>
+            </div>
+            <ul className="space-y-3">
+              {[
+                'Rewards will be claimable within Binance Wallet after ALLOX TGE',
+                "Each task is capped",
+                'Fraudulent activity or use of multiple wallets will result in disqualification',
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-orange-400 mt-2 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm leading-relaxed">{item}</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-black mt-2.5 flex-shrink-0" />
-                  Winners are selected through a lucky draw mechanism at the end
-                  of the campaign period
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-black mt-2.5 flex-shrink-0" />
-                  A different amount of winners will be randomly selected per
-                  tier from all eligible participants
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-black mt-2.5 flex-shrink-0" />
-                  Rewards will be claimable within Binance Wallet after ALLOX
-                  TGE
-                </li>
-              </ul>
-            </section>
+              ))}
+            </ul>
+          </section>
 
             {/* Terms and Conditions */}
             <section className="glass-card p-8">
@@ -360,7 +412,6 @@ export function CampaignRulesPage() {
                 {[
                   "Participants must complete the portfolio task to qualify for each respective tier",
                   "Only Binance Wallet (Keyless) users with verified accounts are eligible",
-                  "Winners will be randomly selected through a lucky draw at the end of the campaign period",
                   "Only one entry per user per tier is allowed",
                   "Users with multiple entries or fraudulent behavior will be disqualified",
                   "Binance Wallet's standard Terms and Conditions apply",
