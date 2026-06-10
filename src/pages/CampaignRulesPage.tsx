@@ -73,7 +73,7 @@ const tasks = [
   },
   {
     title: 'Reach $5,000 Portfolio Volume',
-    description: 'Create portfolios on the AlloX dApp using Binance Wallet and reach a cumulative portfolio volume milestone.\n\nEligible Portfolio tokens: BNB, CAKE, BTCB, ETH, LINK, UNI, ASTER',
+    description: 'Create portfolios on the AlloX dApp using Binance Wallet and reach a cumulative portfolio volume milestone minimum $5,000 on BNB Chain.\n\nEligible Portfolio tokens: BNB, CAKE, BTCB, ETH, LINK, UNI, ASTER',
     mechanism: 'Equal Split',
     capWinners: '200',
     rewardPerUser: '7,000',
@@ -426,7 +426,7 @@ export function CampaignRulesPage() {
             </section>
 
             {/* Geographic Restrictions */}
-            <section className="glass-card p-8">
+            {/* <section className="glass-card p-8">
               <h2 className="text-3xl font-bold mb-4 text-black">
                 Geographic Restrictions
               </h2>
@@ -448,7 +448,7 @@ export function CampaignRulesPage() {
                 Please note this list is not exhaustive and may be subject to
                 change due to evolving local rules and regulations.
               </p>
-            </section>
+            </section> */}
 
             {/* FAQs */}
             <section className="glass-card p-8">
