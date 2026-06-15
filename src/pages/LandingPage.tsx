@@ -571,7 +571,7 @@ export function LandingPage() {
                     className="text-green-600 flex-shrink-0 mt-0.5"
                   />
                   {/* <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div> */}
-                  <span>AlloX Campaign</span>
+                  <span>Spring Series Campaign</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2
@@ -580,6 +580,14 @@ export function LandingPage() {
                   />
                   {/* <div className="w-4 h-4 border-2 border-green-400 rounded-full flex-shrink-0 mt-0.5"></div> */}
                   <span>Daily Bonus</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2
+                    size={16}
+                    className="text-green-600 flex-shrink-0 mt-0.5"
+                  />
+                  {/* <div className="w-4 h-4 border-2 border-green-400 rounded-full flex-shrink-0 mt-0.5"></div> */}
+                  <span>Social Tasks</span>
                 </li>
               </ul>
             </GlassCard>
@@ -600,12 +608,25 @@ export function LandingPage() {
                   <span>On-chain execution</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>Advanced AI agent network</span>
+                    <CheckCircle2
+                    size={16}
+                    className="text-green-600 flex-shrink-0 mt-0.5"
+                  />
+                  <span>Top Portfolios, Prime Picks, Token Watchlist</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>Widget SDK beta release</span>
+                    <CheckCircle2
+                    size={16}
+                    className="text-green-600 flex-shrink-0 mt-0.5"
+                  />
+                  <span>Credit card onramp and email login</span>
+                </li>
+                <li className="flex items-start gap-2">
+                    <CheckCircle2
+                    size={16}
+                    className="text-green-600 flex-shrink-0 mt-0.5"
+                  />
+                  <span>Allocation Race & Prove Your Portfolio campaigns</span>
                 </li>
               </ul>
             </GlassCard>
@@ -624,13 +645,18 @@ export function LandingPage() {
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
                   <span>Token launch</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>Public API access</span>
-                </li>
+              
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
                   <span>Grant program activation</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
+                  <span>Referral program</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
+                  <span>xStocks tokenized equities</span>
                 </li>
               </ul>
             </GlassCard>
@@ -656,6 +682,10 @@ export function LandingPage() {
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
                   <span>Chain Expansion</span>
+                </li>
+                  <li className="flex items-start gap-2">
+                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
+                  <span>Public API access</span>
                 </li>
               </ul>
             </GlassCard>

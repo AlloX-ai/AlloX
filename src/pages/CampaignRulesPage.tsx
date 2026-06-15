@@ -59,7 +59,7 @@ const tasks = [
   },
   {
     title: 'Sign in to AlloX daily for 14 Days',
-    description: 'Sign in to AlloX for 14 days continuously. Sign on-chain message daily for 14 days.',
+    description: 'Sign in to AlloX for any 14 days within the campaign period. Sign on-chain message on each of those days. Check-ins do not need to be consecutive.',
     mechanism: 'Equal Split',
     capWinners: '10,000',
     rewardPerUser: '310',
