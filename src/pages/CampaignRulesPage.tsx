@@ -365,6 +365,12 @@ export function CampaignRulesPage() {
                 </table>
               </div>
 
+              <div className="mt-4 p-4 bg-orange-50 border border-orange-200/60 rounded-2xl text-sm text-orange-800">
+                For all tasks, please click <b>"Complete"</b> before clicking <b>"Verify"</b> in the Binance Wallet task interface.
+              </div>
+              <div className="mt-4 p-4 bg-blue-50 border border-blue-200/60 rounded-2xl text-sm text-blue-800">
+                <b>Daily Sign-in task:</b> Clicking the task will open the AlloX dApp. Once inside, tap the <b>"Daily Bonus"</b> button and complete your daily sign-in.
+              </div>
               <div className="mt-4 p-4 bg-blue-50 border border-blue-200/60 rounded-2xl text-sm text-blue-800">
                 Each task is independent. You can qualify for multiple tasks and earn rewards from each.
               </div>
