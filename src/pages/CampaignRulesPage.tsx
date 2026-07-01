@@ -225,7 +225,7 @@ export function CampaignRulesPage() {
           <p className="text-lg text-gray-600 mb-4">AlloX | Binance Wallet</p>
           <p className="text-gray-600 mb-6 leading-relaxed">
             Complete portfolio tasks on BNB Chain using Binance Wallet to
-            qualify for a share of <strong className="text-black"> 10,000,000 ALLOX tokens ($300,000)</strong> through Lucky Draw and Equal Split distributions.
+            qualify for a share of <strong className="text-black"> 10,000,000 ALLOX tokens</strong> through Lucky Draw and Equal Split distributions.
           </p>
           <div className="bg-yellow-50 border-2 border-yellow-400 rounded-2xl p-4 mb-12">
             <p className="text-sm font-semibold text-gray-900">
@@ -245,7 +245,7 @@ export function CampaignRulesPage() {
                     Start
                   </div>
                   <div className="text-2xl font-bold text-black">
-                    2026-06-15
+                    2026-07-02
                   </div>
                   <div className="text-gray-600 mt-1">11:00 AM (UTC)</div>
                 </div>
@@ -254,7 +254,7 @@ export function CampaignRulesPage() {
                     End
                   </div>
                   <div className="text-2xl font-bold text-black">
-                    2026-07-15
+                    2026-08-01
                   </div>
                   <div className="text-gray-600 mt-1">11:00 AM (UTC)</div>
                 </div>
