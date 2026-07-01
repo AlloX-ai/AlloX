@@ -247,7 +247,6 @@ export function CampaignRulesPage() {
                   <div className="text-2xl font-bold text-black">
                     2026-07-02
                   </div>
-                  <div className="text-gray-600 mt-1">11:00 AM (UTC)</div>
                 </div>
                 <div className="bg-red-50 border border-red-200/60 rounded-2xl p-5">
                   <div className="text-xs font-semibold text-red-600 mb-2 uppercase tracking-wider">
@@ -256,7 +255,6 @@ export function CampaignRulesPage() {
                   <div className="text-2xl font-bold text-black">
                     2026-08-01
                   </div>
-                  <div className="text-gray-600 mt-1">11:00 AM (UTC)</div>
                 </div>
               </div>
             </section>
