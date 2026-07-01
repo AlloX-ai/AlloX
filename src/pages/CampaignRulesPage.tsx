@@ -58,8 +58,8 @@ const tasks = [
     rewardPerUser: '100',
   },
   {
-    title: 'Sign in to AlloX daily for 14 Days',
-    description: 'Sign in to AlloX for any 14 days within the campaign period. Sign on-chain message on each of those days. Check-ins do not need to be consecutive.',
+    title: 'Claim Daily Bonus 14 times',
+    description: 'Claim Daily Bonus 14 times during the 30-day campaign period. Sign on-chain message on each of those days. Check-ins do not need to be consecutive.',
     mechanism: 'Equal Split',
     capWinners: '10,000',
     rewardPerUser: '310',
@@ -84,7 +84,7 @@ const tasks = [
 const faqs: { q: string; a: React.ReactNode }[] = [
   {
     q: 'What tasks are available in this campaign?',
-    a: 'There are five tasks: Connect Binance Wallet with AlloX, Build Portfolio on AlloX, Sign in to AlloX daily for 14 days, Reach $20 Portfolio Volume, and Reach $5,000 Portfolio Volume. Each task has its own reward pool and winner cap.',
+    a: 'There are five tasks: Connect Binance Wallet with AlloX, Build Portfolio on AlloX, claim Daily Bonus on AlloX daily for 14 days, Reach $20 Portfolio Volume, and Reach $5,000 Portfolio Volume. Each task has its own reward pool and winner cap.',
   },
   {
     q: 'What is the difference between Lucky Draw and Equal Split?',
@@ -284,7 +284,7 @@ export function CampaignRulesPage() {
                   <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <span className="text-white text-xs font-bold">3</span>
                   </div>
-                  Sign in to AlloX daily for 14 Days
+                  Claim Daily Bonus 14 times during the 30-day campaign
 
                 </li>
                 <li className="flex items-start gap-3">
@@ -367,7 +367,7 @@ export function CampaignRulesPage() {
                 For all tasks, please click <b>"Complete"</b> before clicking <b>"Verify"</b> in the Binance Wallet task interface.
               </div>
               <div className="mt-4 p-4 bg-blue-50 border border-blue-200/60 rounded-2xl text-sm text-blue-800">
-                <b>Daily Sign-in task:</b> Clicking the task will open the AlloX dApp. Once inside, tap the <b>"Daily Bonus"</b> button and complete your daily sign-in.
+                <b>Daily Bonus task:</b> Clicking the task will open the AlloX dApp. Once inside, tap the <b>"Daily Bonus"</b> button and complete your daily sign-in.
               </div>
               <div className="mt-4 p-4 bg-blue-50 border border-blue-200/60 rounded-2xl text-sm text-blue-800">
                 Each task is independent. You can qualify for multiple tasks and earn rewards from each.
