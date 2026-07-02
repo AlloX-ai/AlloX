@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { GlassCard } from "../components/GlassCard";
 import { AnimatedChatDemo } from "../components/AnimatedChatDemo";
+import { motion, AnimatePresence } from "motion/react";
 import {
   ArrowRight,
   MessageSquare,
@@ -13,17 +14,19 @@ import {
   Linkedin,
   Instagram,
   Github,
+  X,
 } from "lucide-react";
 import { FaTelegram, FaDiscord, FaXTwitter } from "react-icons/fa6";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { StatsCounter } from "../components/StatsCounter";
-
 
 export function LandingPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = "AlloX";
   }, []);
+
+  const [showCampaignPopup, setShowCampaignPopup] = useState(true);
 
   const partners = [
     { name: "BNB Chain", icon: "bnbChain.svg" },
@@ -46,10 +49,9 @@ export function LandingPage() {
     { name: "World of Dypians", icon: "wod.svg" },
     { name: "Mansory", icon: "mansory.png" },
     { name: "4AI", icon: "4ai.png" },
-     { name: "Syndicate", icon: "syndicate.png" },
+    { name: "Syndicate", icon: "syndicate.png" },
     { name: "Gate DEX", icon: "gate.svg" },
-
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-pattern">
@@ -595,7 +597,9 @@ export function LandingPage() {
             <GlassCard className="p-8 min-w-[320px] snap-start ring-2 ring-black/10">
               <div className="flex items-center gap-3 mb-4">
                 <Calendar size={20} className="text-purple-600" />
-                <div className="text-sm font-medium text-purple-600">Q2 2026 - Current</div>
+                <div className="text-sm font-medium text-purple-600">
+                  Q2 2026 - Current
+                </div>
               </div>
               <div className="w-3 h-3 bg-purple-600 rounded-full mb-4 animate-pulse"></div>
               <h3 className="text-xl font-bold mb-3">Multi-Chain Expansion</h3>
@@ -608,21 +612,21 @@ export function LandingPage() {
                   <span>On-chain execution</span>
                 </li>
                 <li className="flex items-start gap-2">
-                    <CheckCircle2
+                  <CheckCircle2
                     size={16}
                     className="text-green-600 flex-shrink-0 mt-0.5"
                   />
                   <span>Top Portfolios, Prime Picks, Token Watchlist</span>
                 </li>
                 <li className="flex items-start gap-2">
-                    <CheckCircle2
+                  <CheckCircle2
                     size={16}
                     className="text-green-600 flex-shrink-0 mt-0.5"
                   />
                   <span>Credit card onramp and email login</span>
                 </li>
                 <li className="flex items-start gap-2">
-                    <CheckCircle2
+                  <CheckCircle2
                     size={16}
                     className="text-green-600 flex-shrink-0 mt-0.5"
                   />
@@ -645,7 +649,7 @@ export function LandingPage() {
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
                   <span>Token launch</span>
                 </li>
-              
+
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
                   <span>Grant program activation</span>
@@ -683,7 +687,7 @@ export function LandingPage() {
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
                   <span>Chain Expansion</span>
                 </li>
-                  <li className="flex items-start gap-2">
+                <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
                   <span>Public API access</span>
                 </li>
@@ -712,7 +716,9 @@ export function LandingPage() {
                     alt={partner.name}
                     className="h-12 mx-auto mb-4"
                   />
-                  <p className="text-xs font-medium text-gray-600">{partner.name}</p>
+                  <p className="text-xs font-medium text-gray-600">
+                    {partner.name}
+                  </p>
                 </div>
               </GlassCard>
             ))}
@@ -733,7 +739,8 @@ export function LandingPage() {
                 </div>
                 <h2 className="text-4xl md:text-5xl mb-6">Audited & Secure</h2>
                 <p className="text-xl text-gray-600 mb-8">
-                  Our dApp has been rigorously audited by a leading blockchain security firm to ensure the safety of your assets.
+                  Our dApp has been rigorously audited by a leading blockchain
+                  security firm to ensure the safety of your assets.
                 </p>
                 <div className="flex flex-col lg:flex-row items-center gap-4">
                   <a
@@ -871,6 +878,135 @@ export function LandingPage() {
           </GlassCard>
         </div>
       </section>
+      <AnimatePresence>
+        {showCampaignPopup && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setShowCampaignPopup(false)}
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
+            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.88, y: 40 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.88, y: 40 }}
+              transition={{ type: "spring", stiffness: 280, damping: 24 }}
+              className="fixed inset-0 z-50 flex items-center justify-center p-6 pointer-events-none"
+            >
+              <div
+                className="relative overflow-hidden rounded-3xl pointer-events-auto w-full max-w-sm shadow-2xl"
+                style={{
+                  background:
+                    "linear-gradient(135deg, #0d1117 0%, #161b22 60%, #1a2332 100%)",
+                  border: "1px solid rgba(240,185,11,0.3)",
+                }}
+              >
+                {/* Floating diamonds */}
+                {[
+                  { size: 38, top: 6, right: 10, delay: 0, opacity: 0.5 },
+                  { size: 22, top: 28, right: 52, delay: 0.6, opacity: 0.3 },
+                  { size: 52, top: 48, right: 6, delay: 1.1, opacity: 0.4 },
+                  { size: 16, top: 16, right: 76, delay: 1.6, opacity: 0.22 },
+                  { size: 28, top: 68, right: 46, delay: 0.9, opacity: 0.28 },
+                  { size: 18, top: 58, right: 82, delay: 2.1, opacity: 0.18 },
+                  { size: 12, top: 38, right: 94, delay: 0.4, opacity: 0.15 },
+                ].map((d, i) => (
+                  <motion.div
+                    key={i}
+                    animate={{
+                      y: [0, -7, 0],
+                      opacity: [d.opacity, d.opacity * 1.6, d.opacity],
+                    }}
+                    transition={{
+                      duration: 3.2 + i * 0.4,
+                      repeat: Infinity,
+                      delay: d.delay,
+                      ease: "easeInOut",
+                    }}
+                    className="absolute pointer-events-none"
+                    style={{
+                      width: d.size,
+                      height: d.size,
+                      top: `${d.top}%`,
+                      right: d.right,
+                      background: "rgba(240,185,11,0.14)",
+                      border: "1px solid rgba(240,185,11,0.32)",
+                      transform: "rotate(45deg)",
+                      borderRadius: 3,
+                    }}
+                  />
+                ))}
+
+                {/* Sweeping shimmer */}
+                <motion.div
+                  animate={{ x: ["-100%", "240%"] }}
+                  transition={{
+                    duration: 3.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    repeatDelay: 2.5,
+                  }}
+                  className="absolute inset-y-0 w-1/4 skew-x-[-20deg] pointer-events-none"
+                  style={{
+                    background:
+                      "linear-gradient(90deg, transparent, rgba(240,185,11,0.07), transparent)",
+                  }}
+                />
+
+                {/* Close button */}
+                <button
+                  onClick={() => setShowCampaignPopup(false)}
+                  className="absolute top-4 right-4 z-20 w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer"
+                  style={{
+                    background: "rgba(255,255,255,0.08)",
+                    border: "1px solid rgba(255,255,255,0.12)",
+                  }}
+                >
+                  <X size={15} className="text-white/70" />
+                </button>
+
+                {/* Content */}
+                <div className="relative z-10 p-7">
+                  {/* Header */}
+                  <div className="flex items-center gap-3 mb-5">
+                    <div>
+                      <div className="font-bold text-white text-lg leading-tight">
+                       Binance Wallet Campaign
+                      </div>
+                    </div>
+                  </div>
+
+                  <p
+                    className="text-sm mb-5 leading-relaxed"
+                    style={{ color: "#F0B90B" }}
+                  >
+                    Exclusive campaign on Binance Wallet with  <b>10,000,000 ALLOX
+                    rewards</b>
+                  </p>
+
+                  {/* Stats row */}
+
+                  {/* CTAs */}
+                  <div className="flex gap-2">
+                    <a
+                    href="https://web3.binance.com/en/booster/47/5104555967354361344?chain=bsc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                      className="flex items-center justify-center w-full py-3 rounded-xl font-bold text-sm transition-all cursor-pointer  hover:shadow-lg"
+                      style={{ background: "#F0B90B", color: "#0d1117" }}
+                    >
+                      View Campaign
+                    </a>
+              
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
