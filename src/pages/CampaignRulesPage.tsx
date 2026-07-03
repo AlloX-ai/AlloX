@@ -52,7 +52,7 @@ const tasks = [
   },
   {
     title: 'Build Portfolio on AlloX',
-    description: 'Build Portfolio with Binance Wallet Extension on BNB. Any USD value/volume will qualify (no minimum). Eligible Portfolio tokens: BNB, CAKE, BTCB, ETH, LINK, UNI, ASTER',
+    description: 'Build Portfolio with Binance Wallet Extension on BNB. Any USD value/volume will qualify (no minimum).\n\nEligible Portfolio tokens: BNB, CAKE, BTCB, ETH, LINK, UNI, ASTER',
     mechanism: 'Lucky Draw',
     capWinners: '20,000',
     rewardPerUser: '100',
