@@ -920,7 +920,7 @@ export function LandingPage() {
                     <div>
                       <div className="flex items-center gap-2 mb-1">
                       </div>
-                      <div className="font-bold text-white text-xl leading-tight">Exclusive Binance Campaign</div>
+                      <div className="font-bold text-white text-xl leading-tight">Binance Wallet Campaign</div>
                     </div>
                   </div>
 
