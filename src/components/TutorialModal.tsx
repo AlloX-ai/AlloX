@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import React from 'react';
-import { ChevronDown, ChevronUp, Shuffle, Users, Shield, Clock, Globe } from 'lucide-react';
+import { ChevronDown, ChevronUp, Shuffle, Users, Shield, Clock, Globe, ZoomIn, X } from 'lucide-react';
 import { Navbar } from '../components/Navbar';
 
 const tasks = [
@@ -173,20 +173,24 @@ const TUTORIAL_STEPS = [
 
 function TutorialModal({ onClose }: { onClose: () => void }) {
   const [step, setStep] = useState(0);
+  const [zoomedImage, setZoomedImage] = useState<string | null>(null);
   const current = TUTORIAL_STEPS[step];
   const isLast = step === TUTORIAL_STEPS.length - 1;
+  const currentImage = `https://cdn.allox.ai/allox/tutorial/tutorial${step + 1}.png`;
+  const currentLargeImage = `https://cdn.allox.ai/allox/tutorial/tutorial${step + 1}large.png`;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-      <div className="bg-white rounded-3xl shadow-2xl max-w-2xl w-full overflow-hidden flex flex-col">
+    <>
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+        <div className="bg-white rounded-3xl shadow-2xl max-w-xl w-full overflow-hidden flex flex-col">
 
         {/* Header — fixed height so title wrapping doesn't resize modal */}
-        <div className="px-6 pt-6 pb-5 flex items-center justify-between border-b border-gray-100" style={{ minHeight: 96 }}>
+        <div className="px-6 pt-6 pb-5 flex items-center justify-between border-b border-gray-100" style={{ minHeight: 88 }}>
           <div className="flex-1 min-w-0 pr-3">
             <p className="text-xs font-bold text-black uppercase tracking-wide mb-1">Tutorial · Step {step + 1} of {TUTORIAL_STEPS.length}</p>
             <h3 className="font-bold text-gray-900 text-base leading-snug line-clamp-2">{current.title}</h3>
           </div>
-          <button onClick={onClose} className="w-9 h-9 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors flex-shrink-0">
+          <button onClick={onClose} className="w-9 h-9 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors flex-shrink-0 cursor-pointer" aria-label="Close tutorial modal">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
           </button>
         </div>
@@ -199,49 +203,91 @@ function TutorialModal({ onClose }: { onClose: () => void }) {
           />
         </div>
 
-        {/* Image placeholder */}
-        <div className="bg-gray-50 border-b border-gray-100 flex items-center justify-center" style={{ height: 340 }}>
-         <img src={`https://cdn.allox.ai/allox/tutorial/tutorial${step + 1}.png`} alt="" />
-        </div>
-
-        {/* Description — fixed height to prevent modal resizing between steps */}
-        <div className="px-6 py-5 overflow-hidden" style={{ height: 160 }}>
-          <p className="text-base text-gray-700 leading-relaxed">{current.desc}</p>
-          {isLast && (
-            <div className="mt-3 p-2.5 bg-amber-50 border border-amber-200/60 rounded-xl text-xs text-amber-800 flex items-start gap-1.5">
-              <span>Remember: click <strong>"Complete"</strong> before <strong>"Verify"</strong> in Binance Wallet.</span>
-            </div>
-          )}
-        </div>
-
-        {/* Navigation */}
-        <div className="px-6 pb-6 flex gap-3">
-          <button
-            onClick={() => setStep(s => s - 1)}
-            disabled={step === 0}
-            className="flex-1 py-3 rounded-xl border border-gray-200 text-base font-semibold text-gray-600 hover:bg-gray-50 disabled:opacity-30 transition-colors"
-          >
-            ← Back
-          </button>
-          {isLast ? (
-            <button onClick={onClose} className="flex-1 py-3 rounded-xl bg-black text-white text-base font-semibold hover:bg-gray-800 transition-colors">
-              Done ✓
+          {/* Image placeholder */}
+          <div className="bg-gray-50 border-b border-gray-100 relative overflow-hidden" style={{ height: 300 }}>
+            <button
+              type="button"
+              onClick={() => setZoomedImage(currentLargeImage)}
+              className="group relative w-full h-full cursor-zoom-in"
+              aria-label={`Open large tutorial image ${step + 1}`}
+            >
+              <img
+                src={currentImage}
+                alt={`Tutorial step ${step + 1}`}
+                className="w-full h-full object-cover"
+              />
+              <span className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-200" />
+              <span className="absolute inset-0 flex items-center justify-center">
+                <span className="w-12 h-12 rounded-full bg-white/20 border border-white/40 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
+                  <ZoomIn size={22} />
+                </span>
+              </span>
+              <span className="absolute bottom-3 right-3 w-9 h-9 rounded-full bg-black/60 border border-white/30 text-white flex items-center justify-center pointer-events-none">
+                <ZoomIn size={16} />
+              </span>
             </button>
-          ) : (
-            <button onClick={() => setStep(s => s + 1)} className="flex-1 py-3 rounded-xl bg-black hover:bg-gray-800 text-white text-base font-semibold transition-colors">
-              Next →
-            </button>
-          )}
-        </div>
+          </div>
 
-        {/* Dot indicators */}
-        <div className="flex justify-center gap-2 pb-5">
-          {TUTORIAL_STEPS.map((_, i) => (
-            <button key={i} onClick={() => setStep(i)} className={`rounded-full transition-all ${i === step ? 'w-5 h-2 bg-black' : 'w-2 h-2 bg-gray-200 hover:bg-gray-300'}`} />
-          ))}
+          {/* Description — fixed height to prevent modal resizing between steps */}
+          <div className="px-6 py-5 overflow-hidden" style={{ height: 140 }}>
+            <p className="text-base text-gray-700 leading-relaxed">{current.desc}</p>
+            {isLast && (
+              <div className="mt-3 p-2.5 bg-amber-50 border border-amber-200/60 rounded-xl text-xs text-amber-800 flex items-start gap-1.5">
+                <span>Remember: click <strong>"Complete"</strong> before <strong>"Verify"</strong> in Binance Wallet.</span>
+              </div>
+            )}
+          </div>
+
+          {/* Navigation */}
+          <div className="px-6 pb-6 flex gap-3">
+            <button
+              onClick={() => setStep(s => s - 1)}
+              disabled={step === 0}
+              className="cursor-pointer flex-1 py-3 rounded-xl border border-gray-200 text-base font-semibold text-gray-600 hover:bg-gray-50 disabled:opacity-30 transition-colors"
+            >
+              ← Back
+            </button>
+            {isLast ? (
+              <button onClick={onClose} className=" cursor-pointer flex-1 py-3 rounded-xl bg-black text-white text-base font-semibold hover:bg-gray-800 transition-colors">
+                Done ✓
+              </button>
+            ) : (
+              <button onClick={() => setStep(s => s + 1)} className=" cursor-pointer flex-1 py-3  rounded-xl bg-black hover:bg-gray-800 text-white text-base font-semibold transition-colors">
+                Next →
+              </button>
+            )}
+          </div>
+
+          {/* Dot indicators */}
+          <div className="flex justify-center gap-2 pb-5">
+            {TUTORIAL_STEPS.map((_, i) => (
+              <button key={i} onClick={() => setStep(i)} className={`rounded-full transition-all ${i === step ? 'w-5 h-2 bg-black' : 'w-2 h-2 bg-gray-200 hover:bg-gray-300'}`} />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+
+      {zoomedImage && (
+        <div
+          className="fixed inset-0 z-[60] bg-black/85 flex items-center justify-center p-4"
+          onClick={() => setZoomedImage(null)}
+        >
+          <button
+            onClick={() => setZoomedImage(null)}
+            className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 border border-white/30 text-white flex items-center justify-center transition-colors cursor-pointer"
+            aria-label="Close large tutorial image"
+          >
+            <X size={20} />
+          </button>
+          <img
+            src={zoomedImage}
+            alt={`Large tutorial step ${step + 1}`}
+            className="max-w-[95vw] max-h-[95vh] w-auto h-auto object-contain rounded-xl shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
+    </>
   );
 }
 
