@@ -2,6 +2,7 @@ import { useState } from "react";
 import React from "react";
 import { ChevronDown, ChevronUp, Shuffle, Users } from "lucide-react";
 import { Navbar } from "../components/Navbar";
+import TutorialModal from "../components/TutorialModal";
 
 const tiers = [
   {
@@ -159,24 +160,7 @@ const faqs: { q: string; a: React.ReactNode }[] = [
   // },
 ];
 
-const excludedCountries = [
-  "Australia",
-  "Brazil",
-  "Canada",
-  "Cuba",
-  "Crimea Region",
-  "Cyprus",
-  "Iran",
-  "Japan",
-  "New Zealand",
-  "Netherlands",
-  "North Korea",
-  "Russia",
-  "Singapore",
-  "Syria",
-  "United States of America and its territories (American Samoa, Guam, Puerto Rico, the Northern Mariana Islands, the U.S. Virgin Islands)",
-  "Any non-government controlled areas of Ukraine",
-];
+
 
 function FAQItem({ q, a }: { q: string; a: React.ReactNode }) {
   const [open, setOpen] = useState(false);
@@ -214,6 +198,10 @@ function MechanismBadge({ mechanism }: { mechanism: string }) {
 }
 
 export function CampaignRulesPage() {
+
+
+  const [showTutorial, setShowTutorial] = useState(false);
+
   return (
     <div className="min-h-screen bg-pattern">
       <div className="pt-32 pb-24 px-6">
@@ -309,9 +297,20 @@ export function CampaignRulesPage() {
 
             {/* Reward Tiers */}
             <section className="glass-card p-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-2">Tasks & Reward Distribution</h2>
+             <div className="flex flex-col md:flex-row items-start justify-between">
+               <div className="flex flex-col">
+                   <h2 className="text-xl font-bold text-gray-900 mb-2">Tasks & Reward Distribution</h2>
               <p className="text-gray-500 text-sm mb-5">All tasks are Product Tasks. dApp URL: <a href="https://app.allox.ai/" target="_blank" className="font-medium text-orange-600">https://app.allox.ai/</a></p>
-
+ 
+              </div>
+            <button
+                onClick={() => setShowTutorial(true)}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 border border-orange-200 text-orange-700 text-xs font-semibold transition-colors mb-2 md:mb-0 cursor-pointer"
+              >
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                How to Build a Portfolio
+              </button>
+             </div>
               {/* Mobile: Cards */}
               <div className="md:hidden space-y-4">
                 {tasks.map((task, i) => (
@@ -466,7 +465,7 @@ export function CampaignRulesPage() {
         </div>
       </div>
 
-      {/* Footer */}
+     {showTutorial && <TutorialModal onClose={() => setShowTutorial(false)} />}
     </div>
   );
 }
