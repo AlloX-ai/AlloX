@@ -11,15 +11,13 @@ import {
   CheckCircle2,
   TrendingUp,
   Calendar,
-  Linkedin,
-  Instagram,
-  Github,
+
   X,
 } from "lucide-react";
-import { FaTelegram, FaDiscord, FaXTwitter } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 import { StatsCounter } from "../components/StatsCounter";
-
+import binanceCampaignLogo from "../assets/binanceCampaignLogo.svg";
+import alloxCampaignLogo from "../assets/alloxCampaignLogo.svg";
 export function LandingPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -878,7 +876,7 @@ export function LandingPage() {
           </GlassCard>
         </div>
       </section>
-      <AnimatePresence>
+        <AnimatePresence>
         {showCampaignPopup && (
           <>
             <motion.div
@@ -897,72 +895,16 @@ export function LandingPage() {
             >
               <div
                 className="relative overflow-hidden rounded-3xl pointer-events-auto w-full max-w-sm shadow-2xl"
-                style={{
-                  background:
-                    "linear-gradient(135deg, #0d1117 0%, #161b22 60%, #1a2332 100%)",
-                  border: "1px solid rgba(240,185,11,0.3)",
-                }}
+                style={{ background: "linear-gradient(135deg, #0d1117 0%, #161b22 60%, #1a2332 100%)", border: "1px solid rgba(240,185,11,0.3)" }}
               >
-                {/* Floating diamonds */}
-                {[
-                  { size: 38, top: 6, right: 10, delay: 0, opacity: 0.5 },
-                  { size: 22, top: 28, right: 52, delay: 0.6, opacity: 0.3 },
-                  { size: 52, top: 48, right: 6, delay: 1.1, opacity: 0.4 },
-                  { size: 16, top: 16, right: 76, delay: 1.6, opacity: 0.22 },
-                  { size: 28, top: 68, right: 46, delay: 0.9, opacity: 0.28 },
-                  { size: 18, top: 58, right: 82, delay: 2.1, opacity: 0.18 },
-                  { size: 12, top: 38, right: 94, delay: 0.4, opacity: 0.15 },
-                ].map((d, i) => (
-                  <motion.div
-                    key={i}
-                    animate={{
-                      y: [0, -7, 0],
-                      opacity: [d.opacity, d.opacity * 1.6, d.opacity],
-                    }}
-                    transition={{
-                      duration: 3.2 + i * 0.4,
-                      repeat: Infinity,
-                      delay: d.delay,
-                      ease: "easeInOut",
-                    }}
-                    className="absolute pointer-events-none"
-                    style={{
-                      width: d.size,
-                      height: d.size,
-                      top: `${d.top}%`,
-                      right: d.right,
-                      background: "rgba(240,185,11,0.14)",
-                      border: "1px solid rgba(240,185,11,0.32)",
-                      transform: "rotate(45deg)",
-                      borderRadius: 3,
-                    }}
-                  />
-                ))}
-
-                {/* Sweeping shimmer */}
-                <motion.div
-                  animate={{ x: ["-100%", "240%"] }}
-                  transition={{
-                    duration: 3.5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    repeatDelay: 2.5,
-                  }}
-                  className="absolute inset-y-0 w-1/4 skew-x-[-20deg] pointer-events-none"
-                  style={{
-                    background:
-                      "linear-gradient(90deg, transparent, rgba(240,185,11,0.07), transparent)",
-                  }}
-                />
+            
+            
 
                 {/* Close button */}
                 <button
                   onClick={() => setShowCampaignPopup(false)}
                   className="absolute top-4 right-4 z-20 w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer"
-                  style={{
-                    background: "rgba(255,255,255,0.08)",
-                    border: "1px solid rgba(255,255,255,0.12)",
-                  }}
+                  style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)" }}
                 >
                   <X size={15} className="text-white/70" />
                 </button>
@@ -970,36 +912,44 @@ export function LandingPage() {
                 {/* Content */}
                 <div className="relative z-10 p-7">
                   {/* Header */}
-                  <div className="flex items-center gap-3 mb-5">
+                  <div className="flex flex-col  items-start gap-3 mb-5">
+                     <div className="flex items-center justify-start gap-4 w-full">
+                       {/* <img src={alloxCampaignLogo}  className="w-28 h-8" alt="AlloX Campaign Logo" /> */}
+                      <img src={binanceCampaignLogo} className="w-28 h-8" alt="Binance Campaign Logo" />
+                     </div>
                     <div>
-                      <div className="font-bold text-white text-lg leading-tight">
-                       Binance Wallet Campaign
+                      <div className="flex items-center gap-2 mb-1">
                       </div>
+                      <div className="font-bold text-white text-xl leading-tight">Exclusive Binance Campaign</div>
                     </div>
                   </div>
 
-                  <p
-                    className="text-sm mb-5 leading-relaxed"
-                    style={{ color: "#F0B90B" }}
-                  >
-                    Exclusive campaign on Binance Wallet with  <b>10,000,000 ALLOX
-                    rewards</b>
-                  </p>
-
+                <p className="text-sm mb-5 leading-relaxed" style={{color: 'rgb(240, 185, 11)'}}>Exclusive campaign on Binance Wallet with  <b>10,000,000 ALLOX rewards</b></p>
                   {/* Stats row */}
+                  <div className="grid grid-cols-2 gap-2 mb-6">
+                    {[
+                      { label: "Duration", value: "Jul 2 – Aug 1" },
+                      { label: "Total Rewards", value: "10,000,000 ALLOX" },
+                    ].map(s => (
+                      <div key={s.label} className="rounded-xl p-2.5 text-center" style={{ background: "rgba(240,185,11,0.07)", border: "1px solid rgba(240,185,11,0.15)" }}>
+                        <div className="text-[10px] mb-0.5" style={{ color: "rgb(240, 187, 11)" }}>{s.label}</div>
+                        <div className="text-xs font-bold text-white leading-tight">{s.value}</div>
+                      </div>
+                    ))}
+                  </div>
 
                   {/* CTAs */}
                   <div className="flex gap-2">
                     <a
-                    href="https://web3.binance.com/en/booster/47/5104555967354361344?chain=bsc"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                      className="flex items-center justify-center w-full py-3 rounded-xl font-bold text-sm transition-all cursor-pointer  hover:shadow-lg"
+                      href="https://web3.binance.com/en/booster/47/5104555967354361344?chain=bsc"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-full py-3 rounded-xl font-bold text-sm transition-all"
                       style={{ background: "#F0B90B", color: "#0d1117" }}
                     >
                       View Campaign
                     </a>
-              
+                   
                   </div>
                 </div>
               </div>
