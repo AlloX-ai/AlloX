@@ -644,17 +644,24 @@ export function LandingPage() {
               </h3>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-start gap-2">
-                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>Token launch</span>
+                  <CheckCircle2
+                    size={16}
+                    className="text-green-600 flex-shrink-0 mt-0.5"
+                  />
+                   <span>Referral program</span>
                 </li>
 
                 <li className="flex items-start gap-2">
-                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>Grant program activation</span>
+                  <CheckCircle2
+                    size={16}
+                    className="text-green-600 flex-shrink-0 mt-0.5"
+                  />
+                  <span>Binance Wallet Campaign</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>Referral program</span>
+                  <span>Token launch</span>
+                 
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
