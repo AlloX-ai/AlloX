@@ -656,7 +656,7 @@ export function LandingPage() {
                     size={16}
                     className="text-green-600 flex-shrink-0 mt-0.5"
                   />
-                  <span>Binance Wallet Campaign</span>
+                  <span>Binance Wallet Exclusive Campaign under the Booster Format</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
