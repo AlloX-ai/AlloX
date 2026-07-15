@@ -11,13 +11,12 @@ import {
   CheckCircle2,
   TrendingUp,
   Calendar,
-
   X,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { StatsCounter } from "../components/StatsCounter";
 import binanceCampaignLogo from "../assets/binanceCampaignLogo.svg";
-import alloxCampaignLogo from "../assets/alloxCampaignLogo.svg";
+
 export function LandingPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -648,7 +647,7 @@ export function LandingPage() {
                     size={16}
                     className="text-green-600 flex-shrink-0 mt-0.5"
                   />
-                   <span>Referral program</span>
+                  <span>Referral program</span>
                 </li>
 
                 <li className="flex items-start gap-2">
@@ -656,16 +655,28 @@ export function LandingPage() {
                     size={16}
                     className="text-green-600 flex-shrink-0 mt-0.5"
                   />
-                  <span>Binance Wallet Exclusive Campaign under the Booster Format</span>
+                  <span>
+                    Binance Wallet Exclusive Campaign under the Booster Format
+                  </span>
                 </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2
+                    size={16}
+                    className="text-green-600 flex-shrink-0 mt-0.5"
+                  />
+                  <span>Volume League Campaign</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2
+                    size={16}
+                    className="text-green-600 flex-shrink-0 mt-0.5"
+                  />
+                  <span>xStocks tokenized equities</span>
+                </li>
+
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
                   <span>Token launch</span>
-                 
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>xStocks tokenized equities</span>
                 </li>
               </ul>
             </GlassCard>
@@ -883,7 +894,7 @@ export function LandingPage() {
           </GlassCard>
         </div>
       </section>
-        <AnimatePresence>
+      <AnimatePresence>
         {showCampaignPopup && (
           <>
             <motion.div
@@ -902,16 +913,20 @@ export function LandingPage() {
             >
               <div
                 className="relative overflow-hidden rounded-3xl pointer-events-auto w-full max-w-sm shadow-2xl"
-                style={{ background: "linear-gradient(135deg, #0d1117 0%, #161b22 60%, #1a2332 100%)", border: "1px solid rgba(240,185,11,0.3)" }}
+                style={{
+                  background:
+                    "linear-gradient(135deg, #0d1117 0%, #161b22 60%, #1a2332 100%)",
+                  border: "1px solid rgba(240,185,11,0.3)",
+                }}
               >
-            
-            
-
                 {/* Close button */}
                 <button
                   onClick={() => setShowCampaignPopup(false)}
                   className="absolute top-4 right-4 z-20 w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer"
-                  style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)" }}
+                  style={{
+                    background: "rgba(255,255,255,0.08)",
+                    border: "1px solid rgba(255,255,255,0.12)",
+                  }}
                 >
                   <X size={15} className="text-white/70" />
                 </button>
@@ -920,27 +935,52 @@ export function LandingPage() {
                 <div className="relative z-10 p-7">
                   {/* Header */}
                   <div className="flex flex-col  items-start gap-3 mb-5">
-                     <div className="flex items-center justify-start gap-4 w-full">
-                       {/* <img src={alloxCampaignLogo}  className="w-28 h-8" alt="AlloX Campaign Logo" /> */}
-                      <img src={binanceCampaignLogo} className="w-28 h-8" alt="Binance Campaign Logo" />
-                     </div>
+                    <div className="flex items-center justify-start gap-4 w-full">
+                      {/* <img src={alloxCampaignLogo}  className="w-28 h-8" alt="AlloX Campaign Logo" /> */}
+                      <img
+                        src={binanceCampaignLogo}
+                        className="w-28 h-8"
+                        alt="Binance Campaign Logo"
+                      />
+                    </div>
                     <div>
-                      <div className="flex items-center gap-2 mb-1">
+                      <div className="flex items-center gap-2 mb-1"></div>
+                      <div className="font-bold text-white text-xl leading-tight">
+                        Binance Wallet Campaign
                       </div>
-                      <div className="font-bold text-white text-xl leading-tight">Binance Wallet Campaign</div>
                     </div>
                   </div>
 
-                <p className="text-sm mb-5 leading-relaxed" style={{color: 'rgb(240, 185, 11)'}}>Exclusive campaign on Binance Wallet with  <b>10,000,000 ALLOX rewards</b></p>
+                  <p
+                    className="text-sm mb-5 leading-relaxed"
+                    style={{ color: "rgb(240, 185, 11)" }}
+                  >
+                    Exclusive campaign on Binance Wallet with{" "}
+                    <b>10,000,000 ALLOX rewards</b>
+                  </p>
                   {/* Stats row */}
                   <div className="grid grid-cols-2 gap-2 mb-6">
                     {[
                       { label: "Duration", value: "Jul 2 – Aug 1" },
                       { label: "Total Rewards", value: "10,000,000 ALLOX" },
-                    ].map(s => (
-                      <div key={s.label} className="rounded-xl p-2.5 text-center" style={{ background: "rgba(240,185,11,0.07)", border: "1px solid rgba(240,185,11,0.15)" }}>
-                        <div className="text-[10px] mb-0.5" style={{ color: "rgb(240, 187, 11)" }}>{s.label}</div>
-                        <div className="text-xs font-bold text-white leading-tight">{s.value}</div>
+                    ].map((s) => (
+                      <div
+                        key={s.label}
+                        className="rounded-xl p-2.5 text-center"
+                        style={{
+                          background: "rgba(240,185,11,0.07)",
+                          border: "1px solid rgba(240,185,11,0.15)",
+                        }}
+                      >
+                        <div
+                          className="text-[10px] mb-0.5"
+                          style={{ color: "rgb(240, 187, 11)" }}
+                        >
+                          {s.label}
+                        </div>
+                        <div className="text-xs font-bold text-white leading-tight">
+                          {s.value}
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -956,7 +996,6 @@ export function LandingPage() {
                     >
                       View Campaign
                     </a>
-                   
                   </div>
                 </div>
               </div>
