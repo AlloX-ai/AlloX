@@ -151,7 +151,7 @@ export function StatsCounter() {
               <StatItem
                 end={Number(data?.stats?.totalVolume)}
                 decimals={1}
-                label="Total Volume (Testnet)"
+                label="Total Volume (Including Testnet)"
                 prefix="$"
               />
             </div>
