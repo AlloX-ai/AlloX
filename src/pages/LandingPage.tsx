@@ -485,7 +485,7 @@ export function LandingPage() {
               to="/foundation"
               className="btn-primary text-lg px-8 py-4 inline-flex items-center"
             >
-              Learn About Foundation
+              Learn About AlloX
               <ArrowRight size={20} className="ml-2" />
             </Link>
           </div>
@@ -554,7 +554,7 @@ export function LandingPage() {
                 </div>
               </div>
               <div className="w-3 h-3 bg-purple-600 rounded-full mb-4"></div>
-              <h3 className="text-xl font-bold mb-3">Foundation Launch</h3>
+              <h3 className="text-xl font-bold mb-3">AlloX Launch</h3>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-start gap-2">
                   <CheckCircle2
