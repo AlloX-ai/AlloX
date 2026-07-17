@@ -537,7 +537,7 @@ export function CampaignRulesPage() {
       <footer className="py-16 px-6 border-t border-gray-200/50">
         <div className="max-w-[1440px] mx-auto text-center">
           <p className="text-gray-600">
-            © 2024 AlloX Foundation. All rights reserved.
+            © 2024 AlloX Platform. All rights reserved.
           </p>
         </div>
       </footer>

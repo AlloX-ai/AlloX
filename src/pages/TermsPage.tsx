@@ -24,7 +24,7 @@ export function TermsPage() {
               <h2 className="text-3xl font-bold mb-4">1. Introduction</h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  Welcome to AlloX. These Terms of Service ("Terms") govern your access to and use of the AlloX platform, including our website, applications, and services (collectively, the "Platform"). The Platform is operated by AlloX Foundation ("AlloX," "we," "us," or "our").
+                  Welcome to AlloX. These Terms of Service ("Terms") govern your access to and use of the AlloX platform, including our website, applications, and services (collectively, the "Platform"). The Platform is operated by ALLOCATIONX S.R.L. ("AlloX," "we," "us," or "our").
                 </p>
                 <p>
                   By accessing or using the Platform, you agree to be bound by these Terms. If you do not agree to these Terms, you may not access or use the Platform.
@@ -183,7 +183,7 @@ export function TermsPage() {
               <h2 className="text-3xl font-bold mb-4">9. Intellectual Property</h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  The Platform, including all content, features, functionality, AI algorithms, and design, is owned by AlloX Foundation and protected by intellectual property laws.
+                  The Platform, including all content, features, functionality, AI algorithms, and design, is owned by ALLOCATIONX S.R.L. and protected by intellectual property laws.
                 </p>
                 <p>
                   You may not copy, modify, distribute, sell, or lease any part of the Platform without our explicit written permission.
@@ -297,7 +297,7 @@ export function TermsPage() {
               <h2 className="text-3xl font-bold mb-4">16. Governing Law</h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  These Terms shall be governed by and construed in accordance with the laws of the jurisdiction where AlloX Foundation is organized, without regard to conflict of law principles.
+                  These Terms shall be governed by and construed in accordance with the laws of the jurisdiction where ALLOCATIONX S.R.L. is organized, without regard to conflict of law principles.
                 </p>
               </div>
             </section>

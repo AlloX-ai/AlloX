@@ -26,7 +26,7 @@ export function PrivacyPage() {
               <h2 className="text-3xl font-bold mb-4">1. Introduction</h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  AlloX Foundation ("AlloX," "we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our Platform.
+                  ALLOCATIONX S.R.L. ("AlloX," "we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our Platform.
                 </p>
                 <p>
                   By using the AlloX Platform, you agree to the collection and use of information in accordance with this Privacy Policy.
@@ -439,7 +439,7 @@ export function PrivacyPage() {
                   If you have questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:
                 </p>
                 <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
-                  <p className="font-medium mb-2">AlloX Foundation</p>
+                  <p className="font-medium mb-2">ALLOCATIONX S.R.L.</p>
                   <p className="text-sm">
                     <strong>General Contact:</strong> contact@allox.ai<br />
                     <strong>Website:</strong> allox.ai
