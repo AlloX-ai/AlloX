@@ -76,7 +76,7 @@ export function FoundationPage() {
         <div className="max-w-[1200px] mx-auto text-center">
           <div className="inline-block mb-6 animate-fade-in">
             <div className="glass-card px-4 py-2 text-xs font-medium text-gray-600 uppercase tracking-wider">
-              AlloX Foundation
+              AlloX Platform
             </div>
           </div>
 
@@ -85,7 +85,7 @@ export function FoundationPage() {
           </h1>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed animate-slide-up">
-            The AlloX Foundation builds AI-powered infrastructure that
+            The AlloX Platform builds AI-powered infrastructure that
             transforms market narratives into diversified, risk-managed
             portfolios.
           </p>
@@ -148,7 +148,7 @@ export function FoundationPage() {
               broader thematic opportunities and proper risk management.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto">
-              AlloX Foundation solves this by transforming market narratives
+              AlloX Platform solves this by transforming market narratives
               into investable baskets. Our AI handles token selection,
               allocation, and rebalancing, bringing institutional-grade
               portfolio management to everyone while maintaining complete

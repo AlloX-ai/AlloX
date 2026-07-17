@@ -42,24 +42,24 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-bold mb-4">Foundation</h4>
+            <h4 className="font-bold mb-4">Platform</h4>
             <ul className="space-y-2 text-sm text-gray-600">
               <li>
                 <NavLink
-                  to="/foundation"
+                  to="/platform"
                   className="hover:text-black transition-colors"
                 >
                   About
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/foundation#litepaper" className="hover:text-black transition-colors">
+                <NavLink to="/platform#litepaper" className="hover:text-black transition-colors">
                   Litepaper
                 </NavLink>
               </li>
               <li>
                 <NavLink
-                  to="/foundation#brand"
+                  to="/platform#brand"
                   className="hover:text-black transition-colors"
                 >
                   Brand
@@ -90,7 +90,7 @@ const Footer = () => {
               href="https://discord.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 glass-card w-12 rounded-xl hover:bg-white/80 hover:shadow-md transition-all duration-200"
+              className="p-3 glass-card w-12 rounded-xl hover:bg-white+/80 hover:shadow-md transition-all duration-200"
               aria-label="Discord"
             >
               <FaDiscord size={20} className="text-gray-700" />
@@ -154,7 +154,7 @@ const Footer = () => {
           {/* Social Icons */}
 
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-600">
-            <div>© 2026 AlloX Foundation. All rights reserved.</div>
+            <div>© 2026 AlloX Platform. All rights reserved.</div>
             <div className="flex gap-6">
               <Link
                 to="/privacy"

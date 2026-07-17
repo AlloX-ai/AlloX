@@ -46,9 +46,9 @@ export function BlogPage() {
     },
     {
       id: 'foundation-launch',
-      category: 'Foundation',
-      title: 'Introducing the AlloX Foundation',
-      snippet: 'The AlloX Foundation is established to advance intent-driven DeFi through grants, research, and ecosystem support.',
+      category: 'Platform',
+      title: 'Introducing the AlloX Platform',
+      snippet: 'The AlloX Platform is established to advance intent-driven DeFi through grants, research, and ecosystem support.',
       date: 'December 20, 2023',
       banner: 'https://images.unsplash.com/photo-1556155092-490a1ba16284?w=600&h=300&fit=crop',
     },

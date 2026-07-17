@@ -9,7 +9,7 @@ export function Navbar() {
   const navItems = [
     { label: 'Product', href: '/product' },
     { label: 'Docs', href: '/docs' },
-    { label: 'Foundation', href: '/foundation' },
+    { label: 'Platform', href: '/platform' },
     // { label: 'Blog', href: '/blog' },
   ];
 

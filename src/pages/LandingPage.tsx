@@ -458,7 +458,7 @@ export function LandingPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block mb-6">
               <div className="glass-card px-4 py-2 text-xs font-medium text-gray-600 uppercase tracking-wider">
-                AlloX Foundation
+                AlloX Platform
               </div>
             </div>
 
