@@ -17,7 +17,7 @@ export function PrivacyPage() {
         <div className="max-w-[1000px] mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Privacy Policy</h1>
           <p className="text-lg text-gray-600 mb-12">
-            Last Updated: February 23, 2026
+            Last Updated: July 17, 2026
           </p>
 
           <div className="flex flex-col gap-12">
