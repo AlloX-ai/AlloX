@@ -4,7 +4,7 @@ interface Stats {
   stats: {
     totalUsers: number;
     totalTransactions: number;
-    totalValueOnChain: number;
+    totalValueLockedUsd: number;
     totalVolume: number
   };
 }
@@ -143,9 +143,9 @@ export function StatsCounter() {
                 label="Total Transactions"
               />
               <StatItem
-                end={Number(data?.stats?.totalValueOnChain)}
+                end={Number(data?.stats?.totalValueLockedUsd)}
                 decimals={1}
-                label="Total Value On Chain"
+                label="On-Chain Invested"
                 prefix="$"
               />
               <StatItem
