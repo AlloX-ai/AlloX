@@ -12,10 +12,12 @@ import {
   TrendingUp,
   Calendar,
   X,
+  ExternalLink,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { StatsCounter } from "../components/StatsCounter";
 import binanceCampaignLogo from "../assets/binanceCampaignLogo.svg";
+import binanceLaptop from "../assets/binanceLaptop.png";
 
 export function LandingPage() {
   useEffect(() => {
@@ -722,7 +724,98 @@ export function LandingPage() {
               Collaborating with industry leaders to shape the future
             </p>
           </div>
+  <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+          >
+            <div
+              className="rounded-2xl overflow-hidden relative mb-8"
+              style={{
+                background: "#181410",
+                border: "1px solid rgba(240,185,11,0.25)",
+              }}
+            >
+              {/* Gold glow top-right */}
+              <div
+                className="absolute top-0 right-0 w-72 h-72 rounded-full blur-3xl opacity-20 pointer-events-none"
+                style={{
+                  background: "#f0b90b",
+                  transform: "translate(30%, -30%)",
+                }}
+              />
 
+              <div className="relative flex flex-col md:flex-row items-center gap-0">
+                {/* Left: text */}
+                <div className="flex-1 px-8 py-8">
+                  {/* Binance Wallet wordmark */}
+                  <div className="flex items-center gap-2.5 mb-5">
+                    {/* Binance logo mark */}
+                    <img
+                      src="https://cdn.allox.ai/allox/tokens/binanceLogo.svg"
+                      className="w-6 h-6"
+                      alt=""
+                    />
+                    <span
+                      className="text-sm font-bold"
+                      style={{ color: "#F0B90B" }}
+                    >
+                      Binance Wallet
+                    </span>
+                    <span
+                      className="text-xs px-2 py-0.5 rounded-full font-bold"
+                      style={{
+                        background: "rgba(240,185,11,0.15)",
+                        color: "#F0B90B",
+                        border: "1px solid rgba(240,185,11,0.3)",
+                      }}
+                    >
+                      Exclusive
+                    </span>
+                  </div>
+
+                  <h3 className="text-2xl font-black text-white leading-snug mb-3">
+                    Exclusive Campaign
+                    <br />
+                    with Binance Wallet
+                  </h3>
+                  <p
+                    className="text-sm leading-relaxed mb-6"
+                    style={{ color: "rgba(255,255,255,0.5)" }}
+                  >
+                    AlloX is featured as an exclusive campaign on Binance Wallet
+                    under the Booster Format. Complete tasks and earn $ALLOX
+                    rewards.
+                  </p>
+
+               
+
+                  <a
+                    href="https://web3.binance.com/en/booster/47/5104555967354361344?chain=bsc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 font-bold text-sm px-5 py-2.5 rounded-xl transition-all hover:opacity-90"
+                    style={{ background: "#F0B90B", color: "#181410" }}
+                  >
+                    View on Binance Wallet
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+
+                {/* Right: laptop mockup */}
+                <div className="flex-shrink-0 px-6 py-8 flex items-center justify-center">
+                  <div className="relative w-72">
+                    <img
+                      src={binanceLaptop}
+                      alt="AlloX Exclusive Campaign on Binance Wallet"
+                      className="w-full h-full object-cover object-top"
+                    />{" "}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
             {partners.map((partner) => (
               <GlassCard className="p-8 flex items-center justify-center hover:scale-105 transition-transform duration-300">
