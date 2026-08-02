@@ -724,7 +724,7 @@ export function LandingPage() {
               Collaborating with industry leaders to shape the future
             </p>
           </div>
-  <motion.div
+          <motion.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -789,7 +789,7 @@ export function LandingPage() {
                     rewards.
                   </p>
 
-               
+
 
                   <a
                     href="https://web3.binance.com/en/booster/47/5104555967354361344?chain=bsc"
@@ -1008,8 +1008,8 @@ export function LandingPage() {
                 className="relative overflow-hidden rounded-3xl pointer-events-auto w-full max-w-sm shadow-2xl"
                 style={{
                   background:
-                    "linear-gradient(135deg, #0d1117 0%, #161b22 60%, #1a2332 100%)",
-                  border: "1px solid rgba(240,185,11,0.3)",
+                    "#fff",
+                  border: "1px solid gray",
                 }}
               >
                 {/* Close button */}
@@ -1021,57 +1021,49 @@ export function LandingPage() {
                     border: "1px solid rgba(255,255,255,0.12)",
                   }}
                 >
-                  <X size={15} className="text-white/70" />
+                  <X size={15} className="text-black/70" />
                 </button>
 
                 {/* Content */}
                 <div className="relative z-10 p-7">
                   {/* Header */}
                   <div className="flex flex-col  items-start gap-3 mb-5">
-                    <div className="flex items-center justify-start gap-4 w-full">
-                      {/* <img src={alloxCampaignLogo}  className="w-28 h-8" alt="AlloX Campaign Logo" /> */}
-                      <img
-                        src={binanceCampaignLogo}
-                        className="w-28 h-8"
-                        alt="Binance Campaign Logo"
-                      />
-                    </div>
+
                     <div>
                       <div className="flex items-center gap-2 mb-1"></div>
-                      <div className="font-bold text-white text-xl leading-tight">
-                        Binance Wallet Campaign
+                      <div className="font-bold text-black text-xl leading-tight">
+                        Volume League Campaign
                       </div>
                     </div>
                   </div>
 
                   <p
                     className="text-sm mb-5 leading-relaxed"
-                    style={{ color: "rgb(240, 185, 11)" }}
                   >
-                    Exclusive campaign on Binance Wallet with{" "}
-                    <b>10,000,000 ALLOX rewards</b>
+                    Generate volume, climb tier brackets, and earn weekly guaranteed rewards
+
                   </p>
                   {/* Stats row */}
                   <div className="grid grid-cols-2 gap-2 mb-6">
                     {[
-                      { label: "Duration", value: "Jul 2 – Aug 1" },
-                      { label: "Total Rewards", value: "10,000,000 ALLOX" },
+                      { label: "Duration", value: "Jul 14 – Aug 18" },
+                      { label: "Total Rewards", value: "$500,000" },
                     ].map((s) => (
                       <div
                         key={s.label}
                         className="rounded-xl p-2.5 text-center"
                         style={{
-                          background: "rgba(240,185,11,0.07)",
-                          border: "1px solid rgba(240,185,11,0.15)",
+                          background: "rgba(0,0,0,0.07)",
+                          border: "1px solid rgba(0,0,0,0.15)",
                         }}
                       >
                         <div
                           className="text-[10px] mb-0.5"
-                          style={{ color: "rgb(240, 187, 11)" }}
+                          style={{ color: "gray" }}
                         >
                           {s.label}
                         </div>
-                        <div className="text-xs font-bold text-white leading-tight">
+                        <div className="text-xs font-bold text-black leading-tight">
                           {s.value}
                         </div>
                       </div>
@@ -1081,11 +1073,11 @@ export function LandingPage() {
                   {/* CTAs */}
                   <div className="flex gap-2">
                     <a
-                      href="https://web3.binance.com/en/booster/47/5104555967354361344?chain=bsc"
+                      href="https://app.allox.ai/campaigns?campaign=volume-league"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center w-full py-3 rounded-xl font-bold text-sm transition-all"
-                      style={{ background: "#F0B90B", color: "#0d1117" }}
+                      style={{ background: "#000", color: "#fff" }}
                     >
                       View Campaign
                     </a>
