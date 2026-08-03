@@ -784,9 +784,7 @@ export function LandingPage() {
                     className="text-sm leading-relaxed mb-6"
                     style={{ color: "rgba(255,255,255,0.5)" }}
                   >
-                    AlloX is featured as an exclusive campaign on Binance Wallet
-                    under the Booster Format. Complete tasks and earn $ALLOX
-                    rewards.
+                    AlloX was featured as an Exclusive Campaign on Binance Wallet under the Booster format, with 86.29K KYC-verified users joining the campaign.
                   </p>
 
                
