@@ -1030,7 +1030,7 @@ export function LandingPage() {
                     <div>
                       <div className="flex items-center gap-2 mb-1"></div>
                       <div className="font-bold text-black text-xl leading-tight">
-                        Volume League Campaign
+                        WOD HODL
                       </div>
                     </div>
                   </div>
@@ -1038,14 +1038,14 @@ export function LandingPage() {
                   <p
                     className="text-sm mb-5 leading-relaxed"
                   >
-                    Generate volume, climb tier brackets, and earn weekly guaranteed rewards
+                    Buy & hold WOD to earn rewards. The longer you hold, the bigger your share.
 
                   </p>
                   {/* Stats row */}
                   <div className="grid grid-cols-2 gap-2 mb-6">
                     {[
-                      { label: "Duration", value: "Jul 14 – Aug 18" },
-                      { label: "Total Rewards", value: "$500,000" },
+                      { label: "Duration", value: "Aug 05 – Sep 05" },
+                      { label: "Total Rewards", value: "$100,000" },
                     ].map((s) => (
                       <div
                         key={s.label}
@@ -1071,7 +1071,7 @@ export function LandingPage() {
                   {/* CTAs */}
                   <div className="flex gap-2">
                     <a
-                      href="https://app.allox.ai/campaigns?campaign=volume-league"
+                      href="https://app.allox.ai/campaigns?campaign=wod-hodl"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center w-full py-3 rounded-xl font-bold text-sm transition-all"
