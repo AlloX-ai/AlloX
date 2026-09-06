@@ -25,7 +25,7 @@ export function LandingPage() {
     document.title = "AlloX";
   }, []);
 
-  const [showCampaignPopup, setShowCampaignPopup] = useState(true);
+  // const [showCampaignPopup, setShowCampaignPopup] = useState(true);
 
   const partners = [
     { name: "BNB Chain", icon: "bnbChain.svg" },
@@ -985,7 +985,7 @@ export function LandingPage() {
           </GlassCard>
         </div>
       </section>
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {showCampaignPopup && (
           <>
             <motion.div
@@ -1009,8 +1009,7 @@ export function LandingPage() {
                     "#fff",
                   border: "1px solid gray",
                 }}
-              >
-                {/* Close button */}
+              > 
                 <button
                   onClick={() => setShowCampaignPopup(false)}
                   className="absolute top-4 right-4 z-20 w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer"
@@ -1022,9 +1021,9 @@ export function LandingPage() {
                   <X size={15} className="text-black/70" />
                 </button>
 
-                {/* Content */}
+                
                 <div className="relative z-10 p-7">
-                  {/* Header */}
+                
                   <div className="flex flex-col  items-start gap-3 mb-5">
 
                     <div>
@@ -1041,7 +1040,7 @@ export function LandingPage() {
                     Buy & hold WOD to earn rewards. The longer you hold, the bigger your share.
 
                   </p>
-                  {/* Stats row */}
+                  
                   <div className="grid grid-cols-2 gap-2 mb-6">
                     {[
                       { label: "Duration", value: "Aug 05 – Sep 05" },
@@ -1066,9 +1065,7 @@ export function LandingPage() {
                         </div>
                       </div>
                     ))}
-                  </div>
-
-                  {/* CTAs */}
+                  </div> 
                   <div className="flex gap-2">
                     <a
                       href="https://app.allox.ai/campaigns?campaign=wod-hodl"
@@ -1085,7 +1082,7 @@ export function LandingPage() {
             </motion.div>
           </>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </div>
   );
 }
