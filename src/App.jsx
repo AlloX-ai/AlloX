@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router";
+import { Route, Routes, useLocation } from "react-router";
 import { LandingPage } from "./pages/LandingPage";
 import { ProductPage } from "./pages/ProductPage";
 import { DocsPage } from "./pages/DocsPage";
@@ -11,8 +11,12 @@ import { Navbar } from "./components/Navbar";
 import Footer from "./components/Footer";
 import { PrivacyPage } from "./pages/PrivacyPage";
 import { CampaignRulesPage } from "./pages/CampaignRulesPage";
+import { MicarWhitepaperPage } from "./pages/MicarWhitepaperPage";
 
 function App() {
+  const { pathname } = useLocation();
+  const isWhitepaper = pathname === "/micar-whitepaper";
+
   return (
    <>
    <Navbar />
@@ -28,8 +32,9 @@ function App() {
         <Route path="/beta" element={<BetaAccessPage />} />
       <Route path="/privacy" element={<PrivacyPage />} />
       <Route path="/binancewallet-campaign-rules" element={<CampaignRulesPage />} />
+      <Route path="/micar-whitepaper" element={<MicarWhitepaperPage />} />
     </Routes>
-    <Footer />
+    {!isWhitepaper && <Footer />}
    </>
   );
 }
