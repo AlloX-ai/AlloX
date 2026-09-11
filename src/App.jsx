@@ -5,37 +5,37 @@ import { DocsPage } from "./pages/DocsPage";
 import { FoundationPage } from "./pages/FoundationPage";
 import { BlogPage } from "./pages/BlogPage";
 import { BlogPostPage } from "./pages/BlogPostPage";
-import { BetaAccessPage } from './pages/BetaAccessPage';
+import { BetaAccessPage } from "./pages/BetaAccessPage";
 import { TermsPage } from "./pages/TermsPage";
 import { Navbar } from "./components/Navbar";
 import Footer from "./components/Footer";
 import { PrivacyPage } from "./pages/PrivacyPage";
 import { CampaignRulesPage } from "./pages/CampaignRulesPage";
-import { MicarWhitepaperPage } from "./pages/MicarWhitepaperPage";
 
 function App() {
   const { pathname } = useLocation();
-  const isWhitepaper = pathname === "/micar-whitepaper";
 
   return (
-   <>
-   <Navbar />
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/product" element={<ProductPage />} />
-      <Route path="/docs" element={<DocsPage />} />
-      <Route path="/platform" element={<FoundationPage />} />
-      <Route path="/blog" element={<BlogPage />} />
-      {/* <Route path="/blog/:postId" element={<BlogPostPage />} />
-     */}
-      <Route path="/terms" element={<TermsPage />} />
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/product" element={<ProductPage />} />
+        <Route path="/docs" element={<DocsPage />} />
+        <Route path="/platform" element={<FoundationPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        {/* <Route path="/blog/:postId" element={<BlogPostPage />} />
+         */}
+        <Route path="/terms" element={<TermsPage />} />
         <Route path="/beta" element={<BetaAccessPage />} />
-      <Route path="/privacy" element={<PrivacyPage />} />
-      <Route path="/binancewallet-campaign-rules" element={<CampaignRulesPage />} />
-      <Route path="/micar-whitepaper" element={<MicarWhitepaperPage />} />
-    </Routes>
-    {!isWhitepaper && <Footer />}
-   </>
+        <Route path="/privacy" element={<PrivacyPage />} />
+        <Route
+          path="/binancewallet-campaign-rules"
+          element={<CampaignRulesPage />}
+        />
+      </Routes>
+      <Footer />
+    </>
   );
 }
 
