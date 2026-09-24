@@ -599,7 +599,7 @@ export function LandingPage() {
               <div className="flex items-center gap-3 mb-4">
                 <Calendar size={20} className="text-purple-600" />
                 <div className="text-sm font-medium text-purple-600">
-                  Q2 2026 - Current
+                  Q2 2026
                 </div>
               </div>
               <div className="w-3 h-3 bg-purple-600 rounded-full mb-4 animate-pulse"></div>
@@ -638,10 +638,10 @@ export function LandingPage() {
 
             <GlassCard className="p-8 min-w-[320px] snap-start">
               <div className="flex items-center gap-3 mb-4">
-                <Calendar size={20} className="text-gray-400" />
-                <div className="text-sm font-medium text-gray-600">Q3 2026</div>
+                <Calendar size={20} className="text-purple-400" />
+                <div className="text-sm font-medium text-purple-600">Q3 2026</div>
               </div>
-              <div className="w-3 h-3 bg-gray-300 rounded-full mb-4"></div>
+              <div className="w-3 h-3 bg-purple-500 rounded-full mb-4"></div>
               <h3 className="text-xl font-bold mb-3">
                 Platform & Distribution
               </h3>
@@ -679,33 +679,45 @@ export function LandingPage() {
                 </li>
 
                 <li className="flex items-start gap-2">
-                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>Token launch</span>
+                   <CheckCircle2
+                    size={16}
+                    className="text-green-600 flex-shrink-0 mt-0.5"
+                  />
+                  <span>Robinhood Chain Expansion</span>
                 </li>
               </ul>
             </GlassCard>
 
             <GlassCard className="p-8 min-w-[320px] snap-start">
               <div className="flex items-center gap-3 mb-4">
-                <Calendar size={20} className="text-gray-400" />
-                <div className="text-sm font-medium text-gray-600">Q4 2026</div>
+                <Calendar size={20} className="text-purple-400" />
+                <div className="text-sm font-medium text-purple-600">Q4 2026 - Current </div>
               </div>
-              <div className="w-3 h-3 bg-gray-300 rounded-full mb-4"></div>
+              <div className="w-3 h-3 bg-purple-500 rounded-full mb-4"></div>
               <h3 className="text-xl font-bold mb-3">
-                Infrastructure & Decentralization
+                Token & Ecosystem
               </h3>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
+                  <span>Token launch (TGE)
+</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
+                  <span>Staking pools</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
+                  <span>Premium feature</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
+                  <span>Community governance</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
                   <span>Protocol integrations</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>Community governance live</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>Chain Expansion</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
