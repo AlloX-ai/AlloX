@@ -320,6 +320,9 @@ export function TermsPage() {
                   <strong>Disqualification Rights:</strong> AlloX reserves the right to disqualify a user's reward eligibility if AlloX determines that the user has breached the AlloX Terms of Use, tampered with AlloX program code, or interfered with the operation of AlloX program code with other software.
                 </p>
                 <p>
+                  <strong>False or Misleading Information:</strong> Users who intentionally create, publish, or distribute false or misleading information about AlloX through social media or other public channels may be deemed ineligible for any rewards, points, Gems, airdrops, or other incentives.
+                </p>
+                <p>
                   <strong>Program Modifications:</strong> AlloX reserves the right at any time in its sole and absolute discretion to determine and/or amend or vary these Activity Terms without prior notice, including but not limited to canceling, extending, terminating or suspending the activities, its eligibility terms and criteria, the selection and number of winners, and the timing of any act to be done, and all users shall be bound by these amendments.
                 </p>
                 <p>

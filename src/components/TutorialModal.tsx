@@ -480,6 +480,7 @@ export function CampaignRulesPage() {
                 'Only Binance Wallet users with verified accounts are eligible',
                 'Only one entry per user per task is allowed',
                 'Users with multiple entries or fraudulent behavior will be disqualified',
+                'Users who intentionally create, publish, or distribute false or misleading information about AlloX through social media or other public channels may be deemed ineligible for any rewards, points, Gems, airdrops, or other incentives',
                 "Binance Wallet's standard Terms and Conditions apply",
                 'The list of excluded countries may be updated periodically due to evolving local regulations',
               ].map((item, i) => (
