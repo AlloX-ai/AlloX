@@ -50,8 +50,7 @@ export function LandingPage() {
     { name: "4AI", icon: "4ai.png" },
     { name: "Syndicate", icon: "syndicate.png" },
     { name: "Gate DEX", icon: "gate.svg" },
-  { name: "Aspecta", icon: "aspecta.png" },
-
+    { name: "Aspecta", icon: "aspecta.png" },
   ];
 
   return (
@@ -639,7 +638,9 @@ export function LandingPage() {
             <GlassCard className="p-8 min-w-[320px] snap-start">
               <div className="flex items-center gap-3 mb-4">
                 <Calendar size={20} className="text-purple-400" />
-                <div className="text-sm font-medium text-purple-600">Q3 2026</div>
+                <div className="text-sm font-medium text-purple-600">
+                  Q3 2026
+                </div>
               </div>
               <div className="w-3 h-3 bg-purple-500 rounded-full mb-4"></div>
               <h3 className="text-xl font-bold mb-3">
@@ -679,11 +680,25 @@ export function LandingPage() {
                 </li>
 
                 <li className="flex items-start gap-2">
-                   <CheckCircle2
+                  <CheckCircle2
                     size={16}
                     className="text-green-600 flex-shrink-0 mt-0.5"
                   />
                   <span>Robinhood Chain Expansion</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2
+                    size={16}
+                    className="text-green-600 flex-shrink-0 mt-0.5"
+                  />
+                  <span>MiCA Whitepaper Published</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2
+                    size={16}
+                    className="text-green-600 flex-shrink-0 mt-0.5"
+                  />
+                  <span>ALLOX Pre-Market Launch</span>
                 </li>
               </ul>
             </GlassCard>
@@ -691,37 +706,40 @@ export function LandingPage() {
             <GlassCard className="p-8 min-w-[320px] snap-start">
               <div className="flex items-center gap-3 mb-4">
                 <Calendar size={20} className="text-purple-400" />
-                <div className="text-sm font-medium text-purple-600">Q4 2026 - Current </div>
+                <div className="text-sm font-medium text-purple-600">
+                  Q4 2026 - Current{" "}
+                </div>
               </div>
               <div className="w-3 h-3 bg-purple-500 rounded-full mb-4"></div>
-              <h3 className="text-xl font-bold mb-3">
-                Token & Ecosystem
-              </h3>
+              <h3 className="text-xl font-bold mb-3">Token & Ecosystem</h3>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>Token launch (TGE)
-</span>
+                  <span>Token Launch (TGE)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>Staking pools</span>
+                  <span>ALLOX Public Round</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>Premium feature</span>
+                  <span>Staking Pools</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>Community governance</span>
+                  <span>Premium Feature Access</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>Protocol integrations</span>
+                  <span>Community Governance</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
-                  <span>Public API access</span>
+                  <span>Protocol Integrations</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
+                  <span>Public API Access</span>
                 </li>
               </ul>
             </GlassCard>
@@ -798,10 +816,10 @@ export function LandingPage() {
                     className="text-sm leading-relaxed mb-6"
                     style={{ color: "rgba(255,255,255,0.5)" }}
                   >
-                    AlloX was featured as an Exclusive Campaign on Binance Wallet under the Booster format, with 86.29K KYC-verified users joining the campaign.
+                    AlloX was featured as an Exclusive Campaign on Binance
+                    Wallet under the Booster format, with 86.29K KYC-verified
+                    users joining the campaign.
                   </p>
-
-
 
                   <a
                     href="https://web3.binance.com/en/booster/47/5104555967354361344?chain=bsc"
