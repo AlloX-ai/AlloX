@@ -25,6 +25,49 @@ export function LandingPage() {
     document.title = "AlloX";
   }, []);
 
+  const [data, setData] = useState(null);
+
+  const getData = async () => {
+    try {
+      const response = await fetch(`https://api.allox.ai/season1/stats`);
+      const res = await response.json();
+
+      setData(res);
+    } catch (error) {
+      console.error("Error fetching stats:", error);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const decimals = 1;
+
+  const formatNumber = (num: number) => {
+    const abs = Math.abs(num);
+
+    let formatted: number;
+    let suffixLabel = "";
+
+    if (abs >= 1_000_000_000) {
+      formatted = num / 1_000_000_000;
+      suffixLabel = "B";
+    } else if (abs >= 1_000_000) {
+      formatted = num / 1_000_000;
+      suffixLabel = "M";
+    } else if (abs >= 1_000) {
+      formatted = num / 1_000;
+      suffixLabel = "K";
+    } else {
+      return decimals > 0
+        ? num.toFixed(decimals)
+        : Math.floor(num).toLocaleString();
+    }
+
+    return `${formatted.toFixed(decimals || 1)}${suffixLabel}`;
+  };
+
   // const [showCampaignPopup, setShowCampaignPopup] = useState(true);
 
   const partners = [
@@ -52,6 +95,8 @@ export function LandingPage() {
     { name: "Gate DEX", icon: "gate.svg" },
     { name: "Aspecta", icon: "aspecta.png" },
   ];
+
+  console.log(data, "data");
 
   return (
     <div className="min-h-screen bg-pattern">
@@ -107,11 +152,106 @@ export function LandingPage() {
           </div>
         </div>
       </section>
-      <StatsCounter />
+
+      <section className="py-24 px-6">
+        <div className="max-w-[1440px] mx-auto">
+          <div
+            className="rounded-3xl overflow-hidden glass-card"
+          
+          >
+            {/* Header */}
+            <div
+              className="px-10 pt-10 pb-8"
+              style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}
+            >
+              <p
+                className="text-xs font-black uppercase tracking-widest mb-3 text-black font-medium"
+              >
+                Track Record
+              </p>
+              <h2 className="text-4xl md:text-4xl font-medium font-black text-black leading-tight mb-2">
+                Proven performance across
+                <br className="hidden md:block" /> market cycles.
+              </h2>
+              <p
+                className="text-base text-gray-600"
+              >
+                Real results, real impact.
+              </p>
+            </div>
+
+            {/* All stats — single grid */}
+            <div
+              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-black/10"
+              style={{borderTop: "1px solid rgb(204 198 198 / 86%)"}}
+            >
+              {[
+                {
+                  display: formatNumber(data?.stats?.totalUsers ?? 0),
+                  prefix: false,
+                  label: "Registered Wallets",
+                  accent: null,
+                },
+                {
+                  display: formatNumber(data?.stats?.totalTransactions ?? 0),
+                  prefix: false,
+                  label: "Total Transactions",
+                  accent: null,
+                },
+                {
+                  display: formatNumber(data?.stats?.totalVolume ?? 0),
+                  prefix: true,
+                  label: "Total Volume",
+                  accent: null,
+                },
+                {
+                  display: formatNumber(data?.stats?.portfoliosCreated30d ?? 0),
+                  prefix: false,
+                  label: "Portfolios Created (30d)",
+                  accent: null,
+                },
+                {
+                  display: formatNumber(data?.stats?.totalValueOnChain ?? 0),
+                  prefix: true,
+                  label: "On-Chain Invested",
+                  accent: null,
+                },
+                {
+                  display: formatNumber(
+                    data?.stats?.totalPortfoliosCreated ?? 0,
+                  ),
+                  label: "Total Portfolios",
+                  prefix: false,
+                  accent: null,
+                },
+              ].map((s) => (
+                <div
+                  key={s.label}
+                  className="px-7 py-8 bg-[#fbfbfb] flex flex-col items-center justify-center"
+                >
+                  <div
+                    className="text-3xl font-black text-black mb-1"
+                    style={{ color: s.accent ?? "#000000" }}
+                  >
+                   {s.prefix && "$"}{s.display}
+                  </div>
+                  <div
+                    className="text-[10px] uppercase tracking-widest font-semibold text-gray-600"
+                  >
+                    {s.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* <StatsCounter /> */}
 
       {/* Performance Metrics Section */}
-      <section className="py-32 px-6 relative overflow-hidden">
-        {/* Background gradient effect */}
+      {/* <section className="py-32 px-6 relative overflow-hidden">
+   
         <div className="absolute inset-0 bg-gradient-to-b from-blue-50/30 via-purple-50/20 to-transparent pointer-events-none"></div>
 
         <div className="max-w-[1440px] mx-auto relative">
@@ -130,7 +270,7 @@ export function LandingPage() {
             </p>
           </div>
 
-          {/* Key Metrics Grid - Enhanced */}
+       
           <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-6 mb-16">
             <GlassCard
               hover
@@ -193,73 +333,9 @@ export function LandingPage() {
             </GlassCard>
           </div>
 
-          {/* Achievements - Enhanced */}
-          {/* <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
-            <GlassCard
-              hover
-              className="p-10 text-center relative overflow-hidden group transition-all duration-300"
-            >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-full -mr-16 -mt-16"></div>
-              <div className="relative">
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <CheckCircle2 size={36} className="text-white" />
-                </div>
-                <h3 className="font-bold text-xl mb-2">Coinbase</h3>
-                <p className="text-sm text-gray-600 mb-1">Listed in 2022</p>
-                <div className="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full mt-2">
-                  Top-tier CEX
-                </div>
-              </div>
-            </GlassCard>
-
-            <GlassCard
-              hover
-              className="p-10 text-center relative overflow-hidden group transition-all duration-300"
-            >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/10 to-transparent rounded-full -mr-16 -mt-16"></div>
-              <div className="relative">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <TrendingUp size={36} className="text-white" />
-                </div>
-                <h3 className="font-bold text-xl mb-2">Top 100</h3>
-                <p className="text-sm text-gray-600 mb-1">Market cap peak</p>
-                <div className="inline-block px-3 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded-full mt-2">
-                  Elite tier
-                </div>
-              </div>
-            </GlassCard>
-
-            <GlassCard
-              hover
-              className="p-10 text-center relative overflow-hidden group transition-all duration-300"
-            >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-500/10 to-transparent rounded-full -mr-16 -mt-16"></div>
-              <div className="relative">
-                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <Globe size={36} className="text-white" />
-                </div>
-                <h3 className="font-bold text-xl mb-2">10+ Exchanges</h3>
-                <p className="text-sm text-gray-600 mb-1">Global liquidity</p>
-                <div className="inline-block px-3 py-1 bg-green-50 text-green-700 text-xs font-medium rounded-full mt-2">
-                  Wide reach
-                </div>
-              </div>
-            </GlassCard>
-          </div> */}
-
-          {/* Additional Details - Enhanced */}
-          {/* <div className="text-center">
-            <GlassCard className="p-8 max-w-3xl mx-auto relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500"></div>
-              <p className="text-base text-gray-700 leading-relaxed">
-                <span className="font-bold text-lg">$40M+ in rewards distributed</span> across ETH, BNB, and AVAX. 
-                <br className="hidden md:block" />
-                Proven multi-chain infrastructure. Real value delivered to our community.
-              </p>
-            </GlassCard>
-          </div> */}
+   
         </div>
-      </section>
+      </section> */}
 
       {/* Feature Grid */}
       <section className="py-24 px-6">
