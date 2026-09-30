@@ -18,6 +18,7 @@ import { useEffect, useState } from "react";
 import { StatsCounter } from "../components/StatsCounter";
 import binanceCampaignLogo from "../assets/binanceCampaignLogo.svg";
 import binanceLaptop from "../assets/binanceLaptop.png";
+import PublicSaleModal from "../components/PublicSaleModal";
 
 export function LandingPage() {
   useEffect(() => {
@@ -26,6 +27,8 @@ export function LandingPage() {
   }, []);
 
   const [data, setData] = useState(null);
+  const [salePopupDismissed, setSalePopupDismissed] = useState(false);
+
 
   const getData = async () => {
     try {
@@ -1191,6 +1194,9 @@ export function LandingPage() {
           </>
         )}
       </AnimatePresence> */}
+       {!salePopupDismissed &&  (
+          <PublicSaleModal onClose={() => setSalePopupDismissed(true)} />
+        )}
     </div>
   );
 }
