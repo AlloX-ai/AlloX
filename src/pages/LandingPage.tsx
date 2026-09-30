@@ -99,7 +99,6 @@ export function LandingPage() {
     { name: "Aspecta", icon: "aspecta.png" },
   ];
 
-  console.log(data, "data");
 
   return (
     <div className="min-h-screen bg-pattern">
@@ -239,7 +238,7 @@ export function LandingPage() {
                    {s.prefix && "$"}{s.display}
                   </div>
                   <div
-                    className="text-[10px] uppercase tracking-widest font-semibold text-gray-600"
+                    className="text-[10px] uppercase tracking-widest font-semibold text-gray-600 text-center"
                   >
                     {s.label}
                   </div>
