@@ -90,7 +90,7 @@ const PublicSaleModal = ({ onClose }) => {
 
           {/* Headline */}
           <h3 className="text-3xl font-black text-white leading-tight mb-8">
-            Open to Everyone.
+            ALLOX Public Sale.
             <br />
             <span
               style={{
@@ -99,7 +99,7 @@ const PublicSaleModal = ({ onClose }) => {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              ALLOX Public Sale.
+              Open to Eligible KYC'd Users.
             </span>
           </h3>
           <p className=" text-sm mt-4 text-gray-300 mb-8">
