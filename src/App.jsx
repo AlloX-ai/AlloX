@@ -11,10 +11,10 @@ import { Navbar } from "./components/Navbar";
 import Footer from "./components/Footer";
 import { PrivacyPage } from "./pages/PrivacyPage";
 import { CampaignRulesPage } from "./pages/CampaignRulesPage";
-
+import { MicaWhitepaperPage } from "./pages/MicaWhitepaperPage";
 function App() {
   const { pathname } = useLocation();
-
+  const isWhitepaper = pathname === "/micar-whitepaper";
   return (
     <>
       <Navbar />
@@ -29,12 +29,14 @@ function App() {
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/beta" element={<BetaAccessPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
+        <Route path="/mica-whitepaper" element={<MicaWhitepaperPage />} />
+
         <Route
           path="/binancewallet-campaign-rules"
           element={<CampaignRulesPage />}
         />
       </Routes>
-      <Footer />
+       {!isWhitepaper && <Footer />}
     </>
   );
 }

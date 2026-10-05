@@ -18,6 +18,7 @@ import { useEffect, useState } from "react";
 import { StatsCounter } from "../components/StatsCounter";
 import binanceCampaignLogo from "../assets/binanceCampaignLogo.svg";
 import binanceLaptop from "../assets/binanceLaptop.png";
+import PublicSaleModal from "../components/PublicSaleModal";
 
 export function LandingPage() {
   useEffect(() => {
@@ -26,6 +27,8 @@ export function LandingPage() {
   }, []);
 
   const [data, setData] = useState(null);
+  const [salePopupDismissed, setSalePopupDismissed] = useState(false);
+
 
   const getData = async () => {
     try {
@@ -94,6 +97,8 @@ export function LandingPage() {
     { name: "Syndicate", icon: "syndicate.png" },
     { name: "Gate DEX", icon: "gate.svg" },
     { name: "Aspecta", icon: "aspecta.png" },
+    { name: "Sonar by Echo", icon: "echo.png" },
+
   ];
 
 
@@ -156,7 +161,7 @@ export function LandingPage() {
         <div className="max-w-[1440px] mx-auto">
           <div
             className="rounded-3xl overflow-hidden glass-card"
-          
+
           >
             {/* Header */}
             <div
@@ -182,7 +187,7 @@ export function LandingPage() {
             {/* All stats — single grid */}
             <div
               className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-black/10"
-              style={{borderTop: "1px solid rgb(204 198 198 / 86%)"}}
+              style={{ borderTop: "1px solid rgb(204 198 198 / 86%)" }}
             >
               {[
                 {
@@ -232,7 +237,7 @@ export function LandingPage() {
                     className="text-3xl font-black text-black mb-1"
                     style={{ color: s.accent ?? "#000000" }}
                   >
-                   {s.prefix && "$"}{s.display}
+                    {s.prefix && "$"}{s.display}
                   </div>
                   <div
                     className="text-[10px] uppercase tracking-widest font-semibold text-gray-600 text-center"
@@ -1190,6 +1195,9 @@ export function LandingPage() {
           </>
         )}
       </AnimatePresence> */}
+      {!salePopupDismissed && (
+        <PublicSaleModal onClose={() => setSalePopupDismissed(true)} />
+      )}
     </div>
   );
 }
