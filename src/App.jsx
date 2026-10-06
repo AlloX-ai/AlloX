@@ -14,7 +14,7 @@ import { CampaignRulesPage } from "./pages/CampaignRulesPage";
 import { MicaWhitepaperPage } from "./pages/MicaWhitepaperPage";
 function App() {
   const { pathname } = useLocation();
-  const isWhitepaper = pathname === "/micar-whitepaper";
+  const isWhitepaper = pathname === "/mica-whitepaper";
   return (
     <>
       <Navbar />
@@ -36,7 +36,7 @@ function App() {
           element={<CampaignRulesPage />}
         />
       </Routes>
-       {!isWhitepaper && <Footer />}
+      {!isWhitepaper && <Footer />}
     </>
   );
 }
