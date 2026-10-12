@@ -209,9 +209,9 @@ export function LandingPage() {
                   accent: null,
                 },
                 {
-                  display: formatNumber(data?.stats?.portfoliosCreated30d ?? 0),
+                  display: formatNumber(data?.stats?.onChainPortfoliosCreated ?? 0),
                   prefix: false,
-                  label: "Portfolios Created (30d)",
+                  label: "On-Chain Portfolios",
                   accent: null,
                 },
                 {
