@@ -186,8 +186,7 @@ export function LandingPage() {
 
             {/* All stats — single grid */}
             <div
-              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-black/10"
-              style={{ borderTop: "1px solid rgb(204 198 198 / 86%)" }}
+              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-black/10 border-t border-gray-300"
             >
               {[
                 {
@@ -231,11 +230,11 @@ export function LandingPage() {
               ].map((s) => (
                 <div
                   key={s.label}
-                  className="px-7 py-8 bg-[#fbfbfb] flex flex-col items-center justify-center"
+                  className="px-7 py-8 bg-[#fbfbfb] dark:bg-gray-50 flex flex-col items-center justify-center"
                 >
                   <div
                     className="text-3xl font-black text-black mb-1"
-                    style={{ color: s.accent ?? "#000000" }}
+                    style={s.accent ? { color: s.accent } : undefined}
                   >
                     {s.prefix && "$"}{s.display}
                   </div>
@@ -887,7 +886,7 @@ export function LandingPage() {
                     </span>
                   </div>
 
-                  <h3 className="text-2xl font-black text-white leading-snug mb-3">
+                  <h3 className="text-2xl font-black text-[#fff] leading-snug mb-3">
                     Exclusive Campaign
                     <br />
                     with Binance Wallet

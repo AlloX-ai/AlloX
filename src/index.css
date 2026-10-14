@@ -1,6 +1,56 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Dark mode: flip Tailwind's neutral palette so existing bg-white / text-gray-* utilities invert site-wide */
+.dark {
+  color-scheme: dark;
+  --color-white: #0a0a0a;
+  --color-black: #fff;
+  --color-gray-50: oklch(13% 0.028 261.692);
+  --color-gray-100: oklch(21% 0.034 264.665);
+  --color-gray-200: oklch(27.8% 0.033 256.848);
+  --color-gray-300: oklch(37.3% 0.034 259.733);
+  --color-gray-400: oklch(44.6% 0.03 256.802);
+  --color-gray-600: oklch(70.7% 0.022 261.325);
+  --color-gray-700: oklch(87.2% 0.01 258.338);
+  --color-gray-800: oklch(92.8% 0.006 264.531);
+  --color-gray-900: oklch(96.7% 0.003 264.542);
+  --color-gray-950: oklch(98.5% 0.002 247.839);
+}
+
+/* Dark mode: turn light colored tints (bg-blue-50, border-green-200, ...) into dark tints of the same hue */
+.dark {
+  --color-red-50: color-mix(in oklab, oklch(63.7% 0.237 25.331) 12%, #0a0a0a);
+  --color-red-100: color-mix(in oklab, oklch(63.7% 0.237 25.331) 18%, #0a0a0a);
+  --color-red-200: color-mix(in oklab, oklch(63.7% 0.237 25.331) 30%, #0a0a0a);
+  --color-orange-50: color-mix(in oklab, oklch(70.5% 0.213 47.604) 12%, #0a0a0a);
+  --color-orange-100: color-mix(in oklab, oklch(70.5% 0.213 47.604) 18%, #0a0a0a);
+  --color-orange-200: color-mix(in oklab, oklch(70.5% 0.213 47.604) 30%, #0a0a0a);
+  --color-amber-50: color-mix(in oklab, oklch(76.9% 0.188 70.08) 12%, #0a0a0a);
+  --color-amber-100: color-mix(in oklab, oklch(76.9% 0.188 70.08) 18%, #0a0a0a);
+  --color-amber-200: color-mix(in oklab, oklch(76.9% 0.188 70.08) 30%, #0a0a0a);
+  --color-yellow-50: color-mix(in oklab, oklch(79.5% 0.184 86.047) 12%, #0a0a0a);
+  --color-yellow-100: color-mix(in oklab, oklch(79.5% 0.184 86.047) 18%, #0a0a0a);
+  --color-yellow-200: color-mix(in oklab, oklch(79.5% 0.184 86.047) 30%, #0a0a0a);
+  --color-green-50: color-mix(in oklab, oklch(72.3% 0.219 149.579) 12%, #0a0a0a);
+  --color-green-100: color-mix(in oklab, oklch(72.3% 0.219 149.579) 18%, #0a0a0a);
+  --color-green-200: color-mix(in oklab, oklch(72.3% 0.219 149.579) 30%, #0a0a0a);
+  --color-emerald-50: color-mix(in oklab, oklch(69.6% 0.17 162.48) 12%, #0a0a0a);
+  --color-emerald-100: color-mix(in oklab, oklch(69.6% 0.17 162.48) 18%, #0a0a0a);
+  --color-emerald-200: color-mix(in oklab, oklch(69.6% 0.17 162.48) 30%, #0a0a0a);
+  --color-blue-50: color-mix(in oklab, oklch(62.3% 0.214 259.815) 12%, #0a0a0a);
+  --color-blue-100: color-mix(in oklab, oklch(62.3% 0.214 259.815) 18%, #0a0a0a);
+  --color-blue-200: color-mix(in oklab, oklch(62.3% 0.214 259.815) 30%, #0a0a0a);
+  --color-purple-50: color-mix(in oklab, oklch(62.7% 0.265 303.9) 12%, #0a0a0a);
+  --color-purple-100: color-mix(in oklab, oklch(62.7% 0.265 303.9) 18%, #0a0a0a);
+  --color-purple-200: color-mix(in oklab, oklch(62.7% 0.265 303.9) 30%, #0a0a0a);
+  --color-pink-50: color-mix(in oklab, oklch(65.6% 0.241 354.308) 12%, #0a0a0a);
+  --color-pink-100: color-mix(in oklab, oklch(65.6% 0.241 354.308) 18%, #0a0a0a);
+  --color-pink-200: color-mix(in oklab, oklch(65.6% 0.241 354.308) 30%, #0a0a0a);
+}
+
 * {
   font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif;
 }
@@ -508,3 +558,15 @@ h1, h2, h3, h4, h5, h6 {
     transform: none;
   }
 }
+
+/* Dark overrides for the hand-written classes above */
+.dark body { background: #0a0a0a; color: #fff; }
+.dark .bg-pattern { background-color: #0a0a0a; background-image: linear-gradient(#ffffff08 1px, #0000 1px), linear-gradient(90deg, #ffffff08 1px, #0000 1px); }
+.dark .glass-card { background: #171717b3; border-color: #ffffff14; box-shadow: 0 4px 24px #0000004d, inset 0 1px #ffffff0d; }
+.dark .full-white { background: #171717 !important; }
+.dark .btn-primary { color: #000; background: #fff; }
+.dark .btn-primary:hover { background: #e5e5e5; }
+.dark .btn-secondary { color: #fff; background: #ffffff14; border-color: #ffffff1a; }
+.dark .btn-secondary:hover { background: #ffffff26; border-color: #fff3; }
+.dark ::selection { background: #ffffff26; }
+.dark :focus-visible { outline-color: #ffffff80; }
