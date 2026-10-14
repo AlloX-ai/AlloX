@@ -1,10 +1,23 @@
 import { Link, useLocation } from 'react-router';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useState } from 'react';
+import { useTheme } from 'next-themes';
 
 export function Navbar() {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { resolvedTheme, setTheme } = useTheme();
+  const isDark = resolvedTheme === 'dark';
+
+  const themeToggle = (
+    <button
+      onClick={() => setTheme(isDark ? 'light' : 'dark')}
+      className="p-2 rounded-lg hover:bg-black/5 transition-colors"
+      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+    >
+      {isDark ? <Sun size={20} /> : <Moon size={20} />}
+    </button>
+  );
 
   const navItems = [
     { label: 'Product', href: '/product' },
@@ -19,7 +32,7 @@ export function Navbar() {
         <div className="glass-card full-white px-6 py-4 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-           <img src={`https://cdn.allox.ai/allox/AlloX-desktop.svg`} alt="AlloX Logo" className="h-8 w-auto" />
+           <img src={`https://cdn.allox.ai/allox/AlloX-desktop.svg`} alt="AlloX Logo" className="h-8 w-auto dark:invert dark:hue-rotate-180" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -41,19 +54,23 @@ export function Navbar() {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-3">
+            {themeToggle}
             <Link to="https://app.allox.ai/" target='_blank' rel='noreferrer'  className="btn-primary">
               Launch App
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 hover:bg-black/5 rounded-lg transition-colors"
-          >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="md:hidden flex items-center gap-1">
+            {themeToggle}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 hover:bg-black/5 rounded-lg transition-colors"
+            >
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
