@@ -1194,9 +1194,9 @@ export function LandingPage() {
           </>
         )}
       </AnimatePresence> */}
-      {!salePopupDismissed && (
+      {/* {!salePopupDismissed && (
         <PublicSaleModal onClose={() => setSalePopupDismissed(true)} />
-      )}
+      )} */}
     </div>
   );
 }
