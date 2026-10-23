@@ -799,6 +799,24 @@ export function LandingPage() {
                   /> <span>ALLOX Public Round</span>
                 </li>
                 <li className="flex items-start gap-2">
+                  <CheckCircle2
+                    size={16}
+                    className="text-green-600 flex-shrink-0 mt-0.5"
+                  /> <span>Arbitrum & Robinhood Chain Expansion</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2
+                    size={16}
+                    className="text-green-600 flex-shrink-0 mt-0.5"
+                  /> <span>Stripe Integration</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2
+                    size={16}
+                    className="text-green-600 flex-shrink-0 mt-0.5"
+                  /> <span>AlloX AI Engine 2.0</span>
+                </li>
+                <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
                   <span>Token Launch (TGE)</span>
                 </li>
