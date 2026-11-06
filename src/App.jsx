@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import { PrivacyPage } from "./pages/PrivacyPage";
 import { CampaignRulesPage } from "./pages/CampaignRulesPage";
 import { MicaWhitepaperPage } from "./pages/MicaWhitepaperPage";
+import { TokenomicsPage } from "./pages/TokenomicsPage";
 function App() {
   const { pathname } = useLocation();
   const isWhitepaper = pathname === "/mica-whitepaper";
@@ -23,6 +24,7 @@ function App() {
         <Route path="/product" element={<ProductPage />} />
         <Route path="/docs" element={<DocsPage />} />
         <Route path="/platform" element={<FoundationPage />} />
+        <Route path="/tokenomics" element={<TokenomicsPage />} />
         <Route path="/blog" element={<BlogPage />} />
         {/* <Route path="/blog/:postId" element={<BlogPostPage />} />
          */}
