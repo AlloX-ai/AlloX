@@ -201,7 +201,7 @@ export function TokenomicsPage() {
               <span className="absolute inset-[14px] rounded-full border-[1.5px] border-[rgba(255,255,255,0.16)] bg-[radial-gradient(circle_at_30%_25%,#2f2f35_0%,#111113_60%,#050506_100%)] shadow-[inset_0_3px_12px_rgba(0,0,0,0.6)]" />
               <span className="absolute inset-7 rounded-full border border-dashed border-[rgba(255,255,255,0.14)]" />
               <img
-                src="/tokenomics/allox-token.png"
+                src="/images/allox-token.png"
                 alt=""
                 className="absolute left-1/2 top-1/2 w-[46%] h-[46%] -translate-x-1/2 -translate-y-1/2 object-contain"
               />
