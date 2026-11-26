@@ -628,7 +628,7 @@ export function LandingPage() {
           </div>
 
           <div className="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory -mx-6 px-6">
-            <GlassCard className="p-8 min-w-[320px] snap-start">
+            <GlassCard className="p-8 min-w-[320px] snap-start h-fit">
               <div className="flex items-center gap-3 mb-4">
                 <Calendar size={20} className="text-purple-600" />
                 <div className="text-sm font-medium text-purple-600">
@@ -673,7 +673,7 @@ export function LandingPage() {
               </ul>
             </GlassCard>
 
-            <GlassCard className="p-8 min-w-[320px] snap-start ring-2 ring-black/10">
+            <GlassCard className="p-8 min-w-[320px] snap-start ring-2 ring-black/10 h-fit">
               <div className="flex items-center gap-3 mb-4">
                 <Calendar size={20} className="text-purple-600" />
                 <div className="text-sm font-medium text-purple-600">
@@ -714,7 +714,7 @@ export function LandingPage() {
               </ul>
             </GlassCard>
 
-            <GlassCard className="p-8 min-w-[320px] snap-start">
+            <GlassCard className="p-8 min-w-[320px] snap-start h-fit">
               <div className="flex items-center gap-3 mb-4">
                 <Calendar size={20} className="text-purple-400" />
                 <div className="text-sm font-medium text-purple-600">
@@ -815,6 +815,19 @@ export function LandingPage() {
                     size={16}
                     className="text-green-600 flex-shrink-0 mt-0.5"
                   /> <span>AlloX AI Engine 2.0</span>
+                </li>
+
+                <li className="flex items-start gap-2">
+                  <CheckCircle2
+                    size={16}
+                    className="text-green-600 flex-shrink-0 mt-0.5"
+                  /> <span>Cross Chain Portfolio Builder</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2
+                    size={16}
+                    className="text-green-600 flex-shrink-0 mt-0.5"
+                  /> <span>Crypto Pulse</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-4 h-4 border-2 border-gray-400 rounded-full flex-shrink-0 mt-0.5"></div>
