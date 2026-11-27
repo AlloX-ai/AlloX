@@ -18,6 +18,7 @@ import { useEffect, useState } from "react";
 import { StatsCounter } from "../components/StatsCounter";
 import binanceCampaignLogo from "../assets/binanceCampaignLogo.svg";
 import binanceLaptop from "../assets/binanceLaptop.png";
+import yziDots from "../assets/yziDots.svg";
 import PublicSaleModal from "../components/PublicSaleModal";
 
 export function LandingPage() {
@@ -75,6 +76,7 @@ export function LandingPage() {
 
   const partners = [
     { name: "BNB Chain", icon: "bnbChain.svg" },
+    { name: "YZi Labs", icon: "yziLabs.png" },
     { name: "Base", icon: "base.svg" },
     { name: "Binance Wallet", icon: "binanceWallet.svg" },
     { name: "TrustWallet", icon: "trustWallet.svg" },
@@ -98,6 +100,7 @@ export function LandingPage() {
     { name: "Gate DEX", icon: "gate.svg" },
     { name: "Aspecta", icon: "aspecta.png" },
     { name: "Sonar by Echo", icon: "echo.png" },
+    { name: "4D Labs", icon: "4DLabs.png" },
 
   ];
 
@@ -874,6 +877,81 @@ export function LandingPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
           >
+            <section
+              aria-label="YZi Labs EASY Residency Season 5"
+              className="rounded-2xl overflow-hidden mb-8 text-[#181A1E] bg-[#F0B90B] border border-[#181A1E]"
+            >
+              <div
+                className="flex flex-wrap items-center justify-between gap-8 px-8 md:px-12 py-10"
+                style={{
+                  backgroundImage:
+                    "radial-gradient(circle, rgba(24,26,30,0.18) 1.4px, rgba(0,0,0,0) 1.7px)",
+                  backgroundSize: "18px 18px",
+                  backgroundPosition: "right top",
+                }}
+              >
+                <div className="flex flex-col gap-5 min-w-0" style={{ flex: "999 1 520px" }}>
+                  <div className="flex flex-wrap items-center gap-3">
+                    <div className="flex items-center gap-2">
+                      <svg width="22" height="26" viewBox="0 0 73 84" fill="#181A1E" aria-hidden="true">
+                        <path d="M36 0L48.5 7.5L36 15L23.5 7.5Z" />
+                        <path d="M36 68.8L48.5 76.3L36 84L23.5 76.3Z" />
+                        <path fillRule="evenodd" d="M11.5 14L36 28.2L61.5 14L73 20.8V63.2L61.5 70L36 55.8L11.5 70L0 63.2V20.8Z M11.8 26.8L36 41.8L11.8 56.8Z M61 26.8L36 41.8L61 56.8Z" />
+                      </svg>
+                      <span className="font-['Space_Grotesk'] font-bold text-[19px] tracking-[-0.3px]">
+                        YZiLabs
+                      </span>
+                    </div>
+                    <span className="w-px h-[18px] bg-[#181A1E]" aria-hidden="true" />
+                    <span className="text-[15px] font-medium">EASY Residency</span>
+                    <span className="font-['Space_Grotesk'] text-xs font-bold tracking-[0.6px] uppercase bg-[#181A1E] text-[#F0B90B] px-2.5 py-[5px] rounded">
+                      Season 5
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-3 font-['Space_Grotesk'] text-xs font-bold tracking-[0.8px] uppercase">
+                    <span>Season 5 · Backed by YZi Labs</span>
+                    <svg width="96" height="8" viewBox="0 0 96 8" aria-hidden="true">
+                      <line x1="0" y1="4" x2="92" y2="4" stroke="#181A1E" strokeWidth="1.2" />
+                      <circle cx="92" cy="4" r="2.5" fill="#181A1E" />
+                    </svg>
+                  </div>
+
+                  <h3 className="m-0 font-['Space_Grotesk'] text-4xl md:text-[44px] leading-[1.08] font-bold tracking-[-1.2px]">
+                    Building with YZi Labs.
+                  </h3>
+
+                  <p className="m-0 max-w-[620px] text-[17px] leading-relaxed text-[#181A1E]/80">
+                    AlloX was selected for EASY Residency Season 5, the flagship
+                    incubation program of YZi Labs, co-building with YZi Labs
+                    investors on GTM, capital strategy and growth.
+                  </p>
+
+                  <div className="pt-1">
+                    <a
+                      href="https://www.yzilabs.com/easy-residency"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2.5 min-h-12 px-[22px] bg-[#181A1E] hover:bg-black text-white hover:text-white font-['Space_Grotesk'] font-bold text-[15px] no-underline rounded transition-colors"
+                    >
+                      View on YZi Labs
+                      <ArrowRight size={14} strokeWidth={2.4} />
+                    </a>
+                  </div>
+                </div>
+
+                <div
+                  className="relative flex justify-center items-center min-h-[280px]"
+                  style={{ flex: "1 1 260px" }}
+                >
+                  <img src={yziDots} alt="" className="w-[300px] h-[300px]" />
+                  <div className="absolute bottom-3.5 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-[#181A1E] text-[#F0B90B] px-3.5 py-2 rounded font-['Space_Grotesk'] font-bold text-[13px] tracking-[0.4px] whitespace-nowrap">
+                    EASY Residency S5 <span className="text-white">× AlloX</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
             <div
               className="rounded-2xl overflow-hidden relative mb-8"
               style={{
@@ -960,7 +1038,7 @@ export function LandingPage() {
           </motion.div>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
             {partners.map((partner) => (
-              <GlassCard className="p-8 flex items-center justify-center hover:scale-105 transition-transform duration-300">
+              <GlassCard className="p-8 flex items-center justify-center hover:scale-105 transition-transform duration-300" key={partner.name}>
                 <div className="text-center">
                   <img
                     src={`https://cdn.allox.ai/allox/partners/${partner.icon}`}

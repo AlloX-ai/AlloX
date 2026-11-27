@@ -45,6 +45,7 @@ export function FoundationPage() {
 
   const partners = [
     { name: "BNB Chain", icon: "bnbChain.svg" },
+    { name: "YZi Labs", icon: "yziLabs.png" },
     { name: "Base", icon: "base.svg" },
     { name: "Binance Wallet", icon: "binanceWallet.svg" },
     { name: "TrustWallet", icon: "trustWallet.svg" },
@@ -68,6 +69,7 @@ export function FoundationPage() {
     { name: "Gate DEX", icon: "gate.svg" },
     { name: "Aspecta", icon: "aspecta.png" },
     { name: "Sonar by Echo", icon: "echo.png" },
+    { name: "4D Labs", icon: "4DLabs.png" },
   ]
 
   return (
@@ -374,7 +376,7 @@ export function FoundationPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
             {partners.map((partner) => (
-              <GlassCard className="p-8 flex items-center justify-center hover:scale-105 transition-transform duration-300">
+              <GlassCard className="p-8 flex items-center justify-center hover:scale-105 transition-transform duration-300" key={partner.name}>
                 <div className="text-center">
                   <img
                     src={`https://cdn.allox.ai/allox/partners/${partner.icon}`}
